@@ -163,11 +163,34 @@ const styles = StyleSheet.create({
     fontSize: 7,
     color: '#9ca3af',
   },
+  statusBox: {
+    marginBottom: 16,
+    padding: 10,
+    backgroundColor: '#f9fafb',
+    borderWidth: 1,
+    borderColor: '#e5e7eb',
+  },
+  statusBoxLabel: {
+    fontSize: 8,
+    color: '#6b7280',
+    marginBottom: 4,
+  },
+  statusBoxUrl: {
+    fontSize: 9,
+    fontFamily: 'Helvetica-Bold',
+    color: '#111',
+  },
+  statusBoxHint: {
+    fontSize: 8,
+    color: '#9ca3af',
+    marginTop: 2,
+  },
 })
 
 interface PdfData {
   orgName: string
   token: string
+  statusUrl: string
   report: {
     category: string
     status: ReportStatus
@@ -181,7 +204,7 @@ interface PdfData {
 }
 
 function MelderReportPdf({ data }: { data: PdfData }) {
-  const { orgName, token, report, messages, exportedAt } = data
+  const { orgName, token, statusUrl, report, messages, exportedAt } = data
 
   return (
     <Document title={`Meine Meldung ${token}`} author="anonym.in">
@@ -193,6 +216,15 @@ function MelderReportPdf({ data }: { data: PdfData }) {
             <Text style={styles.headerSubtitle}>{orgName} · Compliance-Meldekanal</Text>
           </View>
           <Text style={styles.tokenBadge}>{token}</Text>
+        </View>
+
+        {/* Status-Seite */}
+        <View style={styles.statusBox}>
+          <Text style={styles.statusBoxLabel}>Meldung jederzeit einsehen unter:</Text>
+          <Text style={styles.statusBoxUrl}>{statusUrl}</Text>
+          <Text style={styles.statusBoxHint}>
+            Zugangscode: {token} · Bitte sicher aufbewahren – kann nicht wiederhergestellt werden.
+          </Text>
         </View>
 
         {/* Metadaten */}
@@ -269,7 +301,7 @@ function MelderReportPdf({ data }: { data: PdfData }) {
   )
 }
 
-export async function GET(_req: NextRequest, { params }: { params: { token: string } }) {
+export async function GET(req: NextRequest, { params }: { params: { token: string } }) {
   try {
     const token = params.token.toUpperCase()
 
@@ -287,9 +319,12 @@ export async function GET(_req: NextRequest, { params }: { params: { token: stri
 
     const { data: org } = await supabaseAdmin
       .from('organizations')
-      .select('name')
+      .select('name, slug')
       .eq('id', report.organization_id)
       .single()
+
+    const origin = req.nextUrl.origin
+    const statusUrl = `${origin}/melden/${org?.slug ?? ''}/status?token=${token}`
 
     const { title_encrypted, description_encrypted, messages: rawMessages, ...rest } = report
 
@@ -305,6 +340,7 @@ export async function GET(_req: NextRequest, { params }: { params: { token: stri
     const pdfData: PdfData = {
       orgName: org?.name ?? 'Organisation',
       token,
+      statusUrl,
       report: {
         ...rest,
         title: decryptFromString(title_encrypted, orgKey),
