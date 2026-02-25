@@ -8,6 +8,8 @@ import TokenForm from './TokenForm'
 import MelderReplyForm from './MelderReplyForm'
 import MelderPdfDownloadButton from '../MelderPdfDownloadButton'
 
+export const dynamic = 'force-dynamic'
+
 const STATUS_LABELS: Record<ReportStatus, string> = {
   neu: 'Eingegangen',
   in_bearbeitung: 'In Bearbeitung',
