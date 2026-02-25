@@ -1,0 +1,94 @@
+{
+  "portal": {
+    "unavailable": "Ez a bejelentési csatorna jelenleg nem elérhető.",
+    "channelSubtitle": "Anonim megfelelési bejelentési csatorna",
+    "alreadyReported": "Már leadott bejelentést?",
+    "checkStatus": "Állapot ellenőrzése",
+    "form": {
+      "heading": "Bejelentés küldése",
+      "intro": "Bejelentése teljesen titkosítva és névtelenül kerül továbbításra a(z) {orgName} részére.",
+      "category": "Kategória",
+      "categoryPlaceholder": "Kérem, válasszon …",
+      "title": "Rövid leírás",
+      "titlePlaceholder": "Miről van szó?",
+      "description": "Részletes leírás",
+      "descriptionPlaceholder": "Írja le az esetet a lehető legrészletesebben. Mi történt? Mikor? Ki volt érintett?",
+      "submit": "Bejelentés névtelen küldése",
+      "submitting": "Küldés …",
+      "error": "Hiba a bejelentés elküldésekor",
+      "privacy": "Adatvédelem: Nem tárolunk IP-címeket, e-mail-címeket vagy egyéb személyes adatokat. A bejelentés AES-256-GCM titkosítással védett. Nincs nyomkövető cookie ezen az oldalon."
+    },
+    "success": {
+      "heading": "Bejelentés elküldve",
+      "subtext": "Bejelentése biztonságosan elküldésre került, és bizalmasan kerül kezelésre.",
+      "tokenLabel": "Személyes hozzáférési kódja",
+      "copy": "Másolás",
+      "copied": "✓ Másolva",
+      "savePdf": "PDF mentése",
+      "warningTitle": "Fontos – jegyezze fel ezt a kódot:",
+      "warning1": "Ez az egyetlen mód a bejelentés ismételt megtekintésére",
+      "warning2": "Lehetővé teszi a megfelelési csapat válaszainak olvasását",
+      "warning3": "Nem kerül mentésre, és nem állítható helyre",
+      "trackLink": "Bejelentés nyomon követése"
+    },
+    "categories": {
+      "korruption": "Korrupció és megvesztegetés",
+      "betrug": "Csalás és sikkasztás",
+      "datenschutz": "Adatvédelmi jogsértés",
+      "diskriminierung": "Diszkrimináció és zaklatás",
+      "sicherheit": "Munka- és termékbiztonság",
+      "sonstiges": "Egyéb"
+    }
+  },
+  "status": {
+    "pageSubtitle": "Megfelelési csatorna – Bejelentés állapota",
+    "newReport": "Új bejelentés küldése",
+    "notFound": "Bejelentés nem található",
+    "notFoundHint": "Ellenőrizze hozzáférési kódját. A nagy- és kisbetűk figyelmen kívül maradnak.",
+    "retry": "Próbálja újra",
+    "tokenForm": {
+      "heading": "Bejelentés nyomon követése",
+      "subtext": "Adja meg hozzáférési kódját a bejelentés állapotának megtekintéséhez és az üzenetek olvasásához.",
+      "label": "Hozzáférési kód",
+      "placeholder": "pl. WOLF-7342-KÉK",
+      "submit": "Állapot megjelenítése"
+    },
+    "report": {
+      "received": "Beérkezett:",
+      "confirmed": "Beérkezés visszaigazolva: {date} (a 7 napos törvényes határidő betartva)",
+      "pendingConfirmation": "Beérkezési visszaigazolás függőben (törvényes határidő: 7 nap a beérkezéstől számítva)"
+    },
+    "messages": {
+      "heading": "Kommunikáció a megfelelési csapattal",
+      "empty": "Még nincs üzenet. A megfelelési csapat szükség esetén felveszi Önnel a kapcsolatot.",
+      "senderCompliance": "Megfelelési csapat",
+      "senderMelder": "Ön (névtelen)",
+      "replyLabel": "Üzenet küldése a megfelelési csapatnak:",
+      "replyPlaceholder": "Az Ön üzenete a megfelelési csapatnak …",
+      "closed": "Ez a bejelentés lezárva. Nem lehet több üzenetet küldeni.",
+      "send": "Üzenet küldése",
+      "sending": "Küldés …",
+      "errorSend": "Hiba az üzenet küldésekor",
+      "privacy": "Minden üzenet végpontok között titkosított. Nincs nyomkövetés, nincs cookie."
+    },
+    "statusLabels": { "neu": "Beérkezett", "in_bearbeitung": "Feldolgozás alatt", "abgeschlossen": "Lezárva" }
+  },
+  "dashboard": {
+    "title": "Bejelentések",
+    "stats": { "total": "Összesen", "new": "Új", "inProgress": "Feldolgozás alatt", "overdue": "Lejárt" },
+    "filter": { "all": "Összes", "new": "Új", "inProgress": "Feldolgozás alatt", "done": "Lezárva", "overdue": "Lejárt" },
+    "list": { "empty": "Nem találhatók bejelentések.", "received": "Beérkezett:", "token": "Token:", "newMessages": "{n} új" },
+    "deadline": { "confirmation": "Visszaigazolás:", "response": "Válasz:", "overdueN": "{n}n késedelmes", "daysLeft": "{n}n" },
+    "detail": {
+      "back": "← Vissza az áttekintőhöz", "content": "Bejelentés tartalma", "deadlines": "Törvényes határidők (HinSchG)",
+      "confirmDeadline": "Beérkezési visszaigazolás (7 nap)", "responseDeadline": "Válasz (3 hónap)", "statusLabel": "Állapot",
+      "confirmedOn": "✓ {date}", "overdueN": "{n}n késedelmes", "daysLeft": "még {n}n ({date}-ig)",
+      "noMessages": "Még nincs üzenet.", "senderCompliance": "Megfelelés", "senderMelder": "Bejelentő (névtelen)",
+      "replyLabel": "Válasz a bejelentőnek (teljesen titkosított):", "replyPlaceholder": "Az Ön válasza a bejelentőnek …",
+      "send": "Válasz küldése", "sending": "Küldés …", "errorSend": "Hiba küldéskor", "communication": "Kommunikáció", "messagesCount": "{n} üzenet"
+    },
+    "actions": { "heading": "Állapot és határidők", "current": "Jelenlegi:", "confirm": "Beérkezés visszaigazolása (HinSchG 7 napos határidő)", "confirmedOn": "Beérkezés visszaigazolva: {date}", "errorSave": "Hiba mentéskor" },
+    "statusLabels": { "neu": "Új", "in_bearbeitung": "Feldolgozás alatt", "abgeschlossen": "Lezárva" },
+    "nav": { "logout": "Kijelentkezés" }
+  }
+}

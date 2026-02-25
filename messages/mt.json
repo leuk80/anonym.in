@@ -1,0 +1,94 @@
+{
+  "portal": {
+    "unavailable": "Dan il-kanal ta' rappurtar bħalissa mhux disponibbli.",
+    "channelSubtitle": "Kanal anonimus ta' rappurtar tal-konformità",
+    "alreadyReported": "Diġà ressaqt rapport?",
+    "checkStatus": "Iċċekkja l-istatus",
+    "form": {
+      "heading": "Ibgħat rapport",
+      "intro": "Ir-rapport tiegħek se jkun kriptjat kompletament u mibgħut b'mod anonimu lil {orgName}.",
+      "category": "Kategorija",
+      "categoryPlaceholder": "Jekk jogħġbok agħżel …",
+      "title": "Deskrizzjoni qasira",
+      "titlePlaceholder": "Dwar xiex hu?",
+      "description": "Deskrizzjoni dettaljata",
+      "descriptionPlaceholder": "Iddeskrivi s-sitwazzjoni kemm jista' jkun dettaljatament. Xi ġara? Meta? Min kien involut?",
+      "submit": "Ibgħat rapport b'mod anonimu",
+      "submitting": "Qiegħed jintbagħat …",
+      "error": "Żball fl-invio tar-rapport",
+      "privacy": "Privatezza: L-ebda indirizz IP, indirizz tal-email jew data personali oħra ma tiġi maħżuna. Ir-rapport huwa kriptjat b'AES-256-GCM. L-ebda cookies ta' traċċar f'din il-paġna."
+    },
+    "success": {
+      "heading": "Rapport mibgħut",
+      "subtext": "Ir-rapport tiegħek intbagħat b'mod sigur u se jiġi ttrattat b'kunfidenzjalità.",
+      "tokenLabel": "Il-kodiċi ta' aċċess personali tiegħek",
+      "copy": "Ikkopja",
+      "copied": "✓ Ikkopjat",
+      "savePdf": "Issejvja PDF",
+      "warningTitle": "Importanti – innota dan il-kodiċi:",
+      "warning1": "Dan huwa l-uniku mod kif taċċessa r-rapport tiegħek mill-ġdid",
+      "warning2": "Jippermettik taqra t-tweġibiet tat-tim tal-konformità",
+      "warning3": "Ma jiġix maħżun u ma jistax jiġi rkuprat",
+      "trackLink": "Segwi r-rapport"
+    },
+    "categories": {
+      "korruption": "Korruzzjoni u tixħim",
+      "betrug": "Frodi u tapproprjament",
+      "datenschutz": "Ksur tal-protezzjoni tad-data",
+      "diskriminierung": "Diskriminazzjoni u fastidju",
+      "sicherheit": "Sigurtà fuq il-post tax-xogħol u tal-prodotti",
+      "sonstiges": "Oħrajn"
+    }
+  },
+  "status": {
+    "pageSubtitle": "Kanal tal-konformità – Status tar-rapport",
+    "newReport": "Ibgħat rapport ġdid",
+    "notFound": "Rapport ma nstabx",
+    "notFoundHint": "Jekk jogħġbok iċċekkja l-kodiċi ta' aċċess tiegħek. Il-ittri kbar u żgħar jiġu injorati.",
+    "retry": "Erġa' pprova",
+    "tokenForm": {
+      "heading": "Segwi r-rapport",
+      "subtext": "Daħħal il-kodiċi ta' aċċess biex tara l-istatus tar-rapport u taqra l-messaġġi.",
+      "label": "Kodiċi ta' aċċess",
+      "placeholder": "pereż. WOLF-7342-BLUU",
+      "submit": "Uri l-istatus"
+    },
+    "report": {
+      "received": "Riċevut:",
+      "confirmed": "Ir-riċezzjoni ġiet ikkonfermata {date} (il-limitu legali ta' 7 ijiem ġie rispettat)",
+      "pendingConfirmation": "Konferma tar-riċezzjoni mistennija (limitu legali: 7 ijiem minn meta ntbagħat)"
+    },
+    "messages": {
+      "heading": "Komunikazzjoni mat-tim tal-konformità",
+      "empty": "Għadha ma waslet l-ebda messaġġ. It-tim tal-konformità se jikkuntattjak jekk meħtieġ.",
+      "senderCompliance": "Tim tal-konformità",
+      "senderMelder": "Inti (anonimu)",
+      "replyLabel": "Ibgħat messaġġ lit-tim tal-konformità:",
+      "replyPlaceholder": "Il-messaġġ tiegħek lit-tim tal-konformità …",
+      "closed": "Dan ir-rapport huwa magħluq. Ma jistgħux jintbagħtu aktar messaġġi.",
+      "send": "Ibgħat messaġġ",
+      "sending": "Qiegħed jintbagħat …",
+      "errorSend": "Żball fl-invio",
+      "privacy": "Il-messaġġi kollha huma kriptjati minn tarf sa tarf. L-ebda traċċar, l-ebda cookies."
+    },
+    "statusLabels": { "neu": "Riċevut", "in_bearbeitung": "Taħt eżami", "abgeschlossen": "Magħluq" }
+  },
+  "dashboard": {
+    "title": "Rapporti",
+    "stats": { "total": "Total", "new": "Ġdid", "inProgress": "Taħt eżami", "overdue": "Skadut" },
+    "filter": { "all": "Kollha", "new": "Ġdid", "inProgress": "Taħt eżami", "done": "Magħluq", "overdue": "Skadut" },
+    "list": { "empty": "Ma nstab l-ebda rapport.", "received": "Riċevut:", "token": "Token:", "newMessages": "{n} ġdid" },
+    "deadline": { "confirmation": "Konferma:", "response": "Tweġiba:", "overdueN": "{n}j skadut", "daysLeft": "{n}j" },
+    "detail": {
+      "back": "← Lura għall-ħarsa ġenerali", "content": "Kontenut tar-rapport", "deadlines": "Limiti legali (HinSchG)",
+      "confirmDeadline": "Konferma tar-riċezzjoni (7 ijiem)", "responseDeadline": "Tweġiba (3 xhur)", "statusLabel": "Status",
+      "confirmedOn": "✓ {date}", "overdueN": "{n}j skadut", "daysLeft": "għad {n}j (sa {date})",
+      "noMessages": "Għadha ma waslet l-ebda messaġġ.", "senderCompliance": "Konformità", "senderMelder": "Rapportatur (anonimu)",
+      "replyLabel": "Tweġiba lir-rapportatur (kriptjata kompletament):", "replyPlaceholder": "It-tweġiba tiegħek lir-rapportatur …",
+      "send": "Ibgħat tweġiba", "sending": "Qiegħed jintbagħat …", "errorSend": "Żball fl-invio", "communication": "Komunikazzjoni", "messagesCount": "{n} messaġġi"
+    },
+    "actions": { "heading": "Status u limiti", "current": "Attwali:", "confirm": "Ikkonferma r-riċezzjoni (limitu HinSchG ta' 7 ijiem)", "confirmedOn": "Riċezzjoni kkonfermata {date}", "errorSave": "Żball fis-salvataġġ" },
+    "statusLabels": { "neu": "Ġdid", "in_bearbeitung": "Taħt eżami", "abgeschlossen": "Magħluq" },
+    "nav": { "logout": "Oħroġ" }
+  }
+}

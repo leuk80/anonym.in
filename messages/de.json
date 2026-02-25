@@ -1,0 +1,144 @@
+{
+  "portal": {
+    "unavailable": "Dieser Meldekanal ist derzeit nicht verfügbar.",
+    "channelSubtitle": "Anonymer Compliance-Meldekanal",
+    "alreadyReported": "Meldung bereits eingereicht?",
+    "checkStatus": "Status prüfen",
+    "form": {
+      "heading": "Meldung einreichen",
+      "intro": "Ihre Meldung wird vollständig verschlüsselt und anonym übermittelt an {orgName}.",
+      "category": "Kategorie",
+      "categoryPlaceholder": "Bitte wählen …",
+      "title": "Kurzbeschreibung",
+      "titlePlaceholder": "Worum geht es in Kürze?",
+      "description": "Detaillierte Beschreibung",
+      "descriptionPlaceholder": "Beschreiben Sie den Sachverhalt so detailliert wie möglich. Was ist passiert? Wann? Wer war beteiligt?",
+      "submit": "Meldung anonym einreichen",
+      "submitting": "Wird übermittelt …",
+      "error": "Fehler beim Einreichen",
+      "privacy": "Datenschutz: Es werden keine IP-Adressen, E-Mail-Adressen oder sonstigen personenbezogenen Daten gespeichert. Die Meldung wird mit AES-256-GCM verschlüsselt. Keine Tracking-Cookies auf dieser Seite."
+    },
+    "success": {
+      "heading": "Meldung eingereicht",
+      "subtext": "Ihre Meldung wurde sicher übermittelt und wird vertraulich bearbeitet.",
+      "tokenLabel": "Ihr persönlicher Zugangscode",
+      "copy": "Kopieren",
+      "copied": "✓ Kopiert",
+      "savePdf": "PDF speichern",
+      "warningTitle": "Wichtig – bitte notieren Sie diesen Code:",
+      "warning1": "Dies ist der einzige Weg, Ihre Meldung wieder aufzurufen",
+      "warning2": "Er ermöglicht Ihnen, Antworten des Compliance-Teams zu lesen",
+      "warning3": "Er wird nicht gespeichert und kann nicht wiederhergestellt werden",
+      "trackLink": "Meldung verfolgen"
+    },
+    "categories": {
+      "korruption": "Korruption & Bestechung",
+      "betrug": "Betrug & Untreue",
+      "datenschutz": "Datenschutzverletzung",
+      "diskriminierung": "Diskriminierung & Belästigung",
+      "sicherheit": "Arbeits- & Produktsicherheit",
+      "sonstiges": "Sonstiges"
+    }
+  },
+  "status": {
+    "pageSubtitle": "Compliance-Meldekanal – Meldungsstatus",
+    "newReport": "Neue Meldung einreichen",
+    "notFound": "Meldung nicht gefunden",
+    "notFoundHint": "Bitte prüfen Sie Ihren Zugangscode. Groß-/Kleinschreibung wird ignoriert.",
+    "retry": "Erneut versuchen",
+    "tokenForm": {
+      "heading": "Meldung verfolgen",
+      "subtext": "Geben Sie Ihren Zugangscode ein, um den Status Ihrer Meldung zu sehen und Nachrichten zu lesen.",
+      "label": "Zugangscode",
+      "placeholder": "z.B. WOLF-7342-BLAU",
+      "submit": "Status anzeigen"
+    },
+    "report": {
+      "received": "Eingegangen:",
+      "confirmed": "Eingang bestätigt am {date} (gesetzliche 7-Tage-Frist eingehalten)",
+      "pendingConfirmation": "Eingangsbestätigung ausstehend (gesetzliche Frist: 7 Tage ab Eingang)"
+    },
+    "messages": {
+      "heading": "Kommunikation mit dem Compliance-Team",
+      "empty": "Noch keine Nachrichten. Das Compliance-Team wird sich bei Bedarf melden.",
+      "senderCompliance": "Compliance-Team",
+      "senderMelder": "Sie (anonym)",
+      "replyLabel": "Nachricht an das Compliance-Team senden:",
+      "replyPlaceholder": "Ihre Nachricht an das Compliance-Team …",
+      "closed": "Diese Meldung ist abgeschlossen. Keine weiteren Nachrichten möglich.",
+      "send": "Nachricht senden",
+      "sending": "Wird gesendet …",
+      "errorSend": "Fehler beim Senden",
+      "privacy": "Alle Nachrichten sind Ende-zu-Ende-verschlüsselt. Kein Tracking, keine Cookies."
+    },
+    "statusLabels": {
+      "neu": "Eingegangen",
+      "in_bearbeitung": "In Bearbeitung",
+      "abgeschlossen": "Abgeschlossen"
+    }
+  },
+  "dashboard": {
+    "title": "Meldungen",
+    "stats": {
+      "total": "Gesamt",
+      "new": "Neu",
+      "inProgress": "In Bearbeitung",
+      "overdue": "Überfällig"
+    },
+    "filter": {
+      "all": "Alle",
+      "new": "Neu",
+      "inProgress": "In Bearbeitung",
+      "done": "Abgeschlossen",
+      "overdue": "Überfällig"
+    },
+    "list": {
+      "empty": "Keine Meldungen gefunden.",
+      "received": "Eingegangen:",
+      "token": "Token:",
+      "newMessages": "{n} neu"
+    },
+    "deadline": {
+      "confirmation": "Bestätigung:",
+      "response": "Rückmeldung:",
+      "overdueN": "{n}d überfällig",
+      "daysLeft": "{n}d"
+    },
+    "detail": {
+      "back": "← Zurück zur Übersicht",
+      "content": "Meldungsinhalt",
+      "deadlines": "Gesetzliche Fristen (HinSchG)",
+      "confirmDeadline": "Eingangsbestätigung (7 Tage)",
+      "responseDeadline": "Rückmeldung (3 Monate)",
+      "statusLabel": "Status",
+      "confirmedOn": "✓ {date}",
+      "overdueN": "{n}d überfällig",
+      "daysLeft": "noch {n}d (bis {date})",
+      "noMessages": "Noch keine Nachrichten.",
+      "senderCompliance": "Compliance",
+      "senderMelder": "Melder (anonym)",
+      "replyLabel": "Antwort an den Melder (vollständig verschlüsselt):",
+      "replyPlaceholder": "Ihre Antwort an den Melder …",
+      "send": "Antwort senden",
+      "sending": "Wird gesendet …",
+      "errorSend": "Fehler beim Senden",
+      "communication": "Kommunikation",
+      "messagesCount": "{n} Nachrichten"
+    },
+    "actions": {
+      "heading": "Status & Fristen",
+      "current": "Aktuell:",
+      "confirm": "Eingang bestätigen (HinSchG 7-Tage-Frist)",
+      "confirmedOn": "Eingang bestätigt am {date}",
+      "errorSave": "Fehler beim Speichern"
+    },
+    "statusLabels": {
+      "neu": "Neu",
+      "in_bearbeitung": "In Bearbeitung",
+      "abgeschlossen": "Abgeschlossen"
+    },
+    "nav": {
+      "logout": "Abmelden"
+    }
+  }
+}

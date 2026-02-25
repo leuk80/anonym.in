@@ -1,0 +1,94 @@
+{
+  "portal": {
+    "unavailable": "Acest canal de raportare nu este disponibil în prezent.",
+    "channelSubtitle": "Canal anonim de raportare a conformității",
+    "alreadyReported": "Ați trimis deja o raportare?",
+    "checkStatus": "Verificați statusul",
+    "form": {
+      "heading": "Trimiteți o raportare",
+      "intro": "Raportarea dvs. va fi complet criptată și transmisă anonim către {orgName}.",
+      "category": "Categorie",
+      "categoryPlaceholder": "Vă rugăm să selectați …",
+      "title": "Descriere scurtă",
+      "titlePlaceholder": "Despre ce este vorba?",
+      "description": "Descriere detaliată",
+      "descriptionPlaceholder": "Descrieți situația cât mai detaliat posibil. Ce s-a întâmplat? Când? Cine a fost implicat?",
+      "submit": "Trimite raportarea anonim",
+      "submitting": "Se trimite …",
+      "error": "Eroare la trimiterea raportării",
+      "privacy": "Confidențialitate: Nu sunt stocate adrese IP, adrese de e-mail sau alte date personale. Raportarea este criptată cu AES-256-GCM. Niciun cookie de urmărire pe această pagină."
+    },
+    "success": {
+      "heading": "Raportare trimisă",
+      "subtext": "Raportarea dvs. a fost transmisă în siguranță și va fi tratată confidențial.",
+      "tokenLabel": "Codul dvs. personal de acces",
+      "copy": "Copiați",
+      "copied": "✓ Copiat",
+      "savePdf": "Salvați PDF",
+      "warningTitle": "Important – notați acest cod:",
+      "warning1": "Acesta este singurul mod de a accesa din nou raportarea dvs.",
+      "warning2": "Vă permite să citiți răspunsurile echipei de conformitate",
+      "warning3": "Nu este stocat și nu poate fi recuperat",
+      "trackLink": "Urmăriți raportarea"
+    },
+    "categories": {
+      "korruption": "Corupție și mită",
+      "betrug": "Fraudă și delapidare",
+      "datenschutz": "Încălcarea protecției datelor",
+      "diskriminierung": "Discriminare și hărțuire",
+      "sicherheit": "Siguranța muncii și a produselor",
+      "sonstiges": "Altele"
+    }
+  },
+  "status": {
+    "pageSubtitle": "Canal de conformitate – Statusul raportării",
+    "newReport": "Trimiteți o nouă raportare",
+    "notFound": "Raportare negăsită",
+    "notFoundHint": "Verificați codul dvs. de acces. Majusculele și minusculele sunt ignorate.",
+    "retry": "Încercați din nou",
+    "tokenForm": {
+      "heading": "Urmăriți raportarea",
+      "subtext": "Introduceți codul de acces pentru a vedea statusul raportării și a citi mesajele.",
+      "label": "Cod de acces",
+      "placeholder": "ex. WOLF-7342-ALBASTRU",
+      "submit": "Afișați statusul"
+    },
+    "report": {
+      "received": "Primită:",
+      "confirmed": "Primire confirmată la {date} (termenul legal de 7 zile respectat)",
+      "pendingConfirmation": "Confirmare de primire în așteptare (termen legal: 7 zile de la primire)"
+    },
+    "messages": {
+      "heading": "Comunicare cu echipa de conformitate",
+      "empty": "Niciun mesaj încă. Echipa de conformitate vă va contacta dacă este necesar.",
+      "senderCompliance": "Echipa de conformitate",
+      "senderMelder": "Dvs. (anonim)",
+      "replyLabel": "Trimiteți un mesaj echipei de conformitate:",
+      "replyPlaceholder": "Mesajul dvs. pentru echipa de conformitate …",
+      "closed": "Această raportare este închisă. Nu mai sunt posibile alte mesaje.",
+      "send": "Trimiteți mesajul",
+      "sending": "Se trimite …",
+      "errorSend": "Eroare la trimitere",
+      "privacy": "Toate mesajele sunt criptate end-to-end. Fără urmărire, fără cookie-uri."
+    },
+    "statusLabels": { "neu": "Primită", "in_bearbeitung": "În curs", "abgeschlossen": "Închisă" }
+  },
+  "dashboard": {
+    "title": "Raportări",
+    "stats": { "total": "Total", "new": "Nouă", "inProgress": "În curs", "overdue": "Depășit" },
+    "filter": { "all": "Toate", "new": "Nouă", "inProgress": "În curs", "done": "Închisă", "overdue": "Depășit" },
+    "list": { "empty": "Nu s-au găsit raportări.", "received": "Primită:", "token": "Token:", "newMessages": "{n} nouă" },
+    "deadline": { "confirmation": "Confirmare:", "response": "Răspuns:", "overdueN": "{n}z depășit", "daysLeft": "{n}z" },
+    "detail": {
+      "back": "← Înapoi la prezentare generală", "content": "Conținutul raportării", "deadlines": "Termene legale (HinSchG)",
+      "confirmDeadline": "Confirmare de primire (7 zile)", "responseDeadline": "Răspuns (3 luni)", "statusLabel": "Status",
+      "confirmedOn": "✓ {date}", "overdueN": "{n}z depășit", "daysLeft": "încă {n}z (până la {date})",
+      "noMessages": "Niciun mesaj încă.", "senderCompliance": "Conformitate", "senderMelder": "Reclamant (anonim)",
+      "replyLabel": "Răspuns reclamantului (complet criptat):", "replyPlaceholder": "Răspunsul dvs. reclamantului …",
+      "send": "Trimiteți răspunsul", "sending": "Se trimite …", "errorSend": "Eroare la trimitere", "communication": "Comunicare", "messagesCount": "{n} mesaje"
+    },
+    "actions": { "heading": "Status și termene", "current": "Curent:", "confirm": "Confirmați primirea (termenul HinSchG de 7 zile)", "confirmedOn": "Primire confirmată la {date}", "errorSave": "Eroare la salvare" },
+    "statusLabels": { "neu": "Nouă", "in_bearbeitung": "În curs", "abgeschlossen": "Închisă" },
+    "nav": { "logout": "Deconectare" }
+  }
+}

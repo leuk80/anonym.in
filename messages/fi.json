@@ -1,0 +1,94 @@
+{
+  "portal": {
+    "unavailable": "Tämä ilmoituskanava ei ole tällä hetkellä käytettävissä.",
+    "channelSubtitle": "Anonyymi vaatimustenmukaisuuden ilmoituskanava",
+    "alreadyReported": "Oletko jo lähettänyt ilmoituksen?",
+    "checkStatus": "Tarkista tila",
+    "form": {
+      "heading": "Tee ilmoitus",
+      "intro": "Ilmoituksesi salataan täysin ja lähetetään nimettömästi organisaatiolle {orgName}.",
+      "category": "Kategoria",
+      "categoryPlaceholder": "Valitse …",
+      "title": "Lyhyt kuvaus",
+      "titlePlaceholder": "Mistä on kyse?",
+      "description": "Yksityiskohtainen kuvaus",
+      "descriptionPlaceholder": "Kuvaile tapaus mahdollisimman yksityiskohtaisesti. Mitä tapahtui? Milloin? Kuka oli osallisena?",
+      "submit": "Lähetä ilmoitus nimettömästi",
+      "submitting": "Lähetetään …",
+      "error": "Virhe ilmoituksen lähettämisessä",
+      "privacy": "Tietosuoja: IP-osoitteita, sähköpostiosoitteita tai muita henkilötietoja ei tallenneta. Ilmoitus salataan AES-256-GCM-menetelmällä. Ei seurantaevästeitä tällä sivulla."
+    },
+    "success": {
+      "heading": "Ilmoitus lähetetty",
+      "subtext": "Ilmoituksesi on lähetetty turvallisesti ja sitä käsitellään luottamuksellisesti.",
+      "tokenLabel": "Henkilökohtainen pääsykoodisi",
+      "copy": "Kopioi",
+      "copied": "✓ Kopioitu",
+      "savePdf": "Tallenna PDF",
+      "warningTitle": "Tärkeää – kirjoita tämä koodi muistiin:",
+      "warning1": "Tämä on ainoa tapa päästä ilmoitukseesi uudelleen",
+      "warning2": "Sen avulla voit lukea vaatimustenmukaisuustiimin vastauksia",
+      "warning3": "Sitä ei tallenneta eikä sitä voida palauttaa",
+      "trackLink": "Seuraa ilmoitusta"
+    },
+    "categories": {
+      "korruption": "Korruptio ja lahjonta",
+      "betrug": "Petos ja kavallus",
+      "datenschutz": "Tietosuojarikkomus",
+      "diskriminierung": "Syrjintä ja häirintä",
+      "sicherheit": "Työ- ja tuoteturvallisuus",
+      "sonstiges": "Muu"
+    }
+  },
+  "status": {
+    "pageSubtitle": "Vaatimustenmukaisuuskanava – Ilmoituksen tila",
+    "newReport": "Tee uusi ilmoitus",
+    "notFound": "Ilmoitusta ei löydy",
+    "notFoundHint": "Tarkista pääsykoodisi. Isot ja pienet kirjaimet ohitetaan.",
+    "retry": "Yritä uudelleen",
+    "tokenForm": {
+      "heading": "Seuraa ilmoitusta",
+      "subtext": "Syötä pääsykoodisi nähdäksesi ilmoituksesi tilan ja lukemaan viestejä.",
+      "label": "Pääsykoodi",
+      "placeholder": "esim. WOLF-7342-SININEN",
+      "submit": "Näytä tila"
+    },
+    "report": {
+      "received": "Vastaanotettu:",
+      "confirmed": "Vastaanotto vahvistettu {date} (lain mukainen 7 päivän määräaika täytetty)",
+      "pendingConfirmation": "Vastaanoton vahvistus odottaa (lain mukainen määräaika: 7 päivää vastaanottamisesta)"
+    },
+    "messages": {
+      "heading": "Viestintä vaatimustenmukaisuustiimin kanssa",
+      "empty": "Ei viestejä vielä. Vaatimustenmukaisuustiimi ottaa sinuun yhteyttä tarvittaessa.",
+      "senderCompliance": "Vaatimustenmukaisuustiimi",
+      "senderMelder": "Sinä (anonyymi)",
+      "replyLabel": "Lähetä viesti vaatimustenmukaisuustiimille:",
+      "replyPlaceholder": "Viestisi vaatimustenmukaisuustiimille …",
+      "closed": "Tämä ilmoitus on suljettu. Lisäviestien lähettäminen ei ole mahdollista.",
+      "send": "Lähetä viesti",
+      "sending": "Lähetetään …",
+      "errorSend": "Virhe lähettämisessä",
+      "privacy": "Kaikki viestit ovat päästä päähän salattuja. Ei seurantaa, ei evästeitä."
+    },
+    "statusLabels": { "neu": "Vastaanotettu", "in_bearbeitung": "Käsittelyssä", "abgeschlossen": "Suljettu" }
+  },
+  "dashboard": {
+    "title": "Ilmoitukset",
+    "stats": { "total": "Yhteensä", "new": "Uusi", "inProgress": "Käsittelyssä", "overdue": "Myöhässä" },
+    "filter": { "all": "Kaikki", "new": "Uusi", "inProgress": "Käsittelyssä", "done": "Suljettu", "overdue": "Myöhässä" },
+    "list": { "empty": "Ilmoituksia ei löydy.", "received": "Vastaanotettu:", "token": "Tunnus:", "newMessages": "{n} uusi" },
+    "deadline": { "confirmation": "Vahvistus:", "response": "Vastaus:", "overdueN": "{n}pv myöhässä", "daysLeft": "{n}pv" },
+    "detail": {
+      "back": "← Takaisin yleiskatsaukseen", "content": "Ilmoituksen sisältö", "deadlines": "Lakisääteiset määräajat (HinSchG)",
+      "confirmDeadline": "Vastaanoton vahvistus (7 päivää)", "responseDeadline": "Vastaus (3 kuukautta)", "statusLabel": "Tila",
+      "confirmedOn": "✓ {date}", "overdueN": "{n}pv myöhässä", "daysLeft": "vielä {n}pv ({date} asti)",
+      "noMessages": "Ei viestejä vielä.", "senderCompliance": "Vaatimustenmukaisuus", "senderMelder": "Ilmoittaja (anonyymi)",
+      "replyLabel": "Vastaus ilmoittajalle (täysin salattu):", "replyPlaceholder": "Vastauksesi ilmoittajalle …",
+      "send": "Lähetä vastaus", "sending": "Lähetetään …", "errorSend": "Virhe lähettämisessä", "communication": "Viestintä", "messagesCount": "{n} viestiä"
+    },
+    "actions": { "heading": "Tila ja määräajat", "current": "Nykyinen:", "confirm": "Vahvista vastaanotto (HinSchG 7 päivän määräaika)", "confirmedOn": "Vastaanotto vahvistettu {date}", "errorSave": "Virhe tallentamisessa" },
+    "statusLabels": { "neu": "Uusi", "in_bearbeitung": "Käsittelyssä", "abgeschlossen": "Suljettu" },
+    "nav": { "logout": "Kirjaudu ulos" }
+  }
+}

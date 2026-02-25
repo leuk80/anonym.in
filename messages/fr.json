@@ -1,0 +1,144 @@
+{
+  "portal": {
+    "unavailable": "Ce canal de signalement est actuellement indisponible.",
+    "channelSubtitle": "Canal de signalement anonyme de conformité",
+    "alreadyReported": "Vous avez déjà soumis un signalement ?",
+    "checkStatus": "Vérifier le statut",
+    "form": {
+      "heading": "Soumettre un signalement",
+      "intro": "Votre signalement sera entièrement chiffré et transmis anonymement à {orgName}.",
+      "category": "Catégorie",
+      "categoryPlaceholder": "Veuillez sélectionner …",
+      "title": "Description brève",
+      "titlePlaceholder": "De quoi s'agit-il ?",
+      "description": "Description détaillée",
+      "descriptionPlaceholder": "Décrivez les faits aussi précisément que possible. Que s'est-il passé ? Quand ? Qui était impliqué ?",
+      "submit": "Soumettre le signalement anonymement",
+      "submitting": "Envoi en cours …",
+      "error": "Erreur lors de l'envoi",
+      "privacy": "Confidentialité : Aucune adresse IP, adresse e-mail ou autre donnée personnelle n'est enregistrée. Le signalement est chiffré avec AES-256-GCM. Aucun cookie de suivi sur cette page."
+    },
+    "success": {
+      "heading": "Signalement soumis",
+      "subtext": "Votre signalement a été transmis de manière sécurisée et sera traité de façon confidentielle.",
+      "tokenLabel": "Votre code d'accès personnel",
+      "copy": "Copier",
+      "copied": "✓ Copié",
+      "savePdf": "Enregistrer PDF",
+      "warningTitle": "Important – veuillez noter ce code :",
+      "warning1": "C'est le seul moyen de retrouver votre signalement",
+      "warning2": "Il vous permet de lire les réponses de l'équipe de conformité",
+      "warning3": "Il n'est pas enregistré et ne peut pas être récupéré",
+      "trackLink": "Suivre le signalement"
+    },
+    "categories": {
+      "korruption": "Corruption & Corruption",
+      "betrug": "Fraude & Détournement",
+      "datenschutz": "Violation de la protection des données",
+      "diskriminierung": "Discrimination & Harcèlement",
+      "sicherheit": "Sécurité au travail & des produits",
+      "sonstiges": "Autre"
+    }
+  },
+  "status": {
+    "pageSubtitle": "Canal de conformité – Statut du signalement",
+    "newReport": "Soumettre un nouveau signalement",
+    "notFound": "Signalement introuvable",
+    "notFoundHint": "Veuillez vérifier votre code d'accès. La casse n'est pas prise en compte.",
+    "retry": "Réessayer",
+    "tokenForm": {
+      "heading": "Suivre le signalement",
+      "subtext": "Entrez votre code d'accès pour consulter le statut de votre signalement et lire les messages.",
+      "label": "Code d'accès",
+      "placeholder": "ex. WOLF-7342-BLEU",
+      "submit": "Afficher le statut"
+    },
+    "report": {
+      "received": "Reçu le :",
+      "confirmed": "Réception confirmée le {date} (délai légal de 7 jours respecté)",
+      "pendingConfirmation": "Confirmation de réception en attente (délai légal : 7 jours à compter de la réception)"
+    },
+    "messages": {
+      "heading": "Communication avec l'équipe de conformité",
+      "empty": "Aucun message pour l'instant. L'équipe de conformité vous contactera si nécessaire.",
+      "senderCompliance": "Équipe de conformité",
+      "senderMelder": "Vous (anonyme)",
+      "replyLabel": "Envoyer un message à l'équipe de conformité :",
+      "replyPlaceholder": "Votre message à l'équipe de conformité …",
+      "closed": "Ce signalement est clôturé. Aucun autre message n'est possible.",
+      "send": "Envoyer le message",
+      "sending": "Envoi en cours …",
+      "errorSend": "Erreur lors de l'envoi",
+      "privacy": "Tous les messages sont chiffrés de bout en bout. Aucun suivi, aucun cookie."
+    },
+    "statusLabels": {
+      "neu": "Reçu",
+      "in_bearbeitung": "En cours",
+      "abgeschlossen": "Clôturé"
+    }
+  },
+  "dashboard": {
+    "title": "Signalements",
+    "stats": {
+      "total": "Total",
+      "new": "Nouveau",
+      "inProgress": "En cours",
+      "overdue": "En retard"
+    },
+    "filter": {
+      "all": "Tous",
+      "new": "Nouveau",
+      "inProgress": "En cours",
+      "done": "Clôturé",
+      "overdue": "En retard"
+    },
+    "list": {
+      "empty": "Aucun signalement trouvé.",
+      "received": "Reçu :",
+      "token": "Jeton :",
+      "newMessages": "{n} nouveau(x)"
+    },
+    "deadline": {
+      "confirmation": "Confirmation :",
+      "response": "Réponse :",
+      "overdueN": "{n}j de retard",
+      "daysLeft": "{n}j"
+    },
+    "detail": {
+      "back": "← Retour à la vue d'ensemble",
+      "content": "Contenu du signalement",
+      "deadlines": "Délais légaux (HinSchG)",
+      "confirmDeadline": "Confirmation de réception (7 jours)",
+      "responseDeadline": "Réponse (3 mois)",
+      "statusLabel": "Statut",
+      "confirmedOn": "✓ {date}",
+      "overdueN": "{n}j de retard",
+      "daysLeft": "encore {n}j (jusqu'au {date})",
+      "noMessages": "Aucun message pour l'instant.",
+      "senderCompliance": "Conformité",
+      "senderMelder": "Lanceur d'alerte (anonyme)",
+      "replyLabel": "Réponse au lanceur d'alerte (entièrement chiffrée) :",
+      "replyPlaceholder": "Votre réponse au lanceur d'alerte …",
+      "send": "Envoyer la réponse",
+      "sending": "Envoi en cours …",
+      "errorSend": "Erreur lors de l'envoi",
+      "communication": "Communication",
+      "messagesCount": "{n} messages"
+    },
+    "actions": {
+      "heading": "Statut & Délais",
+      "current": "Actuel :",
+      "confirm": "Confirmer la réception (délai HinSchG 7 jours)",
+      "confirmedOn": "Réception confirmée le {date}",
+      "errorSave": "Erreur lors de l'enregistrement"
+    },
+    "statusLabels": {
+      "neu": "Nouveau",
+      "in_bearbeitung": "En cours",
+      "abgeschlossen": "Clôturé"
+    },
+    "nav": {
+      "logout": "Se déconnecter"
+    }
+  }
+}

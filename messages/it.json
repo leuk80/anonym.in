@@ -1,0 +1,98 @@
+{
+  "portal": {
+    "unavailable": "Questo canale di segnalazione non è attualmente disponibile.",
+    "channelSubtitle": "Canale anonimo di segnalazione di conformità",
+    "alreadyReported": "Hai già inviato una segnalazione?",
+    "checkStatus": "Controlla lo stato",
+    "form": {
+      "heading": "Invia una segnalazione",
+      "intro": "La tua segnalazione sarà completamente cifrata e trasmessa in modo anonimo a {orgName}.",
+      "category": "Categoria",
+      "categoryPlaceholder": "Seleziona …",
+      "title": "Descrizione breve",
+      "titlePlaceholder": "Di cosa si tratta?",
+      "description": "Descrizione dettagliata",
+      "descriptionPlaceholder": "Descrivi i fatti nel modo più dettagliato possibile. Cosa è successo? Quando? Chi era coinvolto?",
+      "submit": "Invia segnalazione in modo anonimo",
+      "submitting": "Invio in corso …",
+      "error": "Errore durante l'invio",
+      "privacy": "Privacy: Non vengono memorizzati indirizzi IP, indirizzi email o altri dati personali. La segnalazione è cifrata con AES-256-GCM. Nessun cookie di tracciamento su questa pagina."
+    },
+    "success": {
+      "heading": "Segnalazione inviata",
+      "subtext": "La tua segnalazione è stata trasmessa in modo sicuro e sarà trattata in modo confidenziale.",
+      "tokenLabel": "Il tuo codice di accesso personale",
+      "copy": "Copia",
+      "copied": "✓ Copiato",
+      "savePdf": "Salva PDF",
+      "warningTitle": "Importante – annota questo codice:",
+      "warning1": "Questo è l'unico modo per recuperare la tua segnalazione",
+      "warning2": "Ti consente di leggere le risposte del team di conformità",
+      "warning3": "Non viene memorizzato e non può essere recuperato",
+      "trackLink": "Segui la segnalazione"
+    },
+    "categories": {
+      "korruption": "Corruzione e concussione",
+      "betrug": "Frode e peculato",
+      "datenschutz": "Violazione della protezione dei dati",
+      "diskriminierung": "Discriminazione e molestie",
+      "sicherheit": "Sicurezza sul lavoro e dei prodotti",
+      "sonstiges": "Altro"
+    }
+  },
+  "status": {
+    "pageSubtitle": "Canale di conformità – Stato della segnalazione",
+    "newReport": "Invia nuova segnalazione",
+    "notFound": "Segnalazione non trovata",
+    "notFoundHint": "Controlla il tuo codice di accesso. Le maiuscole/minuscole vengono ignorate.",
+    "retry": "Riprova",
+    "tokenForm": {
+      "heading": "Segui la segnalazione",
+      "subtext": "Inserisci il codice di accesso per visualizzare lo stato della tua segnalazione e leggere i messaggi.",
+      "label": "Codice di accesso",
+      "placeholder": "es. WOLF-7342-BLU",
+      "submit": "Mostra stato"
+    },
+    "report": {
+      "received": "Ricevuta il:",
+      "confirmed": "Ricezione confermata il {date} (termine legale di 7 giorni rispettato)",
+      "pendingConfirmation": "Conferma di ricezione in attesa (termine legale: 7 giorni dalla ricezione)"
+    },
+    "messages": {
+      "heading": "Comunicazione con il team di conformità",
+      "empty": "Nessun messaggio ancora. Il team di conformità ti contatterà se necessario.",
+      "senderCompliance": "Team di conformità",
+      "senderMelder": "Tu (anonimo)",
+      "replyLabel": "Invia messaggio al team di conformità:",
+      "replyPlaceholder": "Il tuo messaggio al team di conformità …",
+      "closed": "Questa segnalazione è chiusa. Non sono possibili ulteriori messaggi.",
+      "send": "Invia messaggio",
+      "sending": "Invio in corso …",
+      "errorSend": "Errore durante l'invio",
+      "privacy": "Tutti i messaggi sono cifrati end-to-end. Nessun tracciamento, nessun cookie."
+    },
+    "statusLabels": {
+      "neu": "Ricevuta",
+      "in_bearbeitung": "In lavorazione",
+      "abgeschlossen": "Chiusa"
+    }
+  },
+  "dashboard": {
+    "title": "Segnalazioni",
+    "stats": { "total": "Totale", "new": "Nuova", "inProgress": "In lavorazione", "overdue": "Scaduta" },
+    "filter": { "all": "Tutte", "new": "Nuova", "inProgress": "In lavorazione", "done": "Chiusa", "overdue": "Scaduta" },
+    "list": { "empty": "Nessuna segnalazione trovata.", "received": "Ricevuta:", "token": "Token:", "newMessages": "{n} nuova/e" },
+    "deadline": { "confirmation": "Conferma:", "response": "Risposta:", "overdueN": "{n}g scaduta", "daysLeft": "{n}g" },
+    "detail": {
+      "back": "← Torna alla panoramica", "content": "Contenuto della segnalazione", "deadlines": "Termini legali (HinSchG)",
+      "confirmDeadline": "Conferma di ricezione (7 giorni)", "responseDeadline": "Risposta (3 mesi)", "statusLabel": "Stato",
+      "confirmedOn": "✓ {date}", "overdueN": "{n}g scaduta", "daysLeft": "ancora {n}g (fino al {date})",
+      "noMessages": "Nessun messaggio ancora.", "senderCompliance": "Conformità", "senderMelder": "Segnalante (anonimo)",
+      "replyLabel": "Risposta al segnalante (completamente cifrata):", "replyPlaceholder": "La tua risposta al segnalante …",
+      "send": "Invia risposta", "sending": "Invio in corso …", "errorSend": "Errore durante l'invio", "communication": "Comunicazione", "messagesCount": "{n} messaggi"
+    },
+    "actions": { "heading": "Stato e termini", "current": "Attuale:", "confirm": "Conferma ricezione (termine HinSchG 7 giorni)", "confirmedOn": "Ricezione confermata il {date}", "errorSave": "Errore durante il salvataggio" },
+    "statusLabels": { "neu": "Nuova", "in_bearbeitung": "In lavorazione", "abgeschlossen": "Chiusa" },
+    "nav": { "logout": "Disconnetti" }
+  }
+}

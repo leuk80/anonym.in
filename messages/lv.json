@@ -1,0 +1,94 @@
+{
+  "portal": {
+    "unavailable": "Šis ziņošanas kanāls pašlaik nav pieejams.",
+    "channelSubtitle": "Anonīms ziņošanas kanāls atbilstībai",
+    "alreadyReported": "Jau iesniedzāt ziņojumu?",
+    "checkStatus": "Pārbaudīt statusu",
+    "form": {
+      "heading": "Iesniegt ziņojumu",
+      "intro": "Jūsu ziņojums tiks pilnībā šifrēts un anonīmi nosūtīts {orgName}.",
+      "category": "Kategorija",
+      "categoryPlaceholder": "Lūdzu, atlasiet …",
+      "title": "Īss apraksts",
+      "titlePlaceholder": "Par ko ir runa?",
+      "description": "Detalizēts apraksts",
+      "descriptionPlaceholder": "Aprakstiet situāciju pēc iespējas detalizētāk. Kas notika? Kad? Kas bija iesaistīts?",
+      "submit": "Iesniegt ziņojumu anonīmi",
+      "submitting": "Nosūtīšana …",
+      "error": "Kļūda ziņojuma iesniegšanā",
+      "privacy": "Privātums: Netiek saglabātas IP adreses, e-pasta adreses vai citi personas dati. Ziņojums tiek šifrēts ar AES-256-GCM. Nav izsekošanas sīkdatņu šajā lapā."
+    },
+    "success": {
+      "heading": "Ziņojums iesniegts",
+      "subtext": "Jūsu ziņojums tika droši nosūtīts un tiks apstrādāts konfidenciāli.",
+      "tokenLabel": "Jūsu personīgais piekļuves kods",
+      "copy": "Kopēt",
+      "copied": "✓ Nokopēts",
+      "savePdf": "Saglabāt PDF",
+      "warningTitle": "Svarīgi – pierakstiet šo kodu:",
+      "warning1": "Tas ir vienīgais veids, kā atkārtoti piekļūt savam ziņojumam",
+      "warning2": "Tas ļauj lasīt atbilstības komandas atbildes",
+      "warning3": "Tas netiek saglabāts un to nevar atjaunot",
+      "trackLink": "Sekot ziņojumam"
+    },
+    "categories": {
+      "korruption": "Korupcija un kukuļošana",
+      "betrug": "Krāpšana un piesavināšanās",
+      "datenschutz": "Datu aizsardzības pārkāpums",
+      "diskriminierung": "Diskriminācija un uzmākšanās",
+      "sicherheit": "Darba un produktu drošība",
+      "sonstiges": "Cits"
+    }
+  },
+  "status": {
+    "pageSubtitle": "Atbilstības kanāls – Ziņojuma statuss",
+    "newReport": "Iesniegt jaunu ziņojumu",
+    "notFound": "Ziņojums nav atrasts",
+    "notFoundHint": "Lūdzu, pārbaudiet savu piekļuves kodu. Lielie un mazie burti tiek ignorēti.",
+    "retry": "Mēģināt vēlreiz",
+    "tokenForm": {
+      "heading": "Sekot ziņojumam",
+      "subtext": "Ievadiet piekļuves kodu, lai skatītu ziņojuma statusu un lasītu ziņas.",
+      "label": "Piekļuves kods",
+      "placeholder": "piem. WOLF-7342-ZILS",
+      "submit": "Parādīt statusu"
+    },
+    "report": {
+      "received": "Saņemts:",
+      "confirmed": "Saņemšana apstiprināta {date} (likumā noteiktais 7 dienu termiņš ievērots)",
+      "pendingConfirmation": "Saņemšanas apstiprinājums gaida (likumā noteiktais termiņš: 7 dienas no saņemšanas)"
+    },
+    "messages": {
+      "heading": "Saziņa ar atbilstības komandu",
+      "empty": "Ziņu vēl nav. Atbilstības komanda sazināsies, ja nepieciešams.",
+      "senderCompliance": "Atbilstības komanda",
+      "senderMelder": "Jūs (anonīmi)",
+      "replyLabel": "Nosūtīt ziņu atbilstības komandai:",
+      "replyPlaceholder": "Jūsu ziņa atbilstības komandai …",
+      "closed": "Šis ziņojums ir slēgts. Turpmākas ziņas nav iespējams nosūtīt.",
+      "send": "Nosūtīt ziņu",
+      "sending": "Nosūtīšana …",
+      "errorSend": "Kļūda nosūtīšanā",
+      "privacy": "Visas ziņas ir šifrētas no gala līdz galam. Nav izsekošanas, nav sīkdatņu."
+    },
+    "statusLabels": { "neu": "Saņemts", "in_bearbeitung": "Tiek apstrādāts", "abgeschlossen": "Slēgts" }
+  },
+  "dashboard": {
+    "title": "Ziņojumi",
+    "stats": { "total": "Kopā", "new": "Jauns", "inProgress": "Tiek apstrādāts", "overdue": "Nokavēts" },
+    "filter": { "all": "Visi", "new": "Jauns", "inProgress": "Tiek apstrādāts", "done": "Slēgts", "overdue": "Nokavēts" },
+    "list": { "empty": "Ziņojumi nav atrasti.", "received": "Saņemts:", "token": "Tokens:", "newMessages": "{n} jauns" },
+    "deadline": { "confirmation": "Apstiprinājums:", "response": "Atbilde:", "overdueN": "{n}d nokavēts", "daysLeft": "{n}d" },
+    "detail": {
+      "back": "← Atpakaļ uz pārskatu", "content": "Ziņojuma saturs", "deadlines": "Likumā noteiktie termiņi (HinSchG)",
+      "confirmDeadline": "Saņemšanas apstiprinājums (7 dienas)", "responseDeadline": "Atbilde (3 mēneši)", "statusLabel": "Statuss",
+      "confirmedOn": "✓ {date}", "overdueN": "{n}d nokavēts", "daysLeft": "vēl {n}d (līdz {date})",
+      "noMessages": "Ziņu vēl nav.", "senderCompliance": "Atbilstība", "senderMelder": "Ziņotājs (anonīmi)",
+      "replyLabel": "Atbilde ziņotājam (pilnībā šifrēta):", "replyPlaceholder": "Jūsu atbilde ziņotājam …",
+      "send": "Nosūtīt atbildi", "sending": "Nosūtīšana …", "errorSend": "Kļūda nosūtīšanā", "communication": "Saziņa", "messagesCount": "{n} ziņas"
+    },
+    "actions": { "heading": "Statuss un termiņi", "current": "Pašreizējais:", "confirm": "Apstiprināt saņemšanu (HinSchG 7 dienu termiņš)", "confirmedOn": "Saņemšana apstiprināta {date}", "errorSave": "Kļūda saglabāšanā" },
+    "statusLabels": { "neu": "Jauns", "in_bearbeitung": "Tiek apstrādāts", "abgeschlossen": "Slēgts" },
+    "nav": { "logout": "Izrakstīties" }
+  }
+}

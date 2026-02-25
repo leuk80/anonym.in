@@ -1,0 +1,94 @@
+{
+  "portal": {
+    "unavailable": "Denna rapporteringskanal är för närvarande inte tillgänglig.",
+    "channelSubtitle": "Anonym kanal för efterlevnadsrapportering",
+    "alreadyReported": "Har du redan skickat in en rapport?",
+    "checkStatus": "Kontrollera status",
+    "form": {
+      "heading": "Skicka en rapport",
+      "intro": "Din rapport kommer att krypteras fullständigt och skickas anonymt till {orgName}.",
+      "category": "Kategori",
+      "categoryPlaceholder": "Välj …",
+      "title": "Kort beskrivning",
+      "titlePlaceholder": "Vad handlar det om?",
+      "description": "Detaljerad beskrivning",
+      "descriptionPlaceholder": "Beskriv händelsen så detaljerat som möjligt. Vad hände? När? Vem var inblandad?",
+      "submit": "Skicka rapport anonymt",
+      "submitting": "Skickar …",
+      "error": "Fel vid inlämning av rapport",
+      "privacy": "Integritet: Inga IP-adresser, e-postadresser eller andra personuppgifter lagras. Rapporten krypteras med AES-256-GCM. Inga spårningscookies på denna sida."
+    },
+    "success": {
+      "heading": "Rapport inskickad",
+      "subtext": "Din rapport har skickats på ett säkert sätt och kommer att hanteras konfidentiellt.",
+      "tokenLabel": "Din personliga åtkomstkod",
+      "copy": "Kopiera",
+      "copied": "✓ Kopierat",
+      "savePdf": "Spara PDF",
+      "warningTitle": "Viktigt – notera denna kod:",
+      "warning1": "Det här är det enda sättet att komma åt din rapport igen",
+      "warning2": "Det låter dig läsa svar från efterlevnadsteamet",
+      "warning3": "Den lagras inte och kan inte återställas",
+      "trackLink": "Följ rapport"
+    },
+    "categories": {
+      "korruption": "Korruption och mutor",
+      "betrug": "Bedrägeri och förskingring",
+      "datenschutz": "Dataskyddsöverträdelse",
+      "diskriminierung": "Diskriminering och trakasserier",
+      "sicherheit": "Arbets- och produktsäkerhet",
+      "sonstiges": "Övrigt"
+    }
+  },
+  "status": {
+    "pageSubtitle": "Efterlevnadskanal – Rapportstatus",
+    "newReport": "Skicka ny rapport",
+    "notFound": "Rapport hittades inte",
+    "notFoundHint": "Kontrollera din åtkomstkod. Stor och liten bokstav ignoreras.",
+    "retry": "Försök igen",
+    "tokenForm": {
+      "heading": "Följ rapport",
+      "subtext": "Ange din åtkomstkod för att se status för din rapport och läsa meddelanden.",
+      "label": "Åtkomstkod",
+      "placeholder": "t.ex. WOLF-7342-BLÅ",
+      "submit": "Visa status"
+    },
+    "report": {
+      "received": "Mottagen:",
+      "confirmed": "Mottagning bekräftad {date} (lagstadgad 7-dagarsfristen uppfylld)",
+      "pendingConfirmation": "Mottagningsbekräftelse väntar (lagstadgad frist: 7 dagar från mottagandet)"
+    },
+    "messages": {
+      "heading": "Kommunikation med efterlevnadsteamet",
+      "empty": "Inga meddelanden ännu. Efterlevnadsteamet kontaktar dig vid behov.",
+      "senderCompliance": "Efterlevnadsteamet",
+      "senderMelder": "Du (anonym)",
+      "replyLabel": "Skicka meddelande till efterlevnadsteamet:",
+      "replyPlaceholder": "Ditt meddelande till efterlevnadsteamet …",
+      "closed": "Denna rapport är stängd. Inga fler meddelanden är möjliga.",
+      "send": "Skicka meddelande",
+      "sending": "Skickar …",
+      "errorSend": "Fel vid sändning",
+      "privacy": "Alla meddelanden är krypterade från ände till ände. Ingen spårning, inga cookies."
+    },
+    "statusLabels": { "neu": "Mottagen", "in_bearbeitung": "Pågår", "abgeschlossen": "Stängd" }
+  },
+  "dashboard": {
+    "title": "Rapporter",
+    "stats": { "total": "Totalt", "new": "Ny", "inProgress": "Pågår", "overdue": "Försenad" },
+    "filter": { "all": "Alla", "new": "Ny", "inProgress": "Pågår", "done": "Stängd", "overdue": "Försenad" },
+    "list": { "empty": "Inga rapporter hittades.", "received": "Mottagen:", "token": "Token:", "newMessages": "{n} ny(a)" },
+    "deadline": { "confirmation": "Bekräftelse:", "response": "Svar:", "overdueN": "{n}d försenad", "daysLeft": "{n}d" },
+    "detail": {
+      "back": "← Tillbaka till översikten", "content": "Rapportinnehåll", "deadlines": "Lagstadgade frister (HinSchG)",
+      "confirmDeadline": "Mottagningsbekräftelse (7 dagar)", "responseDeadline": "Svar (3 månader)", "statusLabel": "Status",
+      "confirmedOn": "✓ {date}", "overdueN": "{n}d försenad", "daysLeft": "ännu {n}d (till {date})",
+      "noMessages": "Inga meddelanden ännu.", "senderCompliance": "Efterlevnad", "senderMelder": "Visselblåsare (anonym)",
+      "replyLabel": "Svar till visselblåsaren (fullständigt krypterat):", "replyPlaceholder": "Ditt svar till visselblåsaren …",
+      "send": "Skicka svar", "sending": "Skickar …", "errorSend": "Fel vid sändning", "communication": "Kommunikation", "messagesCount": "{n} meddelanden"
+    },
+    "actions": { "heading": "Status och frister", "current": "Aktuell:", "confirm": "Bekräfta mottagande (HinSchG 7-dagarsfrist)", "confirmedOn": "Mottagning bekräftad {date}", "errorSave": "Fel vid sparande" },
+    "statusLabels": { "neu": "Ny", "in_bearbeitung": "Pågår", "abgeschlossen": "Stängd" },
+    "nav": { "logout": "Logga ut" }
+  }
+}

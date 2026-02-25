@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import { useTranslations } from 'next-intl'
 
 interface Props {
   token: string
@@ -9,6 +10,7 @@ interface Props {
 }
 
 export default function MelderReplyForm({ token, disabled }: Props) {
+  const t = useTranslations('status.messages')
   const router = useRouter()
   const [content, setContent] = useState('')
   const [loading, setLoading] = useState(false)
@@ -17,7 +19,7 @@ export default function MelderReplyForm({ token, disabled }: Props) {
   if (disabled) {
     return (
       <p className="text-sm text-gray-400 bg-gray-50 rounded-lg px-4 py-3">
-        Diese Meldung ist abgeschlossen. Keine weiteren Nachrichten möglich.
+        {t('closed')}
       </p>
     )
   }
@@ -38,7 +40,7 @@ export default function MelderReplyForm({ token, disabled }: Props) {
 
     if (!res.ok) {
       const data = await res.json()
-      setError(data.message ?? 'Fehler beim Senden')
+      setError(data.message ?? t('errorSend'))
       return
     }
 
@@ -53,7 +55,7 @@ export default function MelderReplyForm({ token, disabled }: Props) {
         onChange={(e) => setContent(e.target.value)}
         disabled={loading}
         rows={4}
-        placeholder="Ihre Nachricht an das Compliance-Team …"
+        placeholder={t('replyPlaceholder')}
         className="w-full px-3 py-2 text-sm border border-gray-200 rounded-lg resize-none
                    focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent
                    disabled:bg-gray-50 disabled:text-gray-400"
@@ -67,7 +69,7 @@ export default function MelderReplyForm({ token, disabled }: Props) {
         className="px-4 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg
                    hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
       >
-        {loading ? 'Wird gesendet …' : 'Nachricht senden'}
+        {loading ? t('sending') : t('send')}
       </button>
     </form>
   )

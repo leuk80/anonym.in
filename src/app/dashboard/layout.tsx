@@ -2,11 +2,15 @@ import { getServerSession } from 'next-auth'
 import { authOptions } from '@/lib/auth'
 import { redirect } from 'next/navigation'
 import Link from 'next/link'
+import { getTranslations } from 'next-intl/server'
 import LogoutButton from './LogoutButton'
+import LanguageSwitcher from '@/components/LanguageSwitcher'
 
 export default async function DashboardLayout({ children }: { children: React.ReactNode }) {
   const session = await getServerSession(authOptions)
   if (!session) redirect('/login')
+
+  const t = await getTranslations('dashboard.nav')
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -15,9 +19,10 @@ export default async function DashboardLayout({ children }: { children: React.Re
           <Link href="/dashboard" className="font-semibold text-gray-900">
             anonym.in
           </Link>
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-4">
+            <LanguageSwitcher />
             <span className="text-sm text-gray-500">{session.user.email}</span>
-            <LogoutButton />
+            <LogoutButton label={t('logout')} />
           </div>
         </div>
       </nav>

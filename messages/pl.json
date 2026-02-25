@@ -1,0 +1,98 @@
+{
+  "portal": {
+    "unavailable": "Ten kanał zgłoszeń jest obecnie niedostępny.",
+    "channelSubtitle": "Anonimowy kanał zgłoszeń compliance",
+    "alreadyReported": "Zgłoszenie już wysłane?",
+    "checkStatus": "Sprawdź status",
+    "form": {
+      "heading": "Wyślij zgłoszenie",
+      "intro": "Twoje zgłoszenie zostanie w pełni zaszyfrowane i anonimowo przesłane do {orgName}.",
+      "category": "Kategoria",
+      "categoryPlaceholder": "Wybierz …",
+      "title": "Krótki opis",
+      "titlePlaceholder": "Czego dotyczy sprawa?",
+      "description": "Szczegółowy opis",
+      "descriptionPlaceholder": "Opisz sprawę tak szczegółowo, jak to możliwe. Co się stało? Kiedy? Kto był zaangażowany?",
+      "submit": "Wyślij zgłoszenie anonimowo",
+      "submitting": "Wysyłanie …",
+      "error": "Błąd podczas wysyłania zgłoszenia",
+      "privacy": "Prywatność: Nie są przechowywane adresy IP, adresy e-mail ani inne dane osobowe. Zgłoszenie jest szyfrowane przy użyciu AES-256-GCM. Brak plików cookie śledzących na tej stronie."
+    },
+    "success": {
+      "heading": "Zgłoszenie wysłane",
+      "subtext": "Twoje zgłoszenie zostało bezpiecznie przesłane i będzie traktowane poufnie.",
+      "tokenLabel": "Twój osobisty kod dostępu",
+      "copy": "Kopiuj",
+      "copied": "✓ Skopiowano",
+      "savePdf": "Zapisz PDF",
+      "warningTitle": "Ważne – zanotuj ten kod:",
+      "warning1": "To jedyny sposób na ponowne uzyskanie dostępu do zgłoszenia",
+      "warning2": "Umożliwia odczytanie odpowiedzi zespołu compliance",
+      "warning3": "Nie jest przechowywany i nie można go odzyskać",
+      "trackLink": "Śledź zgłoszenie"
+    },
+    "categories": {
+      "korruption": "Korupcja i łapownictwo",
+      "betrug": "Oszustwo i defraudacja",
+      "datenschutz": "Naruszenie ochrony danych",
+      "diskriminierung": "Dyskryminacja i molestowanie",
+      "sicherheit": "Bezpieczeństwo pracy i produktów",
+      "sonstiges": "Inne"
+    }
+  },
+  "status": {
+    "pageSubtitle": "Kanał compliance – Status zgłoszenia",
+    "newReport": "Wyślij nowe zgłoszenie",
+    "notFound": "Nie znaleziono zgłoszenia",
+    "notFoundHint": "Sprawdź swój kod dostępu. Wielkość liter jest ignorowana.",
+    "retry": "Spróbuj ponownie",
+    "tokenForm": {
+      "heading": "Śledź zgłoszenie",
+      "subtext": "Wprowadź kod dostępu, aby sprawdzić status zgłoszenia i odczytać wiadomości.",
+      "label": "Kod dostępu",
+      "placeholder": "np. WOLF-7342-NIEBIESKI",
+      "submit": "Pokaż status"
+    },
+    "report": {
+      "received": "Otrzymano:",
+      "confirmed": "Potwierdzono odbiór w dniu {date} (ustawowy termin 7 dni dotrzymany)",
+      "pendingConfirmation": "Potwierdzenie odbioru oczekuje (termin ustawowy: 7 dni od otrzymania)"
+    },
+    "messages": {
+      "heading": "Komunikacja z zespołem compliance",
+      "empty": "Brak wiadomości. Zespół compliance skontaktuje się w razie potrzeby.",
+      "senderCompliance": "Zespół compliance",
+      "senderMelder": "Ty (anonimowo)",
+      "replyLabel": "Wyślij wiadomość do zespołu compliance:",
+      "replyPlaceholder": "Twoja wiadomość do zespołu compliance …",
+      "closed": "To zgłoszenie jest zamknięte. Wysyłanie kolejnych wiadomości jest niemożliwe.",
+      "send": "Wyślij wiadomość",
+      "sending": "Wysyłanie …",
+      "errorSend": "Błąd podczas wysyłania",
+      "privacy": "Wszystkie wiadomości są szyfrowane end-to-end. Brak śledzenia, brak plików cookie."
+    },
+    "statusLabels": {
+      "neu": "Otrzymano",
+      "in_bearbeitung": "W trakcie",
+      "abgeschlossen": "Zamknięte"
+    }
+  },
+  "dashboard": {
+    "title": "Zgłoszenia",
+    "stats": { "total": "Razem", "new": "Nowe", "inProgress": "W trakcie", "overdue": "Przeterminowane" },
+    "filter": { "all": "Wszystkie", "new": "Nowe", "inProgress": "W trakcie", "done": "Zamknięte", "overdue": "Przeterminowane" },
+    "list": { "empty": "Nie znaleziono zgłoszeń.", "received": "Otrzymano:", "token": "Token:", "newMessages": "{n} nowe" },
+    "deadline": { "confirmation": "Potwierdzenie:", "response": "Odpowiedź:", "overdueN": "{n}d po terminie", "daysLeft": "{n}d" },
+    "detail": {
+      "back": "← Powrót do przeglądu", "content": "Treść zgłoszenia", "deadlines": "Terminy ustawowe (HinSchG)",
+      "confirmDeadline": "Potwierdzenie odbioru (7 dni)", "responseDeadline": "Odpowiedź (3 miesiące)", "statusLabel": "Status",
+      "confirmedOn": "✓ {date}", "overdueN": "{n}d po terminie", "daysLeft": "jeszcze {n}d (do {date})",
+      "noMessages": "Brak wiadomości.", "senderCompliance": "Compliance", "senderMelder": "Zgłaszający (anonimowo)",
+      "replyLabel": "Odpowiedź do zgłaszającego (w pełni zaszyfrowana):", "replyPlaceholder": "Twoja odpowiedź do zgłaszającego …",
+      "send": "Wyślij odpowiedź", "sending": "Wysyłanie …", "errorSend": "Błąd podczas wysyłania", "communication": "Komunikacja", "messagesCount": "{n} wiadomości"
+    },
+    "actions": { "heading": "Status i terminy", "current": "Aktualny:", "confirm": "Potwierdź odbiór (termin HinSchG 7 dni)", "confirmedOn": "Potwierdzono odbiór w dniu {date}", "errorSave": "Błąd podczas zapisywania" },
+    "statusLabels": { "neu": "Nowe", "in_bearbeitung": "W trakcie", "abgeschlossen": "Zamknięte" },
+    "nav": { "logout": "Wyloguj" }
+  }
+}

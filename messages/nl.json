@@ -1,0 +1,98 @@
+{
+  "portal": {
+    "unavailable": "Dit meldkanaal is momenteel niet beschikbaar.",
+    "channelSubtitle": "Anoniem compliance-meldkanaal",
+    "alreadyReported": "Al een melding ingediend?",
+    "checkStatus": "Status controleren",
+    "form": {
+      "heading": "Melding indienen",
+      "intro": "Uw melding wordt volledig versleuteld en anoniem doorgezonden aan {orgName}.",
+      "category": "Categorie",
+      "categoryPlaceholder": "Selecteer …",
+      "title": "Korte beschrijving",
+      "titlePlaceholder": "Waar gaat het over?",
+      "description": "Gedetailleerde beschrijving",
+      "descriptionPlaceholder": "Beschrijf de situatie zo gedetailleerd mogelijk. Wat is er gebeurd? Wanneer? Wie was erbij betrokken?",
+      "submit": "Melding anoniem indienen",
+      "submitting": "Wordt verzonden …",
+      "error": "Fout bij het indienen",
+      "privacy": "Privacy: Er worden geen IP-adressen, e-mailadressen of andere persoonsgegevens opgeslagen. De melding wordt versleuteld met AES-256-GCM. Geen tracking-cookies op deze pagina."
+    },
+    "success": {
+      "heading": "Melding ingediend",
+      "subtext": "Uw melding is veilig verzonden en wordt vertrouwelijk behandeld.",
+      "tokenLabel": "Uw persoonlijke toegangscode",
+      "copy": "Kopiëren",
+      "copied": "✓ Gekopieerd",
+      "savePdf": "PDF opslaan",
+      "warningTitle": "Belangrijk – noteer deze code:",
+      "warning1": "Dit is de enige manier om uw melding terug te vinden",
+      "warning2": "Hiermee kunt u antwoorden van het compliance-team lezen",
+      "warning3": "De code wordt niet opgeslagen en kan niet worden hersteld",
+      "trackLink": "Melding volgen"
+    },
+    "categories": {
+      "korruption": "Corruptie en omkoping",
+      "betrug": "Fraude en verduistering",
+      "datenschutz": "Schending van gegevensbescherming",
+      "diskriminierung": "Discriminatie en intimidatie",
+      "sicherheit": "Arbeids- en productveiligheid",
+      "sonstiges": "Overige"
+    }
+  },
+  "status": {
+    "pageSubtitle": "Compliance-kanaal – Status melding",
+    "newReport": "Nieuwe melding indienen",
+    "notFound": "Melding niet gevonden",
+    "notFoundHint": "Controleer uw toegangscode. Hoofd- en kleine letters worden genegeerd.",
+    "retry": "Opnieuw proberen",
+    "tokenForm": {
+      "heading": "Melding volgen",
+      "subtext": "Voer uw toegangscode in om de status van uw melding te bekijken en berichten te lezen.",
+      "label": "Toegangscode",
+      "placeholder": "bijv. WOLF-7342-BLAUW",
+      "submit": "Status weergeven"
+    },
+    "report": {
+      "received": "Ontvangen:",
+      "confirmed": "Ontvangst bevestigd op {date} (wettelijke termijn van 7 dagen nageleefd)",
+      "pendingConfirmation": "Ontvangstbevestiging in behandeling (wettelijke termijn: 7 dagen na ontvangst)"
+    },
+    "messages": {
+      "heading": "Communicatie met het compliance-team",
+      "empty": "Nog geen berichten. Het compliance-team neemt indien nodig contact met u op.",
+      "senderCompliance": "Compliance-team",
+      "senderMelder": "U (anoniem)",
+      "replyLabel": "Bericht sturen naar het compliance-team:",
+      "replyPlaceholder": "Uw bericht aan het compliance-team …",
+      "closed": "Deze melding is afgesloten. Er kunnen geen verdere berichten worden verstuurd.",
+      "send": "Bericht versturen",
+      "sending": "Wordt verzonden …",
+      "errorSend": "Fout bij het verzenden",
+      "privacy": "Alle berichten zijn end-to-end versleuteld. Geen tracking, geen cookies."
+    },
+    "statusLabels": {
+      "neu": "Ontvangen",
+      "in_bearbeitung": "In behandeling",
+      "abgeschlossen": "Afgesloten"
+    }
+  },
+  "dashboard": {
+    "title": "Meldingen",
+    "stats": { "total": "Totaal", "new": "Nieuw", "inProgress": "In behandeling", "overdue": "Achterstallig" },
+    "filter": { "all": "Alle", "new": "Nieuw", "inProgress": "In behandeling", "done": "Afgesloten", "overdue": "Achterstallig" },
+    "list": { "empty": "Geen meldingen gevonden.", "received": "Ontvangen:", "token": "Token:", "newMessages": "{n} nieuw" },
+    "deadline": { "confirmation": "Bevestiging:", "response": "Reactie:", "overdueN": "{n}d achterstallig", "daysLeft": "{n}d" },
+    "detail": {
+      "back": "← Terug naar overzicht", "content": "Inhoud melding", "deadlines": "Wettelijke termijnen (HinSchG)",
+      "confirmDeadline": "Ontvangstbevestiging (7 dagen)", "responseDeadline": "Reactie (3 maanden)", "statusLabel": "Status",
+      "confirmedOn": "✓ {date}", "overdueN": "{n}d achterstallig", "daysLeft": "nog {n}d (tot {date})",
+      "noMessages": "Nog geen berichten.", "senderCompliance": "Compliance", "senderMelder": "Melder (anoniem)",
+      "replyLabel": "Antwoord aan de melder (volledig versleuteld):", "replyPlaceholder": "Uw antwoord aan de melder …",
+      "send": "Antwoord versturen", "sending": "Wordt verzonden …", "errorSend": "Fout bij verzenden", "communication": "Communicatie", "messagesCount": "{n} berichten"
+    },
+    "actions": { "heading": "Status en termijnen", "current": "Huidig:", "confirm": "Ontvangst bevestigen (HinSchG 7-daagse termijn)", "confirmedOn": "Ontvangst bevestigd op {date}", "errorSave": "Fout bij opslaan" },
+    "statusLabels": { "neu": "Nieuw", "in_bearbeitung": "In behandeling", "abgeschlossen": "Afgesloten" },
+    "nav": { "logout": "Uitloggen" }
+  }
+}

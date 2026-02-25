@@ -1,0 +1,94 @@
+{
+  "portal": {
+    "unavailable": "Denne indberetningskanal er i øjeblikket ikke tilgængelig.",
+    "channelSubtitle": "Anonym kanal for compliance-indberetning",
+    "alreadyReported": "Har du allerede indsendt en indberetning?",
+    "checkStatus": "Tjek status",
+    "form": {
+      "heading": "Indsend en indberetning",
+      "intro": "Din indberetning vil blive fuldt krypteret og sendt anonymt til {orgName}.",
+      "category": "Kategori",
+      "categoryPlaceholder": "Vælg venligst …",
+      "title": "Kort beskrivelse",
+      "titlePlaceholder": "Hvad drejer det sig om?",
+      "description": "Detaljeret beskrivelse",
+      "descriptionPlaceholder": "Beskriv sagen så detaljeret som muligt. Hvad skete der? Hvornår? Hvem var involveret?",
+      "submit": "Indsend indberetning anonymt",
+      "submitting": "Sender …",
+      "error": "Fejl ved indsendelse",
+      "privacy": "Privatliv: Der gemmes ingen IP-adresser, e-mailadresser eller andre personoplysninger. Indberetningen krypteres med AES-256-GCM. Ingen sporings-cookies på denne side."
+    },
+    "success": {
+      "heading": "Indberetning indsendt",
+      "subtext": "Din indberetning er sendt sikkert og vil blive behandlet fortroligt.",
+      "tokenLabel": "Din personlige adgangskode",
+      "copy": "Kopiér",
+      "copied": "✓ Kopieret",
+      "savePdf": "Gem PDF",
+      "warningTitle": "Vigtigt – noter denne kode:",
+      "warning1": "Dette er den eneste måde at tilgå din indberetning igen",
+      "warning2": "Den giver dig mulighed for at læse svar fra compliance-teamet",
+      "warning3": "Den gemmes ikke og kan ikke gendannes",
+      "trackLink": "Følg indberetning"
+    },
+    "categories": {
+      "korruption": "Korruption og bestikkelse",
+      "betrug": "Bedrageri og underslæb",
+      "datenschutz": "Databeskyttelsesovertrædelse",
+      "diskriminierung": "Diskrimination og chikane",
+      "sicherheit": "Arbejds- og produktsikkerhed",
+      "sonstiges": "Andet"
+    }
+  },
+  "status": {
+    "pageSubtitle": "Compliance-kanal – Indberetningsstatus",
+    "newReport": "Indsend ny indberetning",
+    "notFound": "Indberetning ikke fundet",
+    "notFoundHint": "Tjek venligst din adgangskode. Store og små bogstaver ignoreres.",
+    "retry": "Prøv igen",
+    "tokenForm": {
+      "heading": "Følg indberetning",
+      "subtext": "Indtast din adgangskode for at se status på din indberetning og læse beskeder.",
+      "label": "Adgangskode",
+      "placeholder": "f.eks. WOLF-7342-BLÅ",
+      "submit": "Vis status"
+    },
+    "report": {
+      "received": "Modtaget:",
+      "confirmed": "Modtagelse bekræftet den {date} (lovpligtig 7-dages frist overholdt)",
+      "pendingConfirmation": "Modtagelsesbekræftelse afventer (lovpligtig frist: 7 dage fra modtagelse)"
+    },
+    "messages": {
+      "heading": "Kommunikation med compliance-teamet",
+      "empty": "Ingen beskeder endnu. Compliance-teamet kontakter dig om nødvendigt.",
+      "senderCompliance": "Compliance-teamet",
+      "senderMelder": "Dig (anonym)",
+      "replyLabel": "Send besked til compliance-teamet:",
+      "replyPlaceholder": "Din besked til compliance-teamet …",
+      "closed": "Denne indberetning er lukket. Ingen yderligere beskeder er mulige.",
+      "send": "Send besked",
+      "sending": "Sender …",
+      "errorSend": "Fejl ved afsendelse",
+      "privacy": "Alle beskeder er end-to-end-krypterede. Ingen sporing, ingen cookies."
+    },
+    "statusLabels": { "neu": "Modtaget", "in_bearbeitung": "Under behandling", "abgeschlossen": "Lukket" }
+  },
+  "dashboard": {
+    "title": "Indberetninger",
+    "stats": { "total": "I alt", "new": "Ny", "inProgress": "Under behandling", "overdue": "Overskredet" },
+    "filter": { "all": "Alle", "new": "Ny", "inProgress": "Under behandling", "done": "Lukket", "overdue": "Overskredet" },
+    "list": { "empty": "Ingen indberetninger fundet.", "received": "Modtaget:", "token": "Token:", "newMessages": "{n} ny(e)" },
+    "deadline": { "confirmation": "Bekræftelse:", "response": "Svar:", "overdueN": "{n}d overskredet", "daysLeft": "{n}d" },
+    "detail": {
+      "back": "← Tilbage til oversigten", "content": "Indberetningens indhold", "deadlines": "Lovpligtige frister (HinSchG)",
+      "confirmDeadline": "Modtagelsesbekræftelse (7 dage)", "responseDeadline": "Svar (3 måneder)", "statusLabel": "Status",
+      "confirmedOn": "✓ {date}", "overdueN": "{n}d overskredet", "daysLeft": "endnu {n}d (til {date})",
+      "noMessages": "Ingen beskeder endnu.", "senderCompliance": "Compliance", "senderMelder": "Whistleblower (anonym)",
+      "replyLabel": "Svar til whistleblower (fuldt krypteret):", "replyPlaceholder": "Dit svar til whistleblower …",
+      "send": "Send svar", "sending": "Sender …", "errorSend": "Fejl ved afsendelse", "communication": "Kommunikation", "messagesCount": "{n} beskeder"
+    },
+    "actions": { "heading": "Status og frister", "current": "Aktuel:", "confirm": "Bekræft modtagelse (HinSchG 7-dages frist)", "confirmedOn": "Modtagelse bekræftet den {date}", "errorSave": "Fejl ved lagring" },
+    "statusLabels": { "neu": "Ny", "in_bearbeitung": "Under behandling", "abgeschlossen": "Lukket" },
+    "nav": { "logout": "Log ud" }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "portal": {
+    "unavailable": "Ta kanal za prijavo je trenutno nedostopen.",
+    "channelSubtitle": "Anonimni kanal za prijavo kršitev",
+    "alreadyReported": "Ste že oddali prijavo?",
+    "checkStatus": "Preveri status",
+    "form": {
+      "heading": "Oddaj prijavo",
+      "intro": "Vaša prijava bo v celoti šifrirana in anonimno posredovana organizaciji {orgName}.",
+      "category": "Kategorija",
+      "categoryPlaceholder": "Izberite …",
+      "title": "Kratek opis",
+      "titlePlaceholder": "Za kaj gre?",
+      "description": "Podroben opis",
+      "descriptionPlaceholder": "Opišite zadevo čim bolj podrobno. Kaj se je zgodilo? Kdaj? Kdo je bil vpleten?",
+      "submit": "Oddaj prijavo anonimno",
+      "submitting": "Pošiljanje …",
+      "error": "Napaka pri oddaji prijave",
+      "privacy": "Zasebnost: Ne shranjujemo IP naslovov, e-poštnih naslovov ali drugih osebnih podatkov. Prijava je šifrirana z AES-256-GCM. Na tej strani ni piškotkov za sledenje."
+    },
+    "success": {
+      "heading": "Prijava oddana",
+      "subtext": "Vaša prijava je bila varno posredovana in bo obravnavana zaupno.",
+      "tokenLabel": "Vaša osebna dostopna koda",
+      "copy": "Kopiraj",
+      "copied": "✓ Kopirano",
+      "savePdf": "Shrani PDF",
+      "warningTitle": "Pomembno – zabeležite to kodo:",
+      "warning1": "To je edini način za ponovni dostop do vaše prijave",
+      "warning2": "Omogoča vam branje odgovorov ekipe za skladnost",
+      "warning3": "Ni shranjena in je ni mogoče obnoviti",
+      "trackLink": "Sledite prijavi"
+    },
+    "categories": {
+      "korruption": "Korupcija in podkupovanje",
+      "betrug": "Goljufija in poneverba",
+      "datenschutz": "Kršitev varstva podatkov",
+      "diskriminierung": "Diskriminacija in nadlegovanje",
+      "sicherheit": "Varnost pri delu in varnost izdelkov",
+      "sonstiges": "Drugo"
+    }
+  },
+  "status": {
+    "pageSubtitle": "Kanal za skladnost – Status prijave",
+    "newReport": "Oddaj novo prijavo",
+    "notFound": "Prijava ni bila najdena",
+    "notFoundHint": "Preverite svojo dostopno kodo. Velike in male črke so prezrte.",
+    "retry": "Poskusite znova",
+    "tokenForm": {
+      "heading": "Sledite prijavi",
+      "subtext": "Vnesite dostopno kodo za ogled statusa vaše prijave in branje sporočil.",
+      "label": "Dostopna koda",
+      "placeholder": "npr. WOLF-7342-MODRA",
+      "submit": "Prikaži status"
+    },
+    "report": {
+      "received": "Prejeto:",
+      "confirmed": "Prejem potrjen {date} (zakonski rok 7 dni izpolnjen)",
+      "pendingConfirmation": "Potrditev prejema v teku (zakonski rok: 7 dni od prejema)"
+    },
+    "messages": {
+      "heading": "Komunikacija z ekipo za skladnost",
+      "empty": "Zaenkrat ni sporočil. Ekipa za skladnost vas bo po potrebi kontaktirala.",
+      "senderCompliance": "Ekipa za skladnost",
+      "senderMelder": "Vi (anonimno)",
+      "replyLabel": "Pošlji sporočilo ekipi za skladnost:",
+      "replyPlaceholder": "Vaše sporočilo ekipi za skladnost …",
+      "closed": "Ta prijava je zaprta. Nadaljnje pošiljanje sporočil ni mogoče.",
+      "send": "Pošlji sporočilo",
+      "sending": "Pošiljanje …",
+      "errorSend": "Napaka pri pošiljanju",
+      "privacy": "Vsa sporočila so šifrirana od konca do konca. Brez sledenja, brez piškotkov."
+    },
+    "statusLabels": { "neu": "Prejeto", "in_bearbeitung": "V obravnavi", "abgeschlossen": "Zaprto" }
+  },
+  "dashboard": {
+    "title": "Prijave",
+    "stats": { "total": "Skupaj", "new": "Nova", "inProgress": "V obravnavi", "overdue": "Zamujeno" },
+    "filter": { "all": "Vse", "new": "Nova", "inProgress": "V obravnavi", "done": "Zaprto", "overdue": "Zamujeno" },
+    "list": { "empty": "Ni najdenih prijav.", "received": "Prejeto:", "token": "Žeton:", "newMessages": "{n} novo" },
+    "deadline": { "confirmation": "Potrditev:", "response": "Odgovor:", "overdueN": "{n}d zamuda", "daysLeft": "{n}d" },
+    "detail": {
+      "back": "← Nazaj na pregled", "content": "Vsebina prijave", "deadlines": "Zakonski roki (HinSchG)",
+      "confirmDeadline": "Potrditev prejema (7 dni)", "responseDeadline": "Odgovor (3 mesece)", "statusLabel": "Status",
+      "confirmedOn": "✓ {date}", "overdueN": "{n}d zamuda", "daysLeft": "še {n}d (do {date})",
+      "noMessages": "Zaenkrat ni sporočil.", "senderCompliance": "Skladnost", "senderMelder": "Prijavitelj (anonimno)",
+      "replyLabel": "Odgovor prijavitelju (v celoti šifriran):", "replyPlaceholder": "Vaš odgovor prijavitelju …",
+      "send": "Pošlji odgovor", "sending": "Pošiljanje …", "errorSend": "Napaka pri pošiljanju", "communication": "Komunikacija", "messagesCount": "{n} sporočil"
+    },
+    "actions": { "heading": "Status in roki", "current": "Trenutni:", "confirm": "Potrdi prejem (HinSchG 7-dnevni rok)", "confirmedOn": "Prejem potrjen {date}", "errorSave": "Napaka pri shranjevanju" },
+    "statusLabels": { "neu": "Nova", "in_bearbeitung": "V obravnavi", "abgeschlossen": "Zaprto" },
+    "nav": { "logout": "Odjava" }
+  }
+}

@@ -1,20 +1,16 @@
 import { getOrganizationBySlug } from '@/lib/supabase'
 import { supabaseAdmin } from '@/lib/supabase'
 import { decryptFromString, getOrgEncryptionKey } from '@/lib/crypto'
-import { REPORT_CATEGORIES, type DecryptedMessage, type ReportStatus } from '@/types'
+import { type DecryptedMessage, type ReportStatus } from '@/types'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import { getTranslations } from 'next-intl/server'
 import TokenForm from './TokenForm'
 import MelderReplyForm from './MelderReplyForm'
 import MelderPdfDownloadButton from '../MelderPdfDownloadButton'
+import LanguageSwitcher from '@/components/LanguageSwitcher'
 
 export const dynamic = 'force-dynamic'
-
-const STATUS_LABELS: Record<ReportStatus, string> = {
-  neu: 'Eingegangen',
-  in_bearbeitung: 'In Bearbeitung',
-  abgeschlossen: 'Abgeschlossen',
-}
 
 const STATUS_CLASSES: Record<ReportStatus, string> = {
   neu: 'bg-blue-100 text-blue-800',
@@ -22,14 +18,14 @@ const STATUS_CLASSES: Record<ReportStatus, string> = {
   abgeschlossen: 'bg-green-100 text-green-800',
 }
 
-function formatDate(iso: string) {
-  return new Date(iso).toLocaleDateString('de-DE', {
+function formatDate(iso: string, locale: string) {
+  return new Date(iso).toLocaleDateString(locale, {
     day: '2-digit', month: '2-digit', year: 'numeric',
   })
 }
 
-function formatDateTime(iso: string) {
-  return new Date(iso).toLocaleString('de-DE', {
+function formatDateTime(iso: string, locale: string) {
+  return new Date(iso).toLocaleString(locale, {
     day: '2-digit', month: '2-digit', year: 'numeric',
     hour: '2-digit', minute: '2-digit',
   })
@@ -45,26 +41,28 @@ export default async function MelderStatusPage({
   const org = await getOrganizationBySlug(params.slug)
   if (!org) notFound()
 
+  const t = await getTranslations('status')
   const token = searchParams.token?.toUpperCase()
 
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4">
       <div className="mb-8 text-center">
         <h1 className="text-xl font-semibold text-gray-900">{org.name}</h1>
-        <p className="mt-1 text-sm text-gray-500">Compliance-Meldekanal – Meldungsstatus</p>
+        <p className="mt-1 text-sm text-gray-500">{t('pageSubtitle')}</p>
+        <div className="mt-3 flex justify-center">
+          <LanguageSwitcher />
+        </div>
       </div>
 
       {!token ? (
-        // Kein Token → Eingabeformular zeigen
         <TokenForm slug={params.slug} />
       ) : (
-        // Token vorhanden → Meldung laden und anzeigen
         <StatusView token={token} slug={params.slug} orgId={org.id} />
       )}
 
       <p className="mt-6 text-center text-xs text-gray-400">
         <Link href={`/melden/${params.slug}`} className="underline underline-offset-2 hover:text-gray-600">
-          Neue Meldung einreichen
+          {t('newReport')}
         </Link>
       </p>
     </div>
@@ -72,26 +70,29 @@ export default async function MelderStatusPage({
 }
 
 async function StatusView({ token, slug, orgId }: { token: string; slug: string; orgId: string }) {
+  const t = await getTranslations('status')
+  const tPortal = await getTranslations('portal')
+  const { getLocale } = await import('next-intl/server')
+  const locale = await getLocale()
+
   const { data: report, error } = await supabaseAdmin
     .from('reports')
     .select('*, messages(*)')
     .eq('melder_token', token)
-    .eq('organization_id', orgId) // Sicherstellen, dass Token zur Org gehört
+    .eq('organization_id', orgId)
     .single()
 
   if (error || !report) {
     return (
       <div className="max-w-md mx-auto text-center">
         <div className="bg-white rounded-xl border border-red-200 p-8">
-          <p className="text-sm text-red-600 font-medium mb-2">Meldung nicht gefunden</p>
-          <p className="text-sm text-gray-500 mb-4">
-            Bitte prüfen Sie Ihren Zugangscode. Groß-/Kleinschreibung wird ignoriert.
-          </p>
+          <p className="text-sm text-red-600 font-medium mb-2">{t('notFound')}</p>
+          <p className="text-sm text-gray-500 mb-4">{t('notFoundHint')}</p>
           <Link
             href={`/melden/${slug}/status`}
             className="text-sm underline underline-offset-2 text-gray-600 hover:text-gray-900"
           >
-            Erneut versuchen
+            {t('retry')}
           </Link>
         </div>
       </div>
@@ -123,6 +124,7 @@ async function StatusView({ token, slug, orgId }: { token: string; slug: string;
   const description = decryptFromString(description_encrypted, orgKey)
   const status = rest.status as ReportStatus
   const isAbgeschlossen = status === 'abgeschlossen'
+  const categoryKey = report.category as string
 
   return (
     <div className="max-w-lg mx-auto space-y-4">
@@ -133,13 +135,13 @@ async function StatusView({ token, slug, orgId }: { token: string; slug: string;
             <p className="text-xs text-gray-400 font-mono mb-1">{token}</p>
             <h2 className="text-base font-semibold text-gray-900">{title}</h2>
             <p className="text-xs text-gray-400 mt-0.5">
-              {REPORT_CATEGORIES[report.category as keyof typeof REPORT_CATEGORIES]} ·{' '}
-              Eingegangen: {formatDate(rest.received_at)}
+              {tPortal(`categories.${categoryKey}` as Parameters<typeof tPortal>[0]) || categoryKey} ·{' '}
+              {t('report.received')} {formatDate(rest.received_at, locale)}
             </p>
           </div>
           <div className="flex flex-col items-end gap-2 shrink-0">
             <span className={`px-2.5 py-1 rounded-lg text-xs font-medium ${STATUS_CLASSES[status]}`}>
-              {STATUS_LABELS[status]}
+              {t(`statusLabels.${status}` as Parameters<typeof t>[0])}
             </span>
             <MelderPdfDownloadButton token={token} />
           </div>
@@ -152,11 +154,11 @@ async function StatusView({ token, slug, orgId }: { token: string; slug: string;
         {/* Eingangsbestätigung */}
         {rest.confirmed_at ? (
           <p className="mt-3 text-xs text-green-700 bg-green-50 rounded-lg px-3 py-2">
-            Eingang bestätigt am {formatDate(rest.confirmed_at)} (gesetzliche 7-Tage-Frist eingehalten)
+            {t('report.confirmed', { date: formatDate(rest.confirmed_at, locale) })}
           </p>
         ) : (
           <p className="mt-3 text-xs text-amber-700 bg-amber-50 rounded-lg px-3 py-2">
-            Eingangsbestätigung ausstehend (gesetzliche Frist: 7 Tage ab Eingang)
+            {t('report.pendingConfirmation')}
           </p>
         )}
       </div>
@@ -164,13 +166,11 @@ async function StatusView({ token, slug, orgId }: { token: string; slug: string;
       {/* Kommunikationsverlauf */}
       <div className="bg-white rounded-xl border border-gray-200 p-6">
         <h3 className="text-sm font-semibold text-gray-900 mb-4">
-          Kommunikation mit dem Compliance-Team
+          {t('messages.heading')}
         </h3>
 
         {messages.length === 0 ? (
-          <p className="text-sm text-gray-400 mb-4">
-            Noch keine Nachrichten. Das Compliance-Team wird sich bei Bedarf melden.
-          </p>
+          <p className="text-sm text-gray-400 mb-4">{t('messages.empty')}</p>
         ) : (
           <div className="space-y-3 mb-4">
             {messages.map((msg) => (
@@ -184,9 +184,9 @@ async function StatusView({ token, slug, orgId }: { token: string; slug: string;
               >
                 <div className="flex justify-between items-center gap-4 mb-1">
                   <span className={`text-xs font-medium ${msg.sender === 'compliance' ? 'text-gray-300' : 'text-gray-500'}`}>
-                    {msg.sender === 'compliance' ? 'Compliance-Team' : 'Sie (anonym)'}
+                    {msg.sender === 'compliance' ? t('messages.senderCompliance') : t('messages.senderMelder')}
                   </span>
-                  <span className="text-xs opacity-60">{formatDateTime(msg.created_at)}</span>
+                  <span className="text-xs opacity-60">{formatDateTime(msg.created_at, locale)}</span>
                 </div>
                 <p className="whitespace-pre-wrap leading-relaxed">{msg.content}</p>
               </div>
@@ -196,16 +196,14 @@ async function StatusView({ token, slug, orgId }: { token: string; slug: string;
 
         <div className={messages.length > 0 ? 'border-t border-gray-100 pt-4' : ''}>
           {!isAbgeschlossen && (
-            <p className="text-xs text-gray-500 mb-3">Nachricht an das Compliance-Team senden:</p>
+            <p className="text-xs text-gray-500 mb-3">{t('messages.replyLabel')}</p>
           )}
           <MelderReplyForm token={token} disabled={isAbgeschlossen} />
         </div>
       </div>
 
       {/* Datenschutzhinweis */}
-      <p className="text-xs text-gray-400 text-center">
-        Alle Nachrichten sind Ende-zu-Ende-verschlüsselt. Kein Tracking, keine Cookies.
-      </p>
+      <p className="text-xs text-gray-400 text-center">{t('messages.privacy')}</p>
     </div>
   )
 }
