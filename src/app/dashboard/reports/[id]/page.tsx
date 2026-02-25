@@ -7,6 +7,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import ReportActions from './ReportActions'
 import ReplyForm from './ReplyForm'
+import PdfDownloadButton from './PdfDownloadButton'
 
 const STATUS_LABELS: Record<ReportStatus, string> = {
   neu: 'Neu',
@@ -86,7 +87,8 @@ export default async function ReportDetailPage({ params }: { params: { id: strin
 
       {/* Header */}
       <div className="mt-4 mb-6">
-        <div className="flex items-center gap-2 flex-wrap mb-1">
+        <div className="flex items-start justify-between gap-4 mb-2">
+          <div className="flex items-center gap-2 flex-wrap">
           <span className="text-xs font-mono text-gray-400">{report.melder_token}</span>
           <span className="text-xs text-gray-300">·</span>
           <span className="text-xs text-gray-400">
@@ -94,6 +96,8 @@ export default async function ReportDetailPage({ params }: { params: { id: strin
           </span>
           <span className="text-xs text-gray-300">·</span>
           <span className="text-xs text-gray-400">Eingegangen: {formatDate(report.received_at)}</span>
+          </div>
+          <PdfDownloadButton reportId={report.id} />
         </div>
         <h1 className="text-lg font-semibold text-gray-900">{report.title}</h1>
       </div>
