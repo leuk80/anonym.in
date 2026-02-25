@@ -6,11 +6,9 @@ if [ "${CLAUDE_CODE_REMOTE:-}" != "true" ]; then
   exit 0
 fi
 
-# Placeholder: add dependency installation here once a tech stack is chosen.
-# Examples:
-#   npm install          (Node.js)
-#   pip install -e .     (Python)
-#   bundle install       (Ruby)
-#   cargo build          (Rust)
+cd "$CLAUDE_PROJECT_DIR"
 
-echo "Session start hook: no dependencies to install yet."
+echo "Installing npm dependencies..."
+npm install
+
+echo "Session start hook: done."
