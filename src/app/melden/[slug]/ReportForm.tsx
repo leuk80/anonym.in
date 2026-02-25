@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { REPORT_CATEGORIES, type ReportCategory } from '@/types'
+import MelderPdfDownloadButton from './MelderPdfDownloadButton'
 
 interface Props {
   slug: string
@@ -69,13 +70,16 @@ export default function ReportForm({ slug, orgName }: Props) {
               Ihr persönlicher Zugangscode
             </p>
             <p className="text-2xl font-mono font-bold text-gray-900 tracking-widest mb-3">{token}</p>
-            <button
-              onClick={copyToken}
-              className="px-4 py-2 text-sm font-medium border border-gray-300 rounded-lg
-                         hover:bg-gray-100 transition-colors"
-            >
-              {copied ? '✓ Kopiert' : 'Kopieren'}
-            </button>
+            <div className="flex items-center justify-center gap-2 flex-wrap">
+              <button
+                onClick={copyToken}
+                className="px-4 py-2 text-sm font-medium border border-gray-300 rounded-lg
+                           hover:bg-gray-100 transition-colors"
+              >
+                {copied ? '✓ Kopiert' : 'Kopieren'}
+              </button>
+              <MelderPdfDownloadButton token={token} />
+            </div>
           </div>
 
           <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 text-left text-sm text-amber-800">

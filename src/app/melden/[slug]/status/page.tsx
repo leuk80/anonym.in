@@ -6,7 +6,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import TokenForm from './TokenForm'
 import MelderReplyForm from './MelderReplyForm'
-import MelderPdfDownloadButton from './MelderPdfDownloadButton'
+import MelderPdfDownloadButton from '../MelderPdfDownloadButton'
 
 const STATUS_LABELS: Record<ReportStatus, string> = {
   neu: 'Eingegangen',
