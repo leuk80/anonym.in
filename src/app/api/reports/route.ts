@@ -3,6 +3,7 @@ import { getOrganizationBySlug } from '@/lib/supabase'
 import { supabaseAdmin } from '@/lib/supabase'
 import { encryptToString, generateMelderToken, getOrgEncryptionKey } from '@/lib/crypto'
 import { checkRateLimit } from '@/lib/rateLimit'
+import { sendNewReportNotification } from '@/lib/email'
 import type { CreateReportRequest, CreateReportResponse, ErrorResponse, ReportCategory } from '@/types'
 
 const VALID_CATEGORIES: ReportCategory[] = [
@@ -84,8 +85,8 @@ export async function POST(req: NextRequest) {
       )
     }
 
-    // TODO (Punkt 5): E-Mail-Benachrichtigung an Compliance-Officer senden
-    // await sendNewReportNotification(org.contact_email)
+    // E-Mail-Benachrichtigung – Fehler soll den Melder nicht blockieren
+    sendNewReportNotification(org.contact_email, org.name).catch(() => {})
 
     return NextResponse.json<CreateReportResponse>(
       { success: true, melder_token: melderToken },
