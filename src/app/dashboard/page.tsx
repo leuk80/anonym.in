@@ -2,28 +2,14 @@ import { getServerSession } from 'next-auth'
 import { authOptions } from '@/lib/auth'
 import { supabaseAdmin } from '@/lib/supabase'
 import { decryptFromString, getOrgEncryptionKey } from '@/lib/crypto'
-import { REPORT_CATEGORIES, type DecryptedReport, type ReportStatus } from '@/types'
+import { type DecryptedReport, type ReportStatus } from '@/types'
 import Link from 'next/link'
-
-const STATUS_LABELS: Record<ReportStatus, string> = {
-  neu: 'Neu',
-  in_bearbeitung: 'In Bearbeitung',
-  abgeschlossen: 'Abgeschlossen',
-}
+import { getTranslations, getLocale } from 'next-intl/server'
 
 const STATUS_CLASSES: Record<ReportStatus, string> = {
   neu: 'bg-blue-100 text-blue-800',
   in_bearbeitung: 'bg-amber-100 text-amber-800',
   abgeschlossen: 'bg-green-100 text-green-800',
-}
-
-function formatDate(iso: string) {
-  return new Date(iso).toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric' })
-}
-
-function daysUntil(iso: string) {
-  const diff = new Date(iso).getTime() - Date.now()
-  return Math.ceil(diff / (1000 * 60 * 60 * 24))
 }
 
 export default async function DashboardPage({
@@ -33,6 +19,17 @@ export default async function DashboardPage({
 }) {
   const session = await getServerSession(authOptions)
   if (!session) return null
+
+  const t = await getTranslations('dashboard')
+  const locale = await getLocale()
+
+  function formatDate(iso: string) {
+    return new Date(iso).toLocaleDateString(locale, { day: '2-digit', month: '2-digit', year: 'numeric' })
+  }
+
+  function daysUntil(iso: string) {
+    return Math.ceil((new Date(iso).getTime() - Date.now()) / (1000 * 60 * 60 * 24))
+  }
 
   const orgId = session.user.organizationId
   const orgKey = getOrgEncryptionKey(orgId)
@@ -56,7 +53,6 @@ export default async function DashboardPage({
     }
   })
 
-  // Statistiken
   const stats = {
     total: reports.length,
     neu: reports.filter((r) => r.status === 'neu').length,
@@ -65,7 +61,6 @@ export default async function DashboardPage({
     overdue: reports.filter((r) => r.is_overdue).length,
   }
 
-  // Filter
   const activeFilter = searchParams.status ?? 'alle'
   const filtered = reports.filter((r) => {
     if (activeFilter === 'overdue') return r.is_overdue
@@ -74,23 +69,23 @@ export default async function DashboardPage({
   })
 
   const filters = [
-    { key: 'alle', label: 'Alle', count: stats.total },
-    { key: 'neu', label: 'Neu', count: stats.neu },
-    { key: 'in_bearbeitung', label: 'In Bearbeitung', count: stats.in_bearbeitung },
-    { key: 'abgeschlossen', label: 'Abgeschlossen', count: stats.abgeschlossen },
-    { key: 'overdue', label: 'Überfällig', count: stats.overdue },
+    { key: 'alle', label: t('filter.all'), count: stats.total },
+    { key: 'neu', label: t('filter.new'), count: stats.neu },
+    { key: 'in_bearbeitung', label: t('filter.inProgress'), count: stats.in_bearbeitung },
+    { key: 'abgeschlossen', label: t('filter.done'), count: stats.abgeschlossen },
+    { key: 'overdue', label: t('filter.overdue'), count: stats.overdue },
   ]
 
   return (
     <div>
-      <h1 className="text-xl font-semibold text-gray-900 mb-6">Meldungen</h1>
+      <h1 className="text-xl font-semibold text-gray-900 mb-6">{t('title')}</h1>
 
       {/* Statistik-Karten */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
-        <StatCard label="Gesamt" value={stats.total} />
-        <StatCard label="Neu" value={stats.neu} color="blue" />
-        <StatCard label="In Bearbeitung" value={stats.in_bearbeitung} color="amber" />
-        <StatCard label="Überfällig" value={stats.overdue} color="red" />
+        <StatCard label={t('stats.total')} value={stats.total} />
+        <StatCard label={t('stats.new')} value={stats.neu} color="blue" />
+        <StatCard label={t('stats.inProgress')} value={stats.in_bearbeitung} color="amber" />
+        <StatCard label={t('stats.overdue')} value={stats.overdue} color="red" />
       </div>
 
       {/* Filter-Tabs */}
@@ -116,7 +111,7 @@ export default async function DashboardPage({
       {/* Meldungs-Liste */}
       {filtered.length === 0 ? (
         <div className="bg-white rounded-xl border border-gray-200 p-12 text-center text-gray-400">
-          Keine Meldungen gefunden.
+          {t('list.empty')}
         </div>
       ) : (
         <div className="space-y-2">
@@ -137,20 +132,18 @@ export default async function DashboardPage({
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 flex-wrap mb-1">
                       <span className={`inline-flex px-2 py-0.5 rounded-md text-xs font-medium ${STATUS_CLASSES[report.status]}`}>
-                        {STATUS_LABELS[report.status]}
+                        {t(`statusLabels.${report.status}` as Parameters<typeof t>[0])}
                       </span>
-                      <span className="text-xs text-gray-400">
-                        {REPORT_CATEGORIES[report.category as keyof typeof REPORT_CATEGORIES] ?? report.category}
-                      </span>
+                      <span className="text-xs text-gray-400">{report.category}</span>
                       {report.unread_messages > 0 && (
                         <span className="inline-flex items-center px-1.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
-                          {report.unread_messages} neu
+                          {t('list.newMessages', { n: report.unread_messages })}
                         </span>
                       )}
                     </div>
                     <p className="text-sm font-medium text-gray-900 truncate">{report.title}</p>
                     <p className="text-xs text-gray-400 mt-0.5">
-                      Eingegangen: {formatDate(report.received_at)} · Token: {report.melder_token}
+                      {t('list.received')} {formatDate(report.received_at)} · {t('list.token')} {report.melder_token}
                     </p>
                   </div>
 
@@ -158,11 +151,17 @@ export default async function DashboardPage({
                   <div className="text-right text-xs shrink-0">
                     {!report.confirmed_at && (
                       <p className={confirmOverdue ? 'text-red-600 font-medium' : 'text-gray-500'}>
-                        Bestätigung: {confirmOverdue ? `${Math.abs(confirmDays)}d überfällig` : `${confirmDays}d`}
+                        {t('deadline.confirmation')}{' '}
+                        {confirmOverdue
+                          ? t('deadline.overdueN', { n: Math.abs(confirmDays) })
+                          : t('deadline.daysLeft', { n: confirmDays })}
                       </p>
                     )}
                     <p className={responseOverdue ? 'text-red-600 font-medium' : 'text-gray-500'}>
-                      Rückmeldung: {responseOverdue ? `${Math.abs(responseDays)}d überfällig` : `${responseDays}d`}
+                      {t('deadline.response')}{' '}
+                      {responseOverdue
+                        ? t('deadline.overdueN', { n: Math.abs(responseDays) })
+                        : t('deadline.daysLeft', { n: responseDays })}
                     </p>
                   </div>
                 </div>

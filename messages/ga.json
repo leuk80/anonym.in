@@ -1,0 +1,94 @@
+{
+  "portal": {
+    "unavailable": "Níl an cainéal tuairiscithe seo ar fáil faoi láthair.",
+    "channelSubtitle": "Cainéal tuairiscithe comhlíontachta anaithnid",
+    "alreadyReported": "Ar chuir tú tuairisc isteach cheana?",
+    "checkStatus": "Seiceáil stádas",
+    "form": {
+      "heading": "Cuir tuairisc isteach",
+      "intro": "Déanfar do thuairisc a chriptiú go hiomlán agus a tharchur go neamhaithnid chuig {orgName}.",
+      "category": "Catagóir",
+      "categoryPlaceholder": "Roghnaigh le do thoil …",
+      "title": "Cur síos gearr",
+      "titlePlaceholder": "Cad faoi a bhfuil sé?",
+      "description": "Cur síos mionsonraithe",
+      "descriptionPlaceholder": "Déan cur síos ar an gceist chomh mionsonraithe agus is féidir. Cad a tharla? Cathain? Cé a bhí páirteach?",
+      "submit": "Cuir tuairisc isteach go neamhaithnid",
+      "submitting": "Á sheoladh …",
+      "error": "Earráid agus an tuairisc á cur isteach",
+      "privacy": "Príobháideachas: Ní stóráiltear seoltaí IP, seoltaí ríomhphoist ná sonraí pearsanta eile. Criptiítear an tuairisc le AES-256-GCM. Gan fianáin rianaithe ar an leathanach seo."
+    },
+    "success": {
+      "heading": "Tuairisc curtha isteach",
+      "subtext": "Tarchuireadh do thuairisc go slán agus déileálfar léi go rúnda.",
+      "tokenLabel": "Do chód rochtana pearsanta",
+      "copy": "Cóipeáil",
+      "copied": "✓ Cóipeáilte",
+      "savePdf": "Sábháil PDF",
+      "warningTitle": "Tábhachtach – nótáil an cód seo:",
+      "warning1": "Is é seo an t-aon bhealach chun rochtain a fháil ar do thuairisc arís",
+      "warning2": "Ligeann sé duit freagraí ón bhfoireann comhlíontachta a léamh",
+      "warning3": "Ní stóráiltear é agus ní féidir é a aisghabháil",
+      "trackLink": "Rianú tuairisc"
+    },
+    "categories": {
+      "korruption": "Éilliú agus breabadóireacht",
+      "betrug": "Calaois agus coimirce",
+      "datenschutz": "Sárú cosanta sonraí",
+      "diskriminierung": "Idirdhealú agus ciapadh",
+      "sicherheit": "Sábháilteacht oibre agus táirgí",
+      "sonstiges": "Eile"
+    }
+  },
+  "status": {
+    "pageSubtitle": "Cainéal comhlíontachta – Stádas tuairisce",
+    "newReport": "Cuir tuairisc nua isteach",
+    "notFound": "Tuairisc gan aimsiú",
+    "notFoundHint": "Seiceáil do chód rochtana. Déantar neamhaird de litreacha móra agus beaga.",
+    "retry": "Bain triail eile as",
+    "tokenForm": {
+      "heading": "Rianú tuairisc",
+      "subtext": "Cuir isteach do chód rochtana chun stádas do thuairisc a fheiceáil agus teachtaireachtaí a léamh.",
+      "label": "Cód rochtana",
+      "placeholder": "m.sh. WOLF-7342-GORM",
+      "submit": "Taispeáin stádas"
+    },
+    "report": {
+      "received": "Faighte:",
+      "confirmed": "Deimhníodh an glacadh ar {date} (an teorainn dhlíthiúil 7 lá comhlíonta)",
+      "pendingConfirmation": "Deimhniú glactha ar feitheamh (teorainn dhlíthiúil: 7 lá ón nglacadh)"
+    },
+    "messages": {
+      "heading": "Cumarsáid leis an bhfoireann comhlíontachta",
+      "empty": "Gan teachtaireachtaí go fóill. Rachaidh an fhoireann comhlíontachta i dteagmháil más gá.",
+      "senderCompliance": "Foireann comhlíontachta",
+      "senderMelder": "Tú féin (anaithnid)",
+      "replyLabel": "Seol teachtaireacht chuig an bhfoireann comhlíontachta:",
+      "replyPlaceholder": "Do theachtaireacht chuig an bhfoireann comhlíontachta …",
+      "closed": "Tá an tuairisc seo dúnta. Ní féidir teachtaireachtaí breise a sheoladh.",
+      "send": "Seol teachtaireacht",
+      "sending": "Á sheoladh …",
+      "errorSend": "Earráid agus á seoladh",
+      "privacy": "Tá gach teachtaireacht criptithe ón gceann go ceann. Gan rianú, gan fianáin."
+    },
+    "statusLabels": { "neu": "Faighte", "in_bearbeitung": "Á phróiseáil", "abgeschlossen": "Dúnta" }
+  },
+  "dashboard": {
+    "title": "Tuairiscí",
+    "stats": { "total": "Iomlán", "new": "Nua", "inProgress": "Á phróiseáil", "overdue": "Thar am" },
+    "filter": { "all": "Gach ceann", "new": "Nua", "inProgress": "Á phróiseáil", "done": "Dúnta", "overdue": "Thar am" },
+    "list": { "empty": "Gan tuairiscí aimsithe.", "received": "Faighte:", "token": "Token:", "newMessages": "{n} nua" },
+    "deadline": { "confirmation": "Deimhniú:", "response": "Freagra:", "overdueN": "{n}l thar am", "daysLeft": "{n}l" },
+    "detail": {
+      "back": "← Ar ais go dtí an forbhreathnú", "content": "Ábhar tuairisce", "deadlines": "Teorainneacha dlíthiúla (HinSchG)",
+      "confirmDeadline": "Deimhniú glactha (7 lá)", "responseDeadline": "Freagra (3 mhí)", "statusLabel": "Stádas",
+      "confirmedOn": "✓ {date}", "overdueN": "{n}l thar am", "daysLeft": "{n}l eile (go dtí {date})",
+      "noMessages": "Gan teachtaireachtaí go fóill.", "senderCompliance": "Comhlíontacht", "senderMelder": "Tuairisceoir (anaithnid)",
+      "replyLabel": "Freagra chuig an tuairisceoir (criptithe go hiomlán):", "replyPlaceholder": "Do fhreagra chuig an tuairisceoir …",
+      "send": "Seol freagra", "sending": "Á sheoladh …", "errorSend": "Earráid", "communication": "Cumarsáid", "messagesCount": "{n} teachtaireachtaí"
+    },
+    "actions": { "heading": "Stádas agus teorainneacha", "current": "Reatha:", "confirm": "Deimhnigh glacadh (teorainn HinSchG 7 lá)", "confirmedOn": "Glacadh deimhnithe ar {date}", "errorSave": "Earráid agus á shábháil" },
+    "statusLabels": { "neu": "Nua", "in_bearbeitung": "Á phróiseáil", "abgeschlossen": "Dúnta" },
+    "nav": { "logout": "Logáil amach" }
+  }
+}

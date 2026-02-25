@@ -1,0 +1,94 @@
+{
+  "portal": {
+    "unavailable": "Tento kanál na oznamovanie je momentálne nedostupný.",
+    "channelSubtitle": "Anonymný kanál na oznamovanie porušení predpisov",
+    "alreadyReported": "Už ste podali oznámenie?",
+    "checkStatus": "Skontrolovať stav",
+    "form": {
+      "heading": "Podať oznámenie",
+      "intro": "Vaše oznámenie bude plne zašifrované a anonymne odoslané organizácii {orgName}.",
+      "category": "Kategória",
+      "categoryPlaceholder": "Vyberte …",
+      "title": "Stručný popis",
+      "titlePlaceholder": "O čom ide?",
+      "description": "Podrobný popis",
+      "descriptionPlaceholder": "Opíšte situáciu čo najpodrobnejšie. Čo sa stalo? Kedy? Kto bol zapojený?",
+      "submit": "Podať oznámenie anonymne",
+      "submitting": "Odosielanie …",
+      "error": "Chyba pri odosielaní oznámenia",
+      "privacy": "Ochrana súkromia: Neukladajú sa IP adresy, e-mailové adresy ani iné osobné údaje. Oznámenie je šifrované pomocou AES-256-GCM. Na tejto stránke nie sú sledovacie súbory cookie."
+    },
+    "success": {
+      "heading": "Oznámenie podané",
+      "subtext": "Vaše oznámenie bolo bezpečne odoslané a bude spracované dôverne.",
+      "tokenLabel": "Váš osobný prístupový kód",
+      "copy": "Kopírovať",
+      "copied": "✓ Skopírované",
+      "savePdf": "Uložiť PDF",
+      "warningTitle": "Dôležité – poznačte si tento kód:",
+      "warning1": "Toto je jediný spôsob, ako znovu získať prístup k vášmu oznámeniu",
+      "warning2": "Umožňuje vám čítať odpovede tímu pre dodržiavanie predpisov",
+      "warning3": "Nie je uložený a nemožno ho obnoviť",
+      "trackLink": "Sledovať oznámenie"
+    },
+    "categories": {
+      "korruption": "Korupcia a úplatkárstvo",
+      "betrug": "Podvod a sprenevera",
+      "datenschutz": "Porušenie ochrany osobných údajov",
+      "diskriminierung": "Diskriminácia a obťažovanie",
+      "sicherheit": "Bezpečnosť práce a produktov",
+      "sonstiges": "Iné"
+    }
+  },
+  "status": {
+    "pageSubtitle": "Kanál pre dodržiavanie predpisov – Stav oznámenia",
+    "newReport": "Podať nové oznámenie",
+    "notFound": "Oznámenie sa nenašlo",
+    "notFoundHint": "Skontrolujte svoj prístupový kód. Veľké a malé písmená sa ignorujú.",
+    "retry": "Skúsiť znova",
+    "tokenForm": {
+      "heading": "Sledovať oznámenie",
+      "subtext": "Zadajte prístupový kód na zobrazenie stavu oznámenia a čítanie správ.",
+      "label": "Prístupový kód",
+      "placeholder": "napr. WOLF-7342-MODRA",
+      "submit": "Zobraziť stav"
+    },
+    "report": {
+      "received": "Prijaté:",
+      "confirmed": "Prijatie potvrdené dňa {date} (zákonná 7-dňová lehota dodržaná)",
+      "pendingConfirmation": "Potvrdenie prijatia čaká (zákonná lehota: 7 dní od prijatia)"
+    },
+    "messages": {
+      "heading": "Komunikácia s tímom pre dodržiavanie predpisov",
+      "empty": "Zatiaľ žiadne správy. Tím v prípade potreby kontaktuje.",
+      "senderCompliance": "Tím pre dodržiavanie predpisov",
+      "senderMelder": "Vy (anonymne)",
+      "replyLabel": "Odoslať správu tímu:",
+      "replyPlaceholder": "Vaša správa tímu …",
+      "closed": "Toto oznámenie je uzavreté. Ďalšie správy nie je možné odosielať.",
+      "send": "Odoslať správu",
+      "sending": "Odosielanie …",
+      "errorSend": "Chyba pri odosielaní",
+      "privacy": "Všetky správy sú šifrované end-to-end. Žiadne sledovanie, žiadne súbory cookie."
+    },
+    "statusLabels": { "neu": "Prijaté", "in_bearbeitung": "Spracováva sa", "abgeschlossen": "Uzavreté" }
+  },
+  "dashboard": {
+    "title": "Oznámenia",
+    "stats": { "total": "Celkom", "new": "Nové", "inProgress": "Spracováva sa", "overdue": "Po termíne" },
+    "filter": { "all": "Všetky", "new": "Nové", "inProgress": "Spracováva sa", "done": "Uzavreté", "overdue": "Po termíne" },
+    "list": { "empty": "Žiadne oznámenia nenájdené.", "received": "Prijaté:", "token": "Token:", "newMessages": "{n} nové" },
+    "deadline": { "confirmation": "Potvrdenie:", "response": "Odpoveď:", "overdueN": "{n}d po termíne", "daysLeft": "{n}d" },
+    "detail": {
+      "back": "← Späť na prehľad", "content": "Obsah oznámenia", "deadlines": "Zákonné lehoty (HinSchG)",
+      "confirmDeadline": "Potvrdenie prijatia (7 dní)", "responseDeadline": "Odpoveď (3 mesiace)", "statusLabel": "Stav",
+      "confirmedOn": "✓ {date}", "overdueN": "{n}d po termíne", "daysLeft": "ešte {n}d (do {date})",
+      "noMessages": "Zatiaľ žiadne správy.", "senderCompliance": "Compliance", "senderMelder": "Oznamovateľ (anonymne)",
+      "replyLabel": "Odpoveď oznamovateľovi (plne šifrovaná):", "replyPlaceholder": "Vaša odpoveď oznamovateľovi …",
+      "send": "Odoslať odpoveď", "sending": "Odosielanie …", "errorSend": "Chyba pri odosielaní", "communication": "Komunikácia", "messagesCount": "{n} správ"
+    },
+    "actions": { "heading": "Stav a lehoty", "current": "Aktuálny:", "confirm": "Potvrdiť prijatie (zákonná lehota HinSchG 7 dní)", "confirmedOn": "Prijatie potvrdené dňa {date}", "errorSave": "Chyba pri ukladaní" },
+    "statusLabels": { "neu": "Nové", "in_bearbeitung": "Spracováva sa", "abgeschlossen": "Uzavreté" },
+    "nav": { "logout": "Odhlásiť" }
+  }
+}

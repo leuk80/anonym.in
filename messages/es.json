@@ -1,0 +1,98 @@
+{
+  "portal": {
+    "unavailable": "Este canal de denuncia no está disponible actualmente.",
+    "channelSubtitle": "Canal anónimo de denuncia de cumplimiento",
+    "alreadyReported": "¿Ya ha enviado una denuncia?",
+    "checkStatus": "Consultar estado",
+    "form": {
+      "heading": "Enviar una denuncia",
+      "intro": "Su denuncia se cifrará completamente y se transmitirá de forma anónima a {orgName}.",
+      "category": "Categoría",
+      "categoryPlaceholder": "Por favor, seleccione …",
+      "title": "Descripción breve",
+      "titlePlaceholder": "¿De qué se trata?",
+      "description": "Descripción detallada",
+      "descriptionPlaceholder": "Describa los hechos con el mayor detalle posible. ¿Qué ocurrió? ¿Cuándo? ¿Quién estuvo implicado?",
+      "submit": "Enviar denuncia de forma anónima",
+      "submitting": "Enviando …",
+      "error": "Error al enviar la denuncia",
+      "privacy": "Privacidad: No se almacenan direcciones IP, direcciones de correo electrónico ni otros datos personales. La denuncia se cifra con AES-256-GCM. Sin cookies de seguimiento en esta página."
+    },
+    "success": {
+      "heading": "Denuncia enviada",
+      "subtext": "Su denuncia ha sido transmitida de forma segura y se tramitará de manera confidencial.",
+      "tokenLabel": "Su código de acceso personal",
+      "copy": "Copiar",
+      "copied": "✓ Copiado",
+      "savePdf": "Guardar PDF",
+      "warningTitle": "Importante – anote este código:",
+      "warning1": "Esta es la única forma de acceder a su denuncia",
+      "warning2": "Le permite leer las respuestas del equipo de cumplimiento",
+      "warning3": "No se almacena y no puede recuperarse",
+      "trackLink": "Seguir la denuncia"
+    },
+    "categories": {
+      "korruption": "Corrupción y soborno",
+      "betrug": "Fraude y malversación",
+      "datenschutz": "Violación de la protección de datos",
+      "diskriminierung": "Discriminación y acoso",
+      "sicherheit": "Seguridad laboral y de productos",
+      "sonstiges": "Otro"
+    }
+  },
+  "status": {
+    "pageSubtitle": "Canal de cumplimiento – Estado de la denuncia",
+    "newReport": "Enviar nueva denuncia",
+    "notFound": "Denuncia no encontrada",
+    "notFoundHint": "Compruebe su código de acceso. Las mayúsculas y minúsculas se ignoran.",
+    "retry": "Intentar de nuevo",
+    "tokenForm": {
+      "heading": "Seguir la denuncia",
+      "subtext": "Introduzca su código de acceso para consultar el estado de su denuncia y leer los mensajes.",
+      "label": "Código de acceso",
+      "placeholder": "p. ej. WOLF-7342-AZUL",
+      "submit": "Mostrar estado"
+    },
+    "report": {
+      "received": "Recibida:",
+      "confirmed": "Recepción confirmada el {date} (plazo legal de 7 días cumplido)",
+      "pendingConfirmation": "Confirmación de recepción pendiente (plazo legal: 7 días desde la recepción)"
+    },
+    "messages": {
+      "heading": "Comunicación con el equipo de cumplimiento",
+      "empty": "Aún no hay mensajes. El equipo de cumplimiento le contactará si es necesario.",
+      "senderCompliance": "Equipo de cumplimiento",
+      "senderMelder": "Usted (anónimo)",
+      "replyLabel": "Enviar mensaje al equipo de cumplimiento:",
+      "replyPlaceholder": "Su mensaje al equipo de cumplimiento …",
+      "closed": "Esta denuncia está cerrada. No se pueden enviar más mensajes.",
+      "send": "Enviar mensaje",
+      "sending": "Enviando …",
+      "errorSend": "Error al enviar",
+      "privacy": "Todos los mensajes están cifrados de extremo a extremo. Sin seguimiento, sin cookies."
+    },
+    "statusLabels": {
+      "neu": "Recibida",
+      "in_bearbeitung": "En tramitación",
+      "abgeschlossen": "Cerrada"
+    }
+  },
+  "dashboard": {
+    "title": "Denuncias",
+    "stats": { "total": "Total", "new": "Nueva", "inProgress": "En tramitación", "overdue": "Vencida" },
+    "filter": { "all": "Todas", "new": "Nueva", "inProgress": "En tramitación", "done": "Cerrada", "overdue": "Vencida" },
+    "list": { "empty": "No se encontraron denuncias.", "received": "Recibida:", "token": "Token:", "newMessages": "{n} nueva(s)" },
+    "deadline": { "confirmation": "Confirmación:", "response": "Respuesta:", "overdueN": "{n}d de retraso", "daysLeft": "{n}d" },
+    "detail": {
+      "back": "← Volver a la vista general", "content": "Contenido de la denuncia", "deadlines": "Plazos legales (HinSchG)",
+      "confirmDeadline": "Confirmación de recepción (7 días)", "responseDeadline": "Respuesta (3 meses)", "statusLabel": "Estado",
+      "confirmedOn": "✓ {date}", "overdueN": "{n}d de retraso", "daysLeft": "{n}d restantes (hasta {date})",
+      "noMessages": "Aún no hay mensajes.", "senderCompliance": "Cumplimiento", "senderMelder": "Denunciante (anónimo)",
+      "replyLabel": "Respuesta al denunciante (totalmente cifrada):", "replyPlaceholder": "Su respuesta al denunciante …",
+      "send": "Enviar respuesta", "sending": "Enviando …", "errorSend": "Error al enviar", "communication": "Comunicación", "messagesCount": "{n} mensajes"
+    },
+    "actions": { "heading": "Estado y plazos", "current": "Actual:", "confirm": "Confirmar recepción (plazo HinSchG 7 días)", "confirmedOn": "Recepción confirmada el {date}", "errorSave": "Error al guardar" },
+    "statusLabels": { "neu": "Nueva", "in_bearbeitung": "En tramitación", "abgeschlossen": "Cerrada" },
+    "nav": { "logout": "Cerrar sesión" }
+  }
+}

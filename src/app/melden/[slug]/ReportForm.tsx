@@ -1,7 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { REPORT_CATEGORIES, type ReportCategory } from '@/types'
+import { useTranslations } from 'next-intl'
+import { type ReportCategory } from '@/types'
 import MelderPdfDownloadButton from './MelderPdfDownloadButton'
 
 interface Props {
@@ -11,7 +12,10 @@ interface Props {
 
 type FormState = 'form' | 'success'
 
+const CATEGORY_KEYS = ['korruption', 'betrug', 'datenschutz', 'diskriminierung', 'sicherheit', 'sonstiges'] as const
+
 export default function ReportForm({ slug, orgName }: Props) {
+  const t = useTranslations('portal')
   const [state, setState] = useState<FormState>('form')
   const [category, setCategory] = useState<ReportCategory | ''>('')
   const [title, setTitle] = useState('')
@@ -36,7 +40,7 @@ export default function ReportForm({ slug, orgName }: Props) {
     setLoading(false)
 
     if (!res.ok) {
-      setError(data.message ?? 'Fehler beim Einreichen')
+      setError(data.message ?? t('form.error'))
       return
     }
 
@@ -59,15 +63,13 @@ export default function ReportForm({ slug, orgName }: Props) {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
           </div>
-          <h2 className="text-lg font-semibold text-gray-900 mb-2">Meldung eingereicht</h2>
-          <p className="text-sm text-gray-500 mb-6">
-            Ihre Meldung wurde sicher übermittelt und wird vertraulich bearbeitet.
-          </p>
+          <h2 className="text-lg font-semibold text-gray-900 mb-2">{t('success.heading')}</h2>
+          <p className="text-sm text-gray-500 mb-6">{t('success.subtext')}</p>
 
           {/* Token */}
           <div className="bg-gray-50 rounded-xl border border-gray-200 p-5 mb-6">
             <p className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-2">
-              Ihr persönlicher Zugangscode
+              {t('success.tokenLabel')}
             </p>
             <p className="text-2xl font-mono font-bold text-gray-900 tracking-widest mb-3">{token}</p>
             <div className="flex items-center justify-center gap-2 flex-wrap">
@@ -76,28 +78,27 @@ export default function ReportForm({ slug, orgName }: Props) {
                 className="px-4 py-2 text-sm font-medium border border-gray-300 rounded-lg
                            hover:bg-gray-100 transition-colors"
               >
-                {copied ? '✓ Kopiert' : 'Kopieren'}
+                {copied ? t('success.copied') : t('success.copy')}
               </button>
               <MelderPdfDownloadButton token={token} />
             </div>
           </div>
 
           <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 text-left text-sm text-amber-800">
-            <p className="font-semibold mb-1">Wichtig – bitte notieren Sie diesen Code:</p>
+            <p className="font-semibold mb-1">{t('success.warningTitle')}</p>
             <ul className="space-y-1 list-disc list-inside text-xs">
-              <li>Dies ist der einzige Weg, Ihre Meldung wieder aufzurufen</li>
-              <li>Er ermöglicht Ihnen, Antworten des Compliance-Teams zu lesen</li>
-              <li>Er wird nicht gespeichert und kann nicht wiederhergestellt werden</li>
+              <li>{t('success.warning1')}</li>
+              <li>{t('success.warning2')}</li>
+              <li>{t('success.warning3')}</li>
             </ul>
           </div>
 
           <p className="mt-5 text-sm text-gray-500">
-            Status und Antworten einsehen:{' '}
             <a
               href={`/melden/${slug}/status?token=${token}`}
               className="text-gray-900 underline underline-offset-2"
             >
-              Meldung verfolgen
+              {t('success.trackLink')}
             </a>
           </p>
         </div>
@@ -108,17 +109,16 @@ export default function ReportForm({ slug, orgName }: Props) {
   return (
     <div className="max-w-lg mx-auto">
       <div className="bg-white rounded-xl border border-gray-200 p-8">
-        <h2 className="text-base font-semibold text-gray-900 mb-1">Meldung einreichen</h2>
+        <h2 className="text-base font-semibold text-gray-900 mb-1">{t('form.heading')}</h2>
         <p className="text-sm text-gray-500 mb-6">
-          Ihre Meldung wird vollständig verschlüsselt und anonym übermittelt an{' '}
-          <span className="font-medium text-gray-700">{orgName}</span>.
+          {t('form.intro', { orgName })}
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-5">
           {/* Kategorie */}
           <div>
             <label htmlFor="category" className="block text-sm font-medium text-gray-700 mb-1">
-              Kategorie <span className="text-red-500">*</span>
+              {t('form.category')} <span className="text-red-500">*</span>
             </label>
             <select
               id="category"
@@ -130,9 +130,9 @@ export default function ReportForm({ slug, orgName }: Props) {
                          focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent
                          disabled:bg-gray-50 disabled:text-gray-400"
             >
-              <option value="">Bitte wählen …</option>
-              {Object.entries(REPORT_CATEGORIES).map(([key, label]) => (
-                <option key={key} value={key}>{label}</option>
+              <option value="">{t('form.categoryPlaceholder')}</option>
+              {CATEGORY_KEYS.map((key) => (
+                <option key={key} value={key}>{t(`categories.${key}`)}</option>
               ))}
             </select>
           </div>
@@ -140,7 +140,7 @@ export default function ReportForm({ slug, orgName }: Props) {
           {/* Titel */}
           <div>
             <label htmlFor="title" className="block text-sm font-medium text-gray-700 mb-1">
-              Kurzbeschreibung <span className="text-red-500">*</span>
+              {t('form.title')} <span className="text-red-500">*</span>
             </label>
             <input
               id="title"
@@ -151,7 +151,7 @@ export default function ReportForm({ slug, orgName }: Props) {
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               disabled={loading}
-              placeholder="Worum geht es in Kürze?"
+              placeholder={t('form.titlePlaceholder')}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm
                          focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent
                          disabled:bg-gray-50 disabled:text-gray-400"
@@ -161,7 +161,7 @@ export default function ReportForm({ slug, orgName }: Props) {
           {/* Beschreibung */}
           <div>
             <label htmlFor="description" className="block text-sm font-medium text-gray-700 mb-1">
-              Detaillierte Beschreibung <span className="text-red-500">*</span>
+              {t('form.description')} <span className="text-red-500">*</span>
             </label>
             <textarea
               id="description"
@@ -171,7 +171,7 @@ export default function ReportForm({ slug, orgName }: Props) {
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               disabled={loading}
-              placeholder="Beschreiben Sie den Sachverhalt so detailliert wie möglich. Was ist passiert? Wann? Wer war beteiligt?"
+              placeholder={t('form.descriptionPlaceholder')}
               className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm resize-none
                          focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent
                          disabled:bg-gray-50 disabled:text-gray-400"
@@ -190,17 +190,13 @@ export default function ReportForm({ slug, orgName }: Props) {
             className="w-full py-2.5 px-4 bg-gray-900 text-white text-sm font-medium rounded-lg
                        hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
           >
-            {loading ? 'Wird übermittelt …' : 'Meldung anonym einreichen'}
+            {loading ? t('form.submitting') : t('form.submit')}
           </button>
         </form>
 
         {/* Datenschutzhinweis */}
         <div className="mt-5 pt-5 border-t border-gray-100">
-          <p className="text-xs text-gray-400 leading-relaxed">
-            Datenschutz: Es werden keine IP-Adressen, E-Mail-Adressen oder sonstigen
-            personenbezogenen Daten gespeichert. Die Meldung wird mit AES-256-GCM verschlüsselt.
-            Keine Tracking-Cookies auf dieser Seite.
-          </p>
+          <p className="text-xs text-gray-400 leading-relaxed">{t('form.privacy')}</p>
         </div>
       </div>
     </div>

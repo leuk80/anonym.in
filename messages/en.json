@@ -1,0 +1,144 @@
+{
+  "portal": {
+    "unavailable": "This reporting channel is currently unavailable.",
+    "channelSubtitle": "Anonymous Compliance Reporting Channel",
+    "alreadyReported": "Already submitted a report?",
+    "checkStatus": "Check status",
+    "form": {
+      "heading": "Submit a report",
+      "intro": "Your report will be fully encrypted and submitted anonymously to {orgName}.",
+      "category": "Category",
+      "categoryPlaceholder": "Please select …",
+      "title": "Brief description",
+      "titlePlaceholder": "What is this about?",
+      "description": "Detailed description",
+      "descriptionPlaceholder": "Describe the matter in as much detail as possible. What happened? When? Who was involved?",
+      "submit": "Submit report anonymously",
+      "submitting": "Submitting …",
+      "error": "Error submitting report",
+      "privacy": "Privacy: No IP addresses, email addresses or other personal data are stored. The report is encrypted with AES-256-GCM. No tracking cookies on this page."
+    },
+    "success": {
+      "heading": "Report submitted",
+      "subtext": "Your report has been securely transmitted and will be handled confidentially.",
+      "tokenLabel": "Your personal access code",
+      "copy": "Copy",
+      "copied": "✓ Copied",
+      "savePdf": "Save PDF",
+      "warningTitle": "Important – please note this code:",
+      "warning1": "This is the only way to retrieve your report",
+      "warning2": "It allows you to read replies from the compliance team",
+      "warning3": "It is not stored and cannot be recovered",
+      "trackLink": "Track report"
+    },
+    "categories": {
+      "korruption": "Corruption & Bribery",
+      "betrug": "Fraud & Embezzlement",
+      "datenschutz": "Data Protection Violation",
+      "diskriminierung": "Discrimination & Harassment",
+      "sicherheit": "Occupational & Product Safety",
+      "sonstiges": "Other"
+    }
+  },
+  "status": {
+    "pageSubtitle": "Compliance Channel – Report Status",
+    "newReport": "Submit new report",
+    "notFound": "Report not found",
+    "notFoundHint": "Please check your access code. Upper/lower case is ignored.",
+    "retry": "Try again",
+    "tokenForm": {
+      "heading": "Track report",
+      "subtext": "Enter your access code to view the status of your report and read messages.",
+      "label": "Access code",
+      "placeholder": "e.g. WOLF-7342-BLUE",
+      "submit": "Show status"
+    },
+    "report": {
+      "received": "Received:",
+      "confirmed": "Receipt confirmed on {date} (statutory 7-day deadline met)",
+      "pendingConfirmation": "Receipt confirmation pending (statutory deadline: 7 days from receipt)"
+    },
+    "messages": {
+      "heading": "Communication with the compliance team",
+      "empty": "No messages yet. The compliance team will contact you if needed.",
+      "senderCompliance": "Compliance team",
+      "senderMelder": "You (anonymous)",
+      "replyLabel": "Send message to compliance team:",
+      "replyPlaceholder": "Your message to the compliance team …",
+      "closed": "This report is closed. No further messages are possible.",
+      "send": "Send message",
+      "sending": "Sending …",
+      "errorSend": "Error sending message",
+      "privacy": "All messages are end-to-end encrypted. No tracking, no cookies."
+    },
+    "statusLabels": {
+      "neu": "Received",
+      "in_bearbeitung": "In progress",
+      "abgeschlossen": "Closed"
+    }
+  },
+  "dashboard": {
+    "title": "Reports",
+    "stats": {
+      "total": "Total",
+      "new": "New",
+      "inProgress": "In progress",
+      "overdue": "Overdue"
+    },
+    "filter": {
+      "all": "All",
+      "new": "New",
+      "inProgress": "In progress",
+      "done": "Closed",
+      "overdue": "Overdue"
+    },
+    "list": {
+      "empty": "No reports found.",
+      "received": "Received:",
+      "token": "Token:",
+      "newMessages": "{n} new"
+    },
+    "deadline": {
+      "confirmation": "Confirmation:",
+      "response": "Response:",
+      "overdueN": "{n}d overdue",
+      "daysLeft": "{n}d"
+    },
+    "detail": {
+      "back": "← Back to overview",
+      "content": "Report content",
+      "deadlines": "Statutory deadlines (HinSchG)",
+      "confirmDeadline": "Receipt confirmation (7 days)",
+      "responseDeadline": "Response (3 months)",
+      "statusLabel": "Status",
+      "confirmedOn": "✓ {date}",
+      "overdueN": "{n}d overdue",
+      "daysLeft": "{n}d remaining (until {date})",
+      "noMessages": "No messages yet.",
+      "senderCompliance": "Compliance",
+      "senderMelder": "Whistleblower (anonymous)",
+      "replyLabel": "Reply to whistleblower (fully encrypted):",
+      "replyPlaceholder": "Your reply to the whistleblower …",
+      "send": "Send reply",
+      "sending": "Sending …",
+      "errorSend": "Error sending",
+      "communication": "Communication",
+      "messagesCount": "{n} messages"
+    },
+    "actions": {
+      "heading": "Status & Deadlines",
+      "current": "Current:",
+      "confirm": "Confirm receipt (HinSchG 7-day deadline)",
+      "confirmedOn": "Receipt confirmed on {date}",
+      "errorSave": "Error saving"
+    },
+    "statusLabels": {
+      "neu": "New",
+      "in_bearbeitung": "In progress",
+      "abgeschlossen": "Closed"
+    },
+    "nav": {
+      "logout": "Log out"
+    }
+  }
+}

@@ -2,13 +2,8 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import { useTranslations } from 'next-intl'
 import type { ReportStatus } from '@/types'
-
-const STATUS_LABELS: Record<ReportStatus, string> = {
-  neu: 'Neu',
-  in_bearbeitung: 'In Bearbeitung',
-  abgeschlossen: 'Abgeschlossen',
-}
 
 const STATUS_CLASSES: Record<ReportStatus, string> = {
   neu: 'bg-blue-100 text-blue-800',
@@ -23,6 +18,7 @@ interface Props {
 }
 
 export default function ReportActions({ reportId, currentStatus, confirmedAt }: Props) {
+  const t = useTranslations('dashboard')
   const router = useRouter()
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -38,7 +34,7 @@ export default function ReportActions({ reportId, currentStatus, confirmedAt }: 
     setLoading(false)
     if (!res.ok) {
       const data = await res.json()
-      setError(data.message ?? 'Fehler beim Speichern')
+      setError(data.message ?? t('actions.errorSave'))
       return
     }
     router.refresh()
@@ -50,13 +46,13 @@ export default function ReportActions({ reportId, currentStatus, confirmedAt }: 
 
   return (
     <div className="bg-white rounded-xl border border-gray-200 p-5 space-y-4">
-      <h2 className="text-sm font-semibold text-gray-900">Status & Fristen</h2>
+      <h2 className="text-sm font-semibold text-gray-900">{t('actions.heading')}</h2>
 
       {/* Aktueller Status */}
       <div className="flex items-center gap-2">
-        <span className="text-xs text-gray-500">Aktuell:</span>
+        <span className="text-xs text-gray-500">{t('actions.current')}</span>
         <span className={`px-2 py-0.5 rounded-md text-xs font-medium ${STATUS_CLASSES[currentStatus]}`}>
-          {STATUS_LABELS[currentStatus]}
+          {t(`statusLabels.${currentStatus}` as Parameters<typeof t>[0])}
         </span>
       </div>
 
@@ -70,7 +66,7 @@ export default function ReportActions({ reportId, currentStatus, confirmedAt }: 
             className="px-3 py-1.5 text-xs font-medium rounded-lg border border-gray-200
                        hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
           >
-            → {STATUS_LABELS[s]}
+            → {t(`statusLabels.${s}` as Parameters<typeof t>[0])}
           </button>
         ))}
       </div>
@@ -78,11 +74,10 @@ export default function ReportActions({ reportId, currentStatus, confirmedAt }: 
       {/* Eingangsbestätigung */}
       {confirmedAt ? (
         <p className="text-xs text-green-700 bg-green-50 rounded-lg px-3 py-2">
-          Eingang bestätigt am{' '}
-          {new Date(confirmedAt).toLocaleDateString('de-DE', {
-            day: '2-digit',
-            month: '2-digit',
-            year: 'numeric',
+          {t('actions.confirmedOn', {
+            date: new Date(confirmedAt).toLocaleDateString('de-DE', {
+              day: '2-digit', month: '2-digit', year: 'numeric',
+            }),
           })}
         </p>
       ) : (
@@ -92,7 +87,7 @@ export default function ReportActions({ reportId, currentStatus, confirmedAt }: 
           className="w-full py-2 px-3 text-xs font-medium text-white bg-gray-900 rounded-lg
                      hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         >
-          Eingang bestätigen (HinSchG 7-Tage-Frist)
+          {t('actions.confirm')}
         </button>
       )}
 

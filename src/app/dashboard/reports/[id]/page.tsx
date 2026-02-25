@@ -2,39 +2,38 @@ import { getServerSession } from 'next-auth'
 import { authOptions } from '@/lib/auth'
 import { supabaseAdmin } from '@/lib/supabase'
 import { decryptFromString, getOrgEncryptionKey } from '@/lib/crypto'
-import { REPORT_CATEGORIES, type DecryptedMessage, type ReportStatus } from '@/types'
+import { type DecryptedMessage, type ReportStatus } from '@/types'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import { getTranslations, getLocale } from 'next-intl/server'
 import ReportActions from './ReportActions'
 import ReplyForm from './ReplyForm'
 import PdfDownloadButton from './PdfDownloadButton'
 
-const STATUS_LABELS: Record<ReportStatus, string> = {
-  neu: 'Neu',
-  in_bearbeitung: 'In Bearbeitung',
-  abgeschlossen: 'Abgeschlossen',
-}
-
-function formatDate(iso: string) {
-  return new Date(iso).toLocaleDateString('de-DE', {
-    day: '2-digit', month: '2-digit', year: 'numeric',
-  })
-}
-
-function formatDateTime(iso: string) {
-  return new Date(iso).toLocaleString('de-DE', {
-    day: '2-digit', month: '2-digit', year: 'numeric',
-    hour: '2-digit', minute: '2-digit',
-  })
-}
-
-function daysUntil(iso: string) {
-  return Math.ceil((new Date(iso).getTime() - Date.now()) / (1000 * 60 * 60 * 24))
-}
-
 export default async function ReportDetailPage({ params }: { params: { id: string } }) {
   const session = await getServerSession(authOptions)
   if (!session) return null
+
+  const t = await getTranslations('dashboard')
+  const tPortal = await getTranslations('portal')
+  const locale = await getLocale()
+
+  function formatDate(iso: string) {
+    return new Date(iso).toLocaleDateString(locale, {
+      day: '2-digit', month: '2-digit', year: 'numeric',
+    })
+  }
+
+  function formatDateTime(iso: string) {
+    return new Date(iso).toLocaleString(locale, {
+      day: '2-digit', month: '2-digit', year: 'numeric',
+      hour: '2-digit', minute: '2-digit',
+    })
+  }
+
+  function daysUntil(iso: string) {
+    return Math.ceil((new Date(iso).getTime() - Date.now()) / (1000 * 60 * 60 * 24))
+  }
 
   const orgId = session.user.organizationId
   const orgKey = getOrgEncryptionKey(orgId)
@@ -82,20 +81,20 @@ export default async function ReportDetailPage({ params }: { params: { id: strin
     <div className="max-w-3xl">
       {/* Zurück */}
       <Link href="/dashboard" className="text-sm text-gray-500 hover:text-gray-900 transition-colors">
-        ← Zurück zur Übersicht
+        {t('detail.back')}
       </Link>
 
       {/* Header */}
       <div className="mt-4 mb-6">
         <div className="flex items-start justify-between gap-4 mb-2">
           <div className="flex items-center gap-2 flex-wrap">
-          <span className="text-xs font-mono text-gray-400">{report.melder_token}</span>
-          <span className="text-xs text-gray-300">·</span>
-          <span className="text-xs text-gray-400">
-            {REPORT_CATEGORIES[report.category as keyof typeof REPORT_CATEGORIES] ?? report.category}
-          </span>
-          <span className="text-xs text-gray-300">·</span>
-          <span className="text-xs text-gray-400">Eingegangen: {formatDate(report.received_at)}</span>
+            <span className="text-xs font-mono text-gray-400">{report.melder_token}</span>
+            <span className="text-xs text-gray-300">·</span>
+            <span className="text-xs text-gray-400">
+              {tPortal(`categories.${report.category}` as Parameters<typeof tPortal>[0]) ?? report.category}
+            </span>
+            <span className="text-xs text-gray-300">·</span>
+            <span className="text-xs text-gray-400">{t('list.received')} {formatDate(report.received_at)}</span>
           </div>
           <PdfDownloadButton reportId={report.id} />
         </div>
@@ -105,37 +104,39 @@ export default async function ReportDetailPage({ params }: { params: { id: strin
       <div className="space-y-5">
         {/* Meldungsinhalt */}
         <div className="bg-white rounded-xl border border-gray-200 p-5">
-          <h2 className="text-sm font-semibold text-gray-900 mb-3">Meldungsinhalt</h2>
+          <h2 className="text-sm font-semibold text-gray-900 mb-3">{t('detail.content')}</h2>
           <p className="text-sm text-gray-700 whitespace-pre-wrap leading-relaxed">{report.description}</p>
         </div>
 
         {/* Fristen */}
         <div className="bg-white rounded-xl border border-gray-200 p-5">
-          <h2 className="text-sm font-semibold text-gray-900 mb-3">Gesetzliche Fristen (HinSchG)</h2>
+          <h2 className="text-sm font-semibold text-gray-900 mb-3">{t('detail.deadlines')}</h2>
           <div className="space-y-2">
             <div className="flex justify-between items-center text-sm">
-              <span className="text-gray-500">Eingangsbestätigung (7 Tage)</span>
+              <span className="text-gray-500">{t('detail.confirmDeadline')}</span>
               {report.confirmed_at ? (
-                <span className="text-green-700 font-medium">✓ {formatDate(report.confirmed_at)}</span>
+                <span className="text-green-700 font-medium">
+                  {t('detail.confirmedOn', { date: formatDate(report.confirmed_at) })}
+                </span>
               ) : (
                 <span className={confirmOverdue ? 'text-red-600 font-medium' : 'text-gray-700'}>
                   {confirmOverdue
-                    ? `${Math.abs(confirmDays)}d überfällig`
-                    : `noch ${confirmDays}d (bis ${formatDate(report.confirmation_deadline)})`}
+                    ? t('detail.overdueN', { n: Math.abs(confirmDays) })
+                    : t('detail.daysLeft', { n: confirmDays, date: formatDate(report.confirmation_deadline) })}
                 </span>
               )}
             </div>
             <div className="flex justify-between items-center text-sm">
-              <span className="text-gray-500">Rückmeldung (3 Monate)</span>
+              <span className="text-gray-500">{t('detail.responseDeadline')}</span>
               <span className={responseOverdue ? 'text-red-600 font-medium' : 'text-gray-700'}>
                 {responseOverdue
-                  ? `${Math.abs(responseDays)}d überfällig`
-                  : `noch ${responseDays}d (bis ${formatDate(report.response_deadline)})`}
+                  ? t('detail.overdueN', { n: Math.abs(responseDays) })
+                  : t('detail.daysLeft', { n: responseDays, date: formatDate(report.response_deadline) })}
               </span>
             </div>
             <div className="flex justify-between items-center text-sm">
-              <span className="text-gray-500">Status</span>
-              <span className="text-gray-700">{STATUS_LABELS[report.status as ReportStatus]}</span>
+              <span className="text-gray-500">{t('detail.statusLabel')}</span>
+              <span className="text-gray-700">{t(`statusLabels.${report.status}` as Parameters<typeof t>[0])}</span>
             </div>
           </div>
         </div>
@@ -150,14 +151,14 @@ export default async function ReportDetailPage({ params }: { params: { id: strin
         {/* Kommunikationsverlauf */}
         <div className="bg-white rounded-xl border border-gray-200 p-5">
           <h2 className="text-sm font-semibold text-gray-900 mb-4">
-            Kommunikation
+            {t('detail.communication')}
             <span className="ml-2 text-xs font-normal text-gray-400">
-              ({messages.length} Nachrichten)
+              ({t('detail.messagesCount', { n: messages.length })})
             </span>
           </h2>
 
           {messages.length === 0 ? (
-            <p className="text-sm text-gray-400 mb-4">Noch keine Nachrichten.</p>
+            <p className="text-sm text-gray-400 mb-4">{t('detail.noMessages')}</p>
           ) : (
             <div className="space-y-3 mb-4">
               {messages.map((msg) => (
@@ -171,9 +172,9 @@ export default async function ReportDetailPage({ params }: { params: { id: strin
                 >
                   <div className="flex justify-between items-center mb-1 gap-4">
                     <span className={`text-xs font-medium ${msg.sender === 'compliance' ? 'text-gray-300' : 'text-gray-500'}`}>
-                      {msg.sender === 'compliance' ? 'Compliance' : 'Melder (anonym)'}
+                      {msg.sender === 'compliance' ? t('detail.senderCompliance') : t('detail.senderMelder')}
                     </span>
-                    <span className={`text-xs ${msg.sender === 'compliance' ? 'text-gray-400' : 'text-gray-400'}`}>
+                    <span className="text-xs text-gray-400">
                       {formatDateTime(msg.created_at)}
                     </span>
                   </div>
@@ -186,7 +187,7 @@ export default async function ReportDetailPage({ params }: { params: { id: strin
           {/* Antwort-Formular */}
           <div className="border-t border-gray-100 pt-4">
             <p className="text-xs text-gray-500 mb-3">
-              Antwort an den Melder (vollständig verschlüsselt):
+              {t('detail.replyLabel')}
             </p>
             <ReplyForm reportId={report.id} />
           </div>

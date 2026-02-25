@@ -1,0 +1,94 @@
+{
+  "portal": {
+    "unavailable": "Tento hlásící kanál je momentálně nedostupný.",
+    "channelSubtitle": "Anonymní kanál pro hlášení porušení předpisů",
+    "alreadyReported": "Již jste podali hlášení?",
+    "checkStatus": "Zkontrolovat stav",
+    "form": {
+      "heading": "Podat hlášení",
+      "intro": "Vaše hlášení bude plně zašifrováno a anonymně odesláno organizaci {orgName}.",
+      "category": "Kategorie",
+      "categoryPlaceholder": "Vyberte …",
+      "title": "Stručný popis",
+      "titlePlaceholder": "O čem jde?",
+      "description": "Podrobný popis",
+      "descriptionPlaceholder": "Popište situaci co nejpodrobněji. Co se stalo? Kdy? Kdo byl zapojen?",
+      "submit": "Podat hlášení anonymně",
+      "submitting": "Odesílání …",
+      "error": "Chyba při podávání hlášení",
+      "privacy": "Ochrana soukromí: Nejsou ukládány IP adresy, e-mailové adresy ani žádné jiné osobní údaje. Hlášení je šifrováno pomocí AES-256-GCM. Na této stránce nejsou sledovací cookies."
+    },
+    "success": {
+      "heading": "Hlášení podáno",
+      "subtext": "Vaše hlášení bylo bezpečně odesláno a bude zpracováno důvěrně.",
+      "tokenLabel": "Váš osobní přístupový kód",
+      "copy": "Kopírovat",
+      "copied": "✓ Zkopírováno",
+      "savePdf": "Uložit PDF",
+      "warningTitle": "Důležité – poznamenejte si tento kód:",
+      "warning1": "Toto je jediný způsob, jak znovu získat přístup k vašemu hlášení",
+      "warning2": "Umožňuje vám číst odpovědi compliance týmu",
+      "warning3": "Není uložen a nelze ho obnovit",
+      "trackLink": "Sledovat hlášení"
+    },
+    "categories": {
+      "korruption": "Korupce a úplatkářství",
+      "betrug": "Podvod a zpronevěra",
+      "datenschutz": "Porušení ochrany osobních údajů",
+      "diskriminierung": "Diskriminace a obtěžování",
+      "sicherheit": "Bezpečnost práce a produktů",
+      "sonstiges": "Ostatní"
+    }
+  },
+  "status": {
+    "pageSubtitle": "Kanál pro compliance – Stav hlášení",
+    "newReport": "Podat nové hlášení",
+    "notFound": "Hlášení nebylo nalezeno",
+    "notFoundHint": "Zkontrolujte svůj přístupový kód. Velká a malá písmena jsou ignorována.",
+    "retry": "Zkusit znovu",
+    "tokenForm": {
+      "heading": "Sledovat hlášení",
+      "subtext": "Zadejte přístupový kód pro zobrazení stavu hlášení a čtení zpráv.",
+      "label": "Přístupový kód",
+      "placeholder": "např. WOLF-7342-MODRA",
+      "submit": "Zobrazit stav"
+    },
+    "report": {
+      "received": "Přijato:",
+      "confirmed": "Příjem potvrzen dne {date} (zákonná 7denní lhůta dodržena)",
+      "pendingConfirmation": "Potvrzení příjmu čeká (zákonná lhůta: 7 dní od přijetí)"
+    },
+    "messages": {
+      "heading": "Komunikace s compliance týmem",
+      "empty": "Zatím žádné zprávy. Compliance tým vás v případě potřeby kontaktuje.",
+      "senderCompliance": "Compliance tým",
+      "senderMelder": "Vy (anonymně)",
+      "replyLabel": "Odeslat zprávu compliance týmu:",
+      "replyPlaceholder": "Vaše zpráva compliance týmu …",
+      "closed": "Toto hlášení je uzavřeno. Další zprávy není možné odesílat.",
+      "send": "Odeslat zprávu",
+      "sending": "Odesílání …",
+      "errorSend": "Chyba při odesílání",
+      "privacy": "Všechny zprávy jsou šifrovány end-to-end. Žádné sledování, žádné cookies."
+    },
+    "statusLabels": { "neu": "Přijato", "in_bearbeitung": "Zpracovává se", "abgeschlossen": "Uzavřeno" }
+  },
+  "dashboard": {
+    "title": "Hlášení",
+    "stats": { "total": "Celkem", "new": "Nové", "inProgress": "Zpracovává se", "overdue": "Po lhůtě" },
+    "filter": { "all": "Vše", "new": "Nové", "inProgress": "Zpracovává se", "done": "Uzavřeno", "overdue": "Po lhůtě" },
+    "list": { "empty": "Žádná hlášení nenalezena.", "received": "Přijato:", "token": "Token:", "newMessages": "{n} nové" },
+    "deadline": { "confirmation": "Potvrzení:", "response": "Odpověď:", "overdueN": "{n}d po lhůtě", "daysLeft": "{n}d" },
+    "detail": {
+      "back": "← Zpět na přehled", "content": "Obsah hlášení", "deadlines": "Zákonné lhůty (HinSchG)",
+      "confirmDeadline": "Potvrzení příjmu (7 dní)", "responseDeadline": "Odpověď (3 měsíce)", "statusLabel": "Stav",
+      "confirmedOn": "✓ {date}", "overdueN": "{n}d po lhůtě", "daysLeft": "ještě {n}d (do {date})",
+      "noMessages": "Zatím žádné zprávy.", "senderCompliance": "Compliance", "senderMelder": "Oznamovatel (anonymně)",
+      "replyLabel": "Odpověď oznamovateli (plně šifrována):", "replyPlaceholder": "Vaše odpověď oznamovateli …",
+      "send": "Odeslat odpověď", "sending": "Odesílání …", "errorSend": "Chyba při odesílání", "communication": "Komunikace", "messagesCount": "{n} zpráv"
+    },
+    "actions": { "heading": "Stav a lhůty", "current": "Aktuální:", "confirm": "Potvrdit příjem (zákonná lhůta HinSchG 7 dní)", "confirmedOn": "Příjem potvrzen dne {date}", "errorSave": "Chyba při ukládání" },
+    "statusLabels": { "neu": "Nové", "in_bearbeitung": "Zpracovává se", "abgeschlossen": "Uzavřeno" },
+    "nav": { "logout": "Odhlásit" }
+  }
+}

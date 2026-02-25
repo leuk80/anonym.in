@@ -1,0 +1,98 @@
+{
+  "portal": {
+    "unavailable": "Este canal de denúncia não está disponível de momento.",
+    "channelSubtitle": "Canal anónimo de denúncia de conformidade",
+    "alreadyReported": "Já submeteu uma denúncia?",
+    "checkStatus": "Verificar estado",
+    "form": {
+      "heading": "Submeter uma denúncia",
+      "intro": "A sua denúncia será totalmente encriptada e transmitida anonimamente a {orgName}.",
+      "category": "Categoria",
+      "categoryPlaceholder": "Por favor, selecione …",
+      "title": "Descrição breve",
+      "titlePlaceholder": "Do que se trata?",
+      "description": "Descrição detalhada",
+      "descriptionPlaceholder": "Descreva os factos com o máximo de detalhe possível. O que aconteceu? Quando? Quem estava envolvido?",
+      "submit": "Submeter denúncia anonimamente",
+      "submitting": "A enviar …",
+      "error": "Erro ao submeter a denúncia",
+      "privacy": "Privacidade: Não são armazenados endereços IP, endereços de e-mail ou outros dados pessoais. A denúncia é encriptada com AES-256-GCM. Sem cookies de rastreamento nesta página."
+    },
+    "success": {
+      "heading": "Denúncia submetida",
+      "subtext": "A sua denúncia foi transmitida de forma segura e será tratada de forma confidencial.",
+      "tokenLabel": "O seu código de acesso pessoal",
+      "copy": "Copiar",
+      "copied": "✓ Copiado",
+      "savePdf": "Guardar PDF",
+      "warningTitle": "Importante – anote este código:",
+      "warning1": "Esta é a única forma de recuperar a sua denúncia",
+      "warning2": "Permite-lhe ler as respostas da equipa de conformidade",
+      "warning3": "Não é armazenado e não pode ser recuperado",
+      "trackLink": "Acompanhar denúncia"
+    },
+    "categories": {
+      "korruption": "Corrupção e suborno",
+      "betrug": "Fraude e desvio de fundos",
+      "datenschutz": "Violação da proteção de dados",
+      "diskriminierung": "Discriminação e assédio",
+      "sicherheit": "Segurança no trabalho e dos produtos",
+      "sonstiges": "Outro"
+    }
+  },
+  "status": {
+    "pageSubtitle": "Canal de conformidade – Estado da denúncia",
+    "newReport": "Submeter nova denúncia",
+    "notFound": "Denúncia não encontrada",
+    "notFoundHint": "Verifique o seu código de acesso. Maiúsculas e minúsculas são ignoradas.",
+    "retry": "Tentar novamente",
+    "tokenForm": {
+      "heading": "Acompanhar denúncia",
+      "subtext": "Introduza o seu código de acesso para ver o estado da sua denúncia e ler mensagens.",
+      "label": "Código de acesso",
+      "placeholder": "ex. WOLF-7342-AZUL",
+      "submit": "Mostrar estado"
+    },
+    "report": {
+      "received": "Recebida:",
+      "confirmed": "Receção confirmada em {date} (prazo legal de 7 dias cumprido)",
+      "pendingConfirmation": "Confirmação de receção pendente (prazo legal: 7 dias a contar da receção)"
+    },
+    "messages": {
+      "heading": "Comunicação com a equipa de conformidade",
+      "empty": "Sem mensagens ainda. A equipa de conformidade entrará em contacto se necessário.",
+      "senderCompliance": "Equipa de conformidade",
+      "senderMelder": "Você (anónimo)",
+      "replyLabel": "Enviar mensagem à equipa de conformidade:",
+      "replyPlaceholder": "A sua mensagem para a equipa de conformidade …",
+      "closed": "Esta denúncia está encerrada. Não é possível enviar mais mensagens.",
+      "send": "Enviar mensagem",
+      "sending": "A enviar …",
+      "errorSend": "Erro ao enviar",
+      "privacy": "Todas as mensagens são encriptadas de ponta a ponta. Sem rastreamento, sem cookies."
+    },
+    "statusLabels": {
+      "neu": "Recebida",
+      "in_bearbeitung": "Em análise",
+      "abgeschlossen": "Encerrada"
+    }
+  },
+  "dashboard": {
+    "title": "Denúncias",
+    "stats": { "total": "Total", "new": "Nova", "inProgress": "Em análise", "overdue": "Em atraso" },
+    "filter": { "all": "Todas", "new": "Nova", "inProgress": "Em análise", "done": "Encerrada", "overdue": "Em atraso" },
+    "list": { "empty": "Não foram encontradas denúncias.", "received": "Recebida:", "token": "Token:", "newMessages": "{n} nova(s)" },
+    "deadline": { "confirmation": "Confirmação:", "response": "Resposta:", "overdueN": "{n}d em atraso", "daysLeft": "{n}d" },
+    "detail": {
+      "back": "← Voltar à visão geral", "content": "Conteúdo da denúncia", "deadlines": "Prazos legais (HinSchG)",
+      "confirmDeadline": "Confirmação de receção (7 dias)", "responseDeadline": "Resposta (3 meses)", "statusLabel": "Estado",
+      "confirmedOn": "✓ {date}", "overdueN": "{n}d em atraso", "daysLeft": "ainda {n}d (até {date})",
+      "noMessages": "Sem mensagens ainda.", "senderCompliance": "Conformidade", "senderMelder": "Denunciante (anónimo)",
+      "replyLabel": "Resposta ao denunciante (totalmente encriptada):", "replyPlaceholder": "A sua resposta ao denunciante …",
+      "send": "Enviar resposta", "sending": "A enviar …", "errorSend": "Erro ao enviar", "communication": "Comunicação", "messagesCount": "{n} mensagens"
+    },
+    "actions": { "heading": "Estado e prazos", "current": "Atual:", "confirm": "Confirmar receção (prazo HinSchG 7 dias)", "confirmedOn": "Receção confirmada em {date}", "errorSave": "Erro ao guardar" },
+    "statusLabels": { "neu": "Nova", "in_bearbeitung": "Em análise", "abgeschlossen": "Encerrada" },
+    "nav": { "logout": "Terminar sessão" }
+  }
+}

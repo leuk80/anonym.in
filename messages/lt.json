@@ -1,0 +1,94 @@
+{
+  "portal": {
+    "unavailable": "Šis pranešimų kanalas šiuo metu nepasiekiamas.",
+    "channelSubtitle": "Anoniminis atitikties pranešimų kanalas",
+    "alreadyReported": "Jau pateikėte pranešimą?",
+    "checkStatus": "Patikrinti būseną",
+    "form": {
+      "heading": "Pateikti pranešimą",
+      "intro": "Jūsų pranešimas bus visiškai užšifruotas ir anonimiškai perduotas {orgName}.",
+      "category": "Kategorija",
+      "categoryPlaceholder": "Pasirinkite …",
+      "title": "Trumpas aprašymas",
+      "titlePlaceholder": "Apie ką kalbama?",
+      "description": "Išsamus aprašymas",
+      "descriptionPlaceholder": "Aprašykite situaciją kuo išsamiau. Kas atsitiko? Kada? Kas buvo įtrauktas?",
+      "submit": "Pateikti pranešimą anonimiškai",
+      "submitting": "Siunčiama …",
+      "error": "Klaida teikiant pranešimą",
+      "privacy": "Privatumas: IP adresai, el. pašto adresai ar kiti asmens duomenys nesaugomi. Pranešimas šifruojamas AES-256-GCM. Šiame puslapyje nėra stebėjimo slapukų."
+    },
+    "success": {
+      "heading": "Pranešimas pateiktas",
+      "subtext": "Jūsų pranešimas buvo saugiai perduotas ir bus tvarkomas konfidencialiai.",
+      "tokenLabel": "Jūsų asmeninis prieigos kodas",
+      "copy": "Kopijuoti",
+      "copied": "✓ Nukopijuota",
+      "savePdf": "Išsaugoti PDF",
+      "warningTitle": "Svarbu – užsirašykite šį kodą:",
+      "warning1": "Tai vienintelis būdas vėl pasiekti savo pranešimą",
+      "warning2": "Leidžia skaityti atitikties komandos atsakymus",
+      "warning3": "Jis nesaugomas ir negali būti atkurtas",
+      "trackLink": "Sekti pranešimą"
+    },
+    "categories": {
+      "korruption": "Korupcija ir kyšininkavimas",
+      "betrug": "Sukčiavimas ir pasisavinimas",
+      "datenschutz": "Duomenų apsaugos pažeidimas",
+      "diskriminierung": "Diskriminacija ir priekabiavimas",
+      "sicherheit": "Darbo ir produktų sauga",
+      "sonstiges": "Kita"
+    }
+  },
+  "status": {
+    "pageSubtitle": "Atitikties kanalas – Pranešimo būsena",
+    "newReport": "Pateikti naują pranešimą",
+    "notFound": "Pranešimas nerastas",
+    "notFoundHint": "Patikrinkite savo prieigos kodą. Didžiosios ir mažosios raidės ignoruojamos.",
+    "retry": "Bandyti dar kartą",
+    "tokenForm": {
+      "heading": "Sekti pranešimą",
+      "subtext": "Įveskite prieigos kodą, kad pamatytumėte pranešimo būseną ir perskaitytumėte žinutes.",
+      "label": "Prieigos kodas",
+      "placeholder": "pvz. WOLF-7342-MĖLYNA",
+      "submit": "Rodyti būseną"
+    },
+    "report": {
+      "received": "Gauta:",
+      "confirmed": "Gavimas patvirtintas {date} (įstatyminis 7 dienų terminas laikytas)",
+      "pendingConfirmation": "Gavimo patvirtinimas laukia (įstatyminis terminas: 7 dienos nuo gavimo)"
+    },
+    "messages": {
+      "heading": "Ryšys su atitikties komanda",
+      "empty": "Žinučių dar nėra. Atitikties komanda susisieks prireikus.",
+      "senderCompliance": "Atitikties komanda",
+      "senderMelder": "Jūs (anonimiškai)",
+      "replyLabel": "Siųsti žinutę atitikties komandai:",
+      "replyPlaceholder": "Jūsų žinutė atitikties komandai …",
+      "closed": "Šis pranešimas uždarytas. Daugiau žinučių siųsti negalima.",
+      "send": "Siųsti žinutę",
+      "sending": "Siunčiama …",
+      "errorSend": "Klaida siunčiant",
+      "privacy": "Visos žinutės yra šifruotos nuo galo iki galo. Jokio stebėjimo, jokių slapukų."
+    },
+    "statusLabels": { "neu": "Gauta", "in_bearbeitung": "Nagrinėjama", "abgeschlossen": "Uždaryta" }
+  },
+  "dashboard": {
+    "title": "Pranešimai",
+    "stats": { "total": "Iš viso", "new": "Naujas", "inProgress": "Nagrinėjama", "overdue": "Vėluoja" },
+    "filter": { "all": "Visi", "new": "Naujas", "inProgress": "Nagrinėjama", "done": "Uždaryta", "overdue": "Vėluoja" },
+    "list": { "empty": "Pranešimų nerasta.", "received": "Gauta:", "token": "Prieigos žymė:", "newMessages": "{n} nauja" },
+    "deadline": { "confirmation": "Patvirtinimas:", "response": "Atsakymas:", "overdueN": "{n}d vėluoja", "daysLeft": "{n}d" },
+    "detail": {
+      "back": "← Grįžti į apžvalgą", "content": "Pranešimo turinys", "deadlines": "Įstatyminiai terminai (HinSchG)",
+      "confirmDeadline": "Gavimo patvirtinimas (7 dienos)", "responseDeadline": "Atsakymas (3 mėnesiai)", "statusLabel": "Būsena",
+      "confirmedOn": "✓ {date}", "overdueN": "{n}d vėluoja", "daysLeft": "dar {n}d (iki {date})",
+      "noMessages": "Žinučių dar nėra.", "senderCompliance": "Atitiktis", "senderMelder": "Pranešėjas (anonimiškai)",
+      "replyLabel": "Atsakymas pranešėjui (visiškai užšifruotas):", "replyPlaceholder": "Jūsų atsakymas pranešėjui …",
+      "send": "Siųsti atsakymą", "sending": "Siunčiama …", "errorSend": "Klaida siunčiant", "communication": "Ryšys", "messagesCount": "{n} žinutės"
+    },
+    "actions": { "heading": "Būsena ir terminai", "current": "Dabartinė:", "confirm": "Patvirtinti gavimą (HinSchG 7 dienų terminas)", "confirmedOn": "Gavimas patvirtintas {date}", "errorSave": "Klaida išsaugant" },
+    "statusLabels": { "neu": "Naujas", "in_bearbeitung": "Nagrinėjama", "abgeschlossen": "Uždaryta" },
+    "nav": { "logout": "Atsijungti" }
+  }
+}
