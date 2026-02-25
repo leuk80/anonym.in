@@ -6,6 +6,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import TokenForm from './TokenForm'
 import MelderReplyForm from './MelderReplyForm'
+import MelderPdfDownloadButton from './MelderPdfDownloadButton'
 
 const STATUS_LABELS: Record<ReportStatus, string> = {
   neu: 'Eingegangen',
@@ -134,9 +135,12 @@ async function StatusView({ token, slug, orgId }: { token: string; slug: string;
               Eingegangen: {formatDate(rest.received_at)}
             </p>
           </div>
-          <span className={`shrink-0 px-2.5 py-1 rounded-lg text-xs font-medium ${STATUS_CLASSES[status]}`}>
-            {STATUS_LABELS[status]}
-          </span>
+          <div className="flex flex-col items-end gap-2 shrink-0">
+            <span className={`px-2.5 py-1 rounded-lg text-xs font-medium ${STATUS_CLASSES[status]}`}>
+              {STATUS_LABELS[status]}
+            </span>
+            <MelderPdfDownloadButton token={token} />
+          </div>
         </div>
 
         <p className="text-sm text-gray-700 whitespace-pre-wrap leading-relaxed border-t border-gray-100 pt-3">
