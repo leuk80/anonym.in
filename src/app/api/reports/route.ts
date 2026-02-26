@@ -67,7 +67,7 @@ export async function POST(req: NextRequest) {
       )
     }
 
-    const orgKey = getOrgEncryptionKey(org.id)
+    const orgKey = await getOrgEncryptionKey(org.id)
     const melderToken = generateMelderToken()
 
     const { error } = await supabaseAdmin.from('reports').insert({

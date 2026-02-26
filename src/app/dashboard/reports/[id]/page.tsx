@@ -36,7 +36,7 @@ export default async function ReportDetailPage({ params }: { params: { id: strin
   }
 
   const orgId = session.user.organizationId
-  const orgKey = getOrgEncryptionKey(orgId)
+  const orgKey = await getOrgEncryptionKey(orgId)
 
   const { data: raw, error } = await supabaseAdmin
     .from('reports')

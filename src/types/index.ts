@@ -18,6 +18,7 @@ export interface Organization {
   stripe_customer_id: string | null
   stripe_subscription_id: string | null
   encryption_key_hash: string
+  encryption_key_enc: string
   created_at: string
   updated_at: string
 }
@@ -179,8 +180,7 @@ export interface CreateOrganizationRequest {
 export interface CreateOrganizationResponse {
   success: true
   organization_id: string
-  encryption_key: string  // Einmalig ausgegeben – muss als Env-Var gespeichert werden!
-  env_var_name: string    // z.B. ORG_KEY_550e8400...
+  slug: string
 }
 
 // Generische Fehler-Response

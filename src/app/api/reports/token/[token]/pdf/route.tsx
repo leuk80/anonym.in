@@ -315,7 +315,7 @@ export async function GET(req: NextRequest, { params }: { params: { token: strin
       return NextResponse.json({ success: false, message: 'Meldung nicht gefunden' }, { status: 404 })
     }
 
-    const orgKey = getOrgEncryptionKey(report.organization_id)
+    const orgKey = await getOrgEncryptionKey(report.organization_id)
 
     const { data: org } = await supabaseAdmin
       .from('organizations')

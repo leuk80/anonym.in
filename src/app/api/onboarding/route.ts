@@ -2,9 +2,9 @@ import { NextRequest, NextResponse } from 'next/server'
 import { supabaseAdmin } from '@/lib/supabase'
 import {
   generateEncryptionKey,
-  getOrgKeyEnvName,
   hashPassword,
   hashValue,
+  wrapOrgKey,
 } from '@/lib/crypto'
 import type { SubscriptionPlan } from '@/types'
 
@@ -108,9 +108,10 @@ export async function POST(req: NextRequest) {
       )
     }
 
-    // Encryption Key generieren
+    // Encryption Key generieren und sofort mit Master Key verschlüsseln
     const encryptionKey = generateEncryptionKey()
     const encryptionKeyHash = hashValue(encryptionKey)
+    const encryptionKeyEnc = wrapOrgKey(encryptionKey)
 
     // Organisation anlegen
     const { data: org, error: orgError } = await supabaseAdmin
@@ -122,6 +123,7 @@ export async function POST(req: NextRequest) {
         subscription_status: 'trial',
         subscription_plan: subscription_plan as SubscriptionPlan,
         encryption_key_hash: encryptionKeyHash,
+        encryption_key_enc: encryptionKeyEnc,
       })
       .select('id')
       .single()
@@ -153,15 +155,11 @@ export async function POST(req: NextRequest) {
       )
     }
 
-    const envVarName = getOrgKeyEnvName(org.id)
-
     return NextResponse.json(
       {
         success: true,
         organization_id: org.id,
         slug,
-        encryption_key: encryptionKey,
-        env_var_name: envVarName,
       },
       { status: 201 }
     )

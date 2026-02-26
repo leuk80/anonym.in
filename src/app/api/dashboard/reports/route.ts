@@ -21,7 +21,7 @@ export async function GET() {
     }
 
     const orgId = session.user.organizationId
-    const orgKey = getOrgEncryptionKey(orgId)
+    const orgKey = await getOrgEncryptionKey(orgId)
 
     const { data: reports, error } = await supabaseAdmin
       .from('reports')

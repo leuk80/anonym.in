@@ -330,7 +330,7 @@ export async function GET(_req: NextRequest, { params }: { params: { id: string 
     }
 
     const orgId = session.user.organizationId
-    const orgKey = getOrgEncryptionKey(orgId)
+    const orgKey = await getOrgEncryptionKey(orgId)
 
     const { data: org } = await supabaseAdmin
       .from('organizations')

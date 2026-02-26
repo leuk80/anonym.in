@@ -24,7 +24,7 @@ export async function GET(_req: NextRequest, { params }: { params: { token: stri
       )
     }
 
-    const orgKey = getOrgEncryptionKey(report.organization_id)
+    const orgKey = await getOrgEncryptionKey(report.organization_id)
 
     // Compliance-Nachrichten als gelesen markieren (Melder hat sie gesehen)
     await supabaseAdmin
@@ -97,7 +97,7 @@ export async function POST(req: NextRequest, { params }: { params: { token: stri
       )
     }
 
-    const orgKey = getOrgEncryptionKey(report.organization_id)
+    const orgKey = await getOrgEncryptionKey(report.organization_id)
     const contentEncrypted = encryptToString(content, orgKey)
 
     const { data: message, error } = await supabaseAdmin
