@@ -32,7 +32,7 @@ export default async function DashboardPage({
   }
 
   const orgId = session.user.organizationId
-  const orgKey = getOrgEncryptionKey(orgId)
+  const orgKey = await getOrgEncryptionKey(orgId)
   const now = new Date()
 
   const { data: rawReports } = await supabaseAdmin

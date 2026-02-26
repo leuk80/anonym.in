@@ -27,8 +27,6 @@ interface FormData {
 interface SuccessData {
   organization_id: string
   slug: string
-  encryption_key: string
-  env_var_name: string
 }
 
 const STEPS = ['Unternehmen', 'Plan wählen', 'Admin-Account']
@@ -179,8 +177,6 @@ function OnboardingForm() {
       setSuccess({
         organization_id: data.organization_id,
         slug: data.slug,
-        encryption_key: data.encryption_key,
-        env_var_name: data.env_var_name,
       })
     } catch {
       setError('Netzwerkfehler. Bitte versuchen Sie es erneut.')
@@ -189,8 +185,8 @@ function OnboardingForm() {
     }
   }
 
-  async function copyKey() {
-    await navigator.clipboard.writeText(success!.encryption_key)
+  async function copyPortalUrl() {
+    await navigator.clipboard.writeText(`https://anonym.in/melden/${success!.slug}`)
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
   }
@@ -206,7 +202,7 @@ function OnboardingForm() {
           </div>
           <h1 className="text-2xl font-bold text-gray-900">Ihr Account ist bereit!</h1>
           <p className="mt-2 text-sm text-gray-500">
-            Ihr Meldekanal ist eingerichtet und empfangsbereit.
+            Ihr Meldekanal ist eingerichtet und sofort empfangsbereit.
           </p>
         </div>
 
@@ -218,61 +214,31 @@ function OnboardingForm() {
               <code className="text-sm text-gray-900 font-mono break-all">
                 anonym.in{portalUrl}
               </code>
-              <Link
-                href={portalUrl}
-                target="_blank"
-                className="shrink-0 text-xs border border-gray-200 rounded-lg px-3 py-1.5 hover:bg-gray-50 transition-colors"
-              >
-                Öffnen →
-              </Link>
-            </div>
-          </div>
-
-          {/* Encryption Key Warning */}
-          <div className="bg-amber-50 rounded-xl border border-amber-200 p-5">
-            <div className="flex items-start gap-3 mb-3">
-              <span className="text-xl mt-0.5">⚠️</span>
-              <div>
-                <p className="text-sm font-semibold text-amber-900">Wichtig: Encryption Key</p>
-                <p className="text-xs text-amber-700 mt-1 leading-relaxed">
-                  Ihr Verschlüsselungs-Key muss einmalig als Umgebungsvariable auf dem Server eingetragen
-                  werden, bevor Meldungen verschlüsselt werden können. Notieren Sie den Key jetzt – er
-                  wird nur einmalig angezeigt und kann <strong>nicht wiederhergestellt</strong> werden.
-                </p>
-              </div>
-            </div>
-            <div className="space-y-2">
-              <div>
-                <p className="text-xs text-amber-700 mb-1">Env-Var Name:</p>
-                <code className="block text-xs bg-amber-100 rounded px-2 py-1 font-mono break-all text-amber-900">
-                  {success.env_var_name}
-                </code>
-              </div>
-              <div>
-                <p className="text-xs text-amber-700 mb-1">Encryption Key (einmalig angezeigt):</p>
-                <div className="flex items-center gap-2">
-                  <code className="flex-1 text-xs bg-amber-100 rounded px-2 py-1 font-mono break-all text-amber-900">
-                    {success.encryption_key}
-                  </code>
-                  <button
-                    onClick={copyKey}
-                    className="shrink-0 text-xs bg-amber-200 hover:bg-amber-300 text-amber-900 rounded px-2 py-1 transition-colors"
-                  >
-                    {copied ? '✓' : 'Kopieren'}
-                  </button>
-                </div>
+              <div className="flex items-center gap-2 shrink-0">
+                <button
+                  onClick={copyPortalUrl}
+                  className="text-xs border border-gray-200 rounded-lg px-3 py-1.5 hover:bg-gray-50 transition-colors"
+                >
+                  {copied ? '✓' : 'Kopieren'}
+                </button>
+                <Link
+                  href={portalUrl}
+                  target="_blank"
+                  className="text-xs border border-gray-200 rounded-lg px-3 py-1.5 hover:bg-gray-50 transition-colors"
+                >
+                  Öffnen →
+                </Link>
               </div>
             </div>
           </div>
 
-          {/* Setup instructions */}
+          {/* Nächste Schritte */}
           <div className="bg-gray-50 rounded-xl border border-gray-100 p-5">
             <p className="text-xs font-medium text-gray-700 mb-2">Nächste Schritte</p>
             <ol className="space-y-1.5 text-xs text-gray-600 list-decimal list-inside">
-              <li>Notieren Sie den Encryption Key und den Env-Var Namen sicher (z.B. Passwortmanager).</li>
-              <li>Senden Sie den Key an Ihren Server-Administrator oder tragen Sie ihn selbst als Env-Var ein.</li>
-              <li>Sobald der Key gesetzt ist, können Sie sich einloggen und Meldungen empfangen.</li>
+              <li>Loggen Sie sich ein und erkunden Sie Ihr Dashboard.</li>
               <li>Verteilen Sie den Meldekanal-Link an Ihre Mitarbeiter.</li>
+              <li>Eingehende Meldungen werden sofort verschlüsselt gespeichert.</li>
             </ol>
           </div>
 
@@ -280,7 +246,7 @@ function OnboardingForm() {
             href="/login"
             className="block text-center bg-gray-900 text-white text-sm font-medium py-3 rounded-lg hover:bg-gray-800 transition-colors"
           >
-            Zum Login →
+            Jetzt einloggen →
           </Link>
         </div>
       </div>

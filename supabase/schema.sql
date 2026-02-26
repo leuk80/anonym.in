@@ -23,6 +23,7 @@ CREATE TABLE organizations (
   stripe_customer_id   TEXT,
   stripe_subscription_id TEXT,
   encryption_key_hash  TEXT        NOT NULL,                 -- SHA-256 des Org-Keys (zur Verifikation)
+  encryption_key_enc   TEXT        NOT NULL,                 -- Org-Key, verschlüsselt mit MASTER_ENCRYPTION_KEY (AES-256-GCM)
   created_at           TIMESTAMPTZ NOT NULL DEFAULT NOW(),
   updated_at           TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );

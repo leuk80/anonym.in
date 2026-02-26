@@ -59,18 +59,50 @@ export function generateEncryptionKey(): string {
   return randomBytes(32).toString('hex') // 256-bit
 }
 
-// Env-Var-Name aus Org-UUID (Bindestriche entfernen)
-export function getOrgKeyEnvName(organizationId: string): string {
-  return `ORG_KEY_${organizationId.replace(/-/g, '')}`
-}
+// ============================================================
+// Master Key Envelope Encryption
+// Org-Keys werden AES-256-GCM verschlüsselt in der DB gespeichert.
+// Nur ein einziger MASTER_ENCRYPTION_KEY muss als Env-Var gepflegt werden.
+// ============================================================
 
-export function getOrgEncryptionKey(organizationId: string): string {
-  const envName = getOrgKeyEnvName(organizationId)
-  const key = process.env[envName]
-  if (!key) {
-    throw new Error(`Encryption key not found for organization: ${organizationId}`)
+function getMasterEncryptionKey(): string {
+  const key = process.env.MASTER_ENCRYPTION_KEY
+  if (!key || key.length !== 64) {
+    throw new Error(
+      'MASTER_ENCRYPTION_KEY ist nicht konfiguriert oder ungültig. ' +
+      'Setze eine 64-stellige Hex-Zeichenkette (32 Bytes) als Env-Var.'
+    )
   }
   return key
+}
+
+/** Org-Key mit dem Master Key verschlüsseln – Ergebnis wird in der DB gespeichert */
+export function wrapOrgKey(orgKey: string): string {
+  return encryptToString(orgKey, getMasterEncryptionKey())
+}
+
+/** Verschlüsselten Org-Key aus der DB entschlüsseln */
+export function unwrapOrgKey(encryptedKey: string): string {
+  return decryptFromString(encryptedKey, getMasterEncryptionKey())
+}
+
+/**
+ * Org-Encryption-Key abrufen.
+ * Liest encryption_key_enc aus der DB und entschlüsselt mit dem Master Key.
+ */
+export async function getOrgEncryptionKey(organizationId: string): Promise<string> {
+  const { supabaseAdmin } = await import('@/lib/supabase')
+  const { data: org, error } = await supabaseAdmin
+    .from('organizations')
+    .select('encryption_key_enc')
+    .eq('id', organizationId)
+    .single()
+
+  if (error || !org?.encryption_key_enc) {
+    throw new Error(`Encryption key nicht gefunden für Organisation: ${organizationId}`)
+  }
+
+  return unwrapOrgKey(org.encryption_key_enc)
 }
 
 // ============================================================

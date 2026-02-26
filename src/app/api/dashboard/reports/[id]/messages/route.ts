@@ -46,7 +46,7 @@ export async function POST(req: NextRequest, { params }: { params: { id: string 
       )
     }
 
-    const orgKey = getOrgEncryptionKey(orgId)
+    const orgKey = await getOrgEncryptionKey(orgId)
     const contentEncrypted = encryptToString(content, orgKey)
 
     const { data: message, error } = await supabaseAdmin

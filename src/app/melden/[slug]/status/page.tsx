@@ -107,7 +107,7 @@ async function StatusView({ token, slug, orgId }: { token: string; slug: string;
     .eq('sender', 'compliance')
     .eq('is_read', false)
 
-  const orgKey = getOrgEncryptionKey(orgId)
+  const orgKey = await getOrgEncryptionKey(orgId)
   const { title_encrypted, description_encrypted, messages: rawMessages, ...rest } = report
 
   const messages: DecryptedMessage[] = (rawMessages ?? [])
