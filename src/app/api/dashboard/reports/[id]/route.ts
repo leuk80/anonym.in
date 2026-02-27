@@ -12,7 +12,13 @@ import type {
   ReportStatus,
 } from '@/types'
 
-const VALID_STATUSES: ReportStatus[] = ['neu', 'bestaetigt', 'in_bearbeitung', 'abgeschlossen']
+// Erlaubte Statusübergänge – spiegelt die Zustandsmaschine im Frontend
+const ALLOWED_TRANSITIONS: Record<ReportStatus, ReportStatus[]> = {
+  neu:            ['bestaetigt', 'in_bearbeitung', 'abgeschlossen'],
+  bestaetigt:     ['in_bearbeitung', 'abgeschlossen'],
+  in_bearbeitung: ['abgeschlossen'],
+  abgeschlossen:  [],
+}
 
 export async function GET(_req: NextRequest, { params }: { params: { id: string } }) {
   try {
@@ -90,11 +96,39 @@ export async function PATCH(req: NextRequest, { params }: { params: { id: string
     const body: UpdateReportRequest = await req.json()
     const { status, confirmed_at } = body
 
-    if (status !== undefined && !VALID_STATUSES.includes(status)) {
-      return NextResponse.json<ErrorResponse>(
-        { success: false, message: 'Ungültiger Status' },
-        { status: 400 }
-      )
+    // Aktuellen Status laden, um Übergänge zu validieren
+    if (status !== undefined) {
+      const { data: current, error: fetchError } = await supabaseAdmin
+        .from('reports')
+        .select('status, confirmed_at')
+        .eq('id', params.id)
+        .eq('organization_id', session.user.organizationId)
+        .single()
+
+      if (fetchError || !current) {
+        return NextResponse.json<ErrorResponse>(
+          { success: false, message: 'Meldung nicht gefunden' },
+          { status: 404 }
+        )
+      }
+
+      const currentStatus = current.status as ReportStatus
+      const allowed = ALLOWED_TRANSITIONS[currentStatus] ?? []
+
+      if (!allowed.includes(status)) {
+        return NextResponse.json<ErrorResponse>(
+          { success: false, message: 'Ungültiger Statusübergang' },
+          { status: 400 }
+        )
+      }
+
+      // confirmed_at darf nicht überschrieben werden
+      if (confirmed_at && current.confirmed_at) {
+        return NextResponse.json<ErrorResponse>(
+          { success: false, message: 'Eingangsbestätigung bereits gesetzt' },
+          { status: 400 }
+        )
+      }
     }
 
     const updates: Record<string, string> = {}

@@ -41,9 +41,15 @@ export default function ReportActions({ reportId, currentStatus, confirmedAt }: 
     router.refresh()
   }
 
-  const nextStatuses = (['neu', 'bestaetigt', 'in_bearbeitung', 'abgeschlossen'] as ReportStatus[]).filter(
-    (s) => s !== currentStatus
-  )
+  // Erlaubte Übergänge – einmal bestätigt/weitergeschaltet, kein Zurück
+  const ALLOWED_TRANSITIONS: Record<ReportStatus, ReportStatus[]> = {
+    neu:           ['in_bearbeitung', 'abgeschlossen'],
+    bestaetigt:    ['in_bearbeitung', 'abgeschlossen'],
+    in_bearbeitung: ['abgeschlossen'],
+    abgeschlossen: [],
+  }
+
+  const nextStatuses = ALLOWED_TRANSITIONS[currentStatus]
 
   return (
     <div className="bg-white rounded-xl border border-gray-200 p-5 space-y-4">
@@ -57,22 +63,7 @@ export default function ReportActions({ reportId, currentStatus, confirmedAt }: 
         </span>
       </div>
 
-      {/* Status ändern */}
-      <div className="flex flex-wrap gap-2">
-        {nextStatuses.map((s) => (
-          <button
-            key={s}
-            disabled={loading}
-            onClick={() => patch({ status: s })}
-            className="px-3 py-1.5 text-xs font-medium rounded-lg border border-gray-200
-                       hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-          >
-            → {t(`statusLabels.${s}` as Parameters<typeof t>[0])}
-          </button>
-        ))}
-      </div>
-
-      {/* Eingangsbestätigung */}
+      {/* Eingangsbestätigung – setzt Status automatisch auf 'bestaetigt' */}
       {confirmedAt ? (
         <p className="text-xs text-green-700 bg-green-50 rounded-lg px-3 py-2">
           {t('actions.confirmedOn', {
@@ -84,12 +75,29 @@ export default function ReportActions({ reportId, currentStatus, confirmedAt }: 
       ) : (
         <button
           disabled={loading}
-          onClick={() => patch({ confirmed_at: new Date().toISOString() })}
+          onClick={() => patch({ confirmed_at: new Date().toISOString(), status: 'bestaetigt' })}
           className="w-full py-2 px-3 text-xs font-medium text-white bg-gray-900 rounded-lg
                      hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         >
           {t('actions.confirm')}
         </button>
+      )}
+
+      {/* Status manuell weiterschalten */}
+      {nextStatuses.length > 0 && (
+        <div className="flex flex-wrap gap-2">
+          {nextStatuses.map((s) => (
+            <button
+              key={s}
+              disabled={loading}
+              onClick={() => patch({ status: s })}
+              className="px-3 py-1.5 text-xs font-medium rounded-lg border border-gray-200
+                         hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            >
+              → {t(`statusLabels.${s}` as Parameters<typeof t>[0])}
+            </button>
+          ))}
+        </div>
       )}
 
       {error && (
