@@ -71,12 +71,12 @@
       "errorSend": "Σφάλμα κατά την αποστολή",
       "privacy": "Όλα τα μηνύματα είναι κρυπτογραφημένα από άκρο σε άκρο. Χωρίς παρακολούθηση, χωρίς cookies."
     },
-    "statusLabels": { "neu": "Ελήφθη", "in_bearbeitung": "Σε εξέλιξη", "abgeschlossen": "Κλειστή" }
+    "statusLabels": { "neu": "Ελήφθη", "bestaetigt": "Παραλαβή επιβεβαιώθηκε", "in_bearbeitung": "Σε εξέλιξη", "abgeschlossen": "Κλειστή" }
   },
   "dashboard": {
     "title": "Αναφορές",
     "stats": { "total": "Σύνολο", "new": "Νέα", "inProgress": "Σε εξέλιξη", "overdue": "Εκπρόθεσμη" },
-    "filter": { "all": "Όλες", "new": "Νέα", "inProgress": "Σε εξέλιξη", "done": "Κλειστή", "overdue": "Εκπρόθεσμη" },
+    "filter": { "all": "Όλες", "new": "Νέα", "confirmed": "Επιβεβαιωμένο", "inProgress": "Σε εξέλιξη", "done": "Κλειστή", "overdue": "Εκπρόθεσμη" },
     "list": { "empty": "Δεν βρέθηκαν αναφορές.", "received": "Ελήφθη:", "token": "Κωδικός:", "newMessages": "{n} νέο/α" },
     "deadline": { "confirmation": "Επιβεβαίωση:", "response": "Απάντηση:", "overdueN": "{n}η εκπρόθεσμη", "daysLeft": "{n}η" },
     "detail": {
@@ -88,7 +88,7 @@
       "send": "Αποστολή απάντησης", "sending": "Αποστολή …", "errorSend": "Σφάλμα", "communication": "Επικοινωνία", "messagesCount": "{n} μηνύματα"
     },
     "actions": { "heading": "Κατάσταση και προθεσμίες", "current": "Τρέχουσα:", "confirm": "Επιβεβαίωση λήψης (HinSchG 7 ημερών)", "confirmedOn": "Λήψη επιβεβαιώθηκε στις {date}", "errorSave": "Σφάλμα αποθήκευσης" },
-    "statusLabels": { "neu": "Νέα", "in_bearbeitung": "Σε εξέλιξη", "abgeschlossen": "Κλειστή" },
+    "statusLabels": { "neu": "Νέα", "bestaetigt": "Επιβεβαιωμένο", "in_bearbeitung": "Σε εξέλιξη", "abgeschlossen": "Κλειστή" },
     "nav": { "logout": "Αποσύνδεση" }
   }
 }

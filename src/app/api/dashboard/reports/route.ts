@@ -55,6 +55,7 @@ export async function GET() {
     const stats: DashboardStats = {
       total: decryptedReports.length,
       neu: decryptedReports.filter((r) => r.status === 'neu').length,
+      bestaetigt: decryptedReports.filter((r) => r.status === 'bestaetigt').length,
       in_bearbeitung: decryptedReports.filter((r) => r.status === 'in_bearbeitung').length,
       abgeschlossen: decryptedReports.filter((r) => r.status === 'abgeschlossen').length,
       overdue: decryptedReports.filter((r) => r.is_overdue).length,

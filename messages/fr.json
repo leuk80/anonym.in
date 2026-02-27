@@ -73,6 +73,7 @@
     },
     "statusLabels": {
       "neu": "Reçu",
+      "bestaetigt": "Réception confirmée",
       "in_bearbeitung": "En cours",
       "abgeschlossen": "Clôturé"
     }
@@ -88,6 +89,7 @@
     "filter": {
       "all": "Tous",
       "new": "Nouveau",
+      "confirmed": "Confirmé",
       "inProgress": "En cours",
       "done": "Clôturé",
       "overdue": "En retard"
@@ -134,6 +136,7 @@
     },
     "statusLabels": {
       "neu": "Nouveau",
+      "bestaetigt": "Confirmé",
       "in_bearbeitung": "En cours",
       "abgeschlossen": "Clôturé"
     },

@@ -71,12 +71,12 @@
       "errorSend": "Kļūda nosūtīšanā",
       "privacy": "Visas ziņas ir šifrētas no gala līdz galam. Nav izsekošanas, nav sīkdatņu."
     },
-    "statusLabels": { "neu": "Saņemts", "in_bearbeitung": "Tiek apstrādāts", "abgeschlossen": "Slēgts" }
+    "statusLabels": { "neu": "Saņemts", "bestaetigt": "Saņemšana apstiprināta", "in_bearbeitung": "Tiek apstrādāts", "abgeschlossen": "Slēgts" }
   },
   "dashboard": {
     "title": "Ziņojumi",
     "stats": { "total": "Kopā", "new": "Jauns", "inProgress": "Tiek apstrādāts", "overdue": "Nokavēts" },
-    "filter": { "all": "Visi", "new": "Jauns", "inProgress": "Tiek apstrādāts", "done": "Slēgts", "overdue": "Nokavēts" },
+    "filter": { "all": "Visi", "new": "Jauns", "confirmed": "Apstiprināts", "inProgress": "Tiek apstrādāts", "done": "Slēgts", "overdue": "Nokavēts" },
     "list": { "empty": "Ziņojumi nav atrasti.", "received": "Saņemts:", "token": "Tokens:", "newMessages": "{n} jauns" },
     "deadline": { "confirmation": "Apstiprinājums:", "response": "Atbilde:", "overdueN": "{n}d nokavēts", "daysLeft": "{n}d" },
     "detail": {
@@ -88,7 +88,7 @@
       "send": "Nosūtīt atbildi", "sending": "Nosūtīšana …", "errorSend": "Kļūda nosūtīšanā", "communication": "Saziņa", "messagesCount": "{n} ziņas"
     },
     "actions": { "heading": "Statuss un termiņi", "current": "Pašreizējais:", "confirm": "Apstiprināt saņemšanu (HinSchG 7 dienu termiņš)", "confirmedOn": "Saņemšana apstiprināta {date}", "errorSave": "Kļūda saglabāšanā" },
-    "statusLabels": { "neu": "Jauns", "in_bearbeitung": "Tiek apstrādāts", "abgeschlossen": "Slēgts" },
+    "statusLabels": { "neu": "Jauns", "bestaetigt": "Apstiprināts", "in_bearbeitung": "Tiek apstrādāts", "abgeschlossen": "Slēgts" },
     "nav": { "logout": "Izrakstīties" }
   }
 }

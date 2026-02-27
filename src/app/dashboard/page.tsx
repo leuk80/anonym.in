@@ -8,6 +8,7 @@ import { getTranslations, getLocale } from 'next-intl/server'
 
 const STATUS_CLASSES: Record<ReportStatus, string> = {
   neu: 'bg-blue-100 text-blue-800',
+  bestaetigt: 'bg-purple-100 text-purple-800',
   in_bearbeitung: 'bg-amber-100 text-amber-800',
   abgeschlossen: 'bg-green-100 text-green-800',
 }
@@ -56,6 +57,7 @@ export default async function DashboardPage({
   const stats = {
     total: reports.length,
     neu: reports.filter((r) => r.status === 'neu').length,
+    bestaetigt: reports.filter((r) => r.status === 'bestaetigt').length,
     in_bearbeitung: reports.filter((r) => r.status === 'in_bearbeitung').length,
     abgeschlossen: reports.filter((r) => r.status === 'abgeschlossen').length,
     overdue: reports.filter((r) => r.is_overdue).length,
@@ -71,6 +73,7 @@ export default async function DashboardPage({
   const filters = [
     { key: 'alle', label: t('filter.all'), count: stats.total },
     { key: 'neu', label: t('filter.new'), count: stats.neu },
+    { key: 'bestaetigt', label: t('filter.confirmed'), count: stats.bestaetigt },
     { key: 'in_bearbeitung', label: t('filter.inProgress'), count: stats.in_bearbeitung },
     { key: 'abgeschlossen', label: t('filter.done'), count: stats.abgeschlossen },
     { key: 'overdue', label: t('filter.overdue'), count: stats.overdue },

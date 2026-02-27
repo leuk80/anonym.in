@@ -4,7 +4,7 @@
 
 export type SubscriptionStatus = 'trial' | 'active' | 'inactive' | 'cancelled'
 export type SubscriptionPlan = 'starter' | 'professional' | 'enterprise'
-export type ReportStatus = 'neu' | 'in_bearbeitung' | 'abgeschlossen'
+export type ReportStatus = 'neu' | 'bestaetigt' | 'in_bearbeitung' | 'abgeschlossen'
 export type MessageSender = 'melder' | 'compliance'
 export type UserRole = 'admin' | 'officer'
 
@@ -141,6 +141,7 @@ export interface GetDashboardReportsResponse {
 export interface DashboardStats {
   total: number
   neu: number
+  bestaetigt: number
   in_bearbeitung: number
   abgeschlossen: number
   overdue: number

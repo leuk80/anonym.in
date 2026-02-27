@@ -71,12 +71,12 @@
       "errorSend": "Hiba az üzenet küldésekor",
       "privacy": "Minden üzenet végpontok között titkosított. Nincs nyomkövetés, nincs cookie."
     },
-    "statusLabels": { "neu": "Beérkezett", "in_bearbeitung": "Feldolgozás alatt", "abgeschlossen": "Lezárva" }
+    "statusLabels": { "neu": "Beérkezett", "bestaetigt": "Beérkezés visszaigazolva", "in_bearbeitung": "Feldolgozás alatt", "abgeschlossen": "Lezárva" }
   },
   "dashboard": {
     "title": "Bejelentések",
     "stats": { "total": "Összesen", "new": "Új", "inProgress": "Feldolgozás alatt", "overdue": "Lejárt" },
-    "filter": { "all": "Összes", "new": "Új", "inProgress": "Feldolgozás alatt", "done": "Lezárva", "overdue": "Lejárt" },
+    "filter": { "all": "Összes", "new": "Új", "confirmed": "Visszaigazolva", "inProgress": "Feldolgozás alatt", "done": "Lezárva", "overdue": "Lejárt" },
     "list": { "empty": "Nem találhatók bejelentések.", "received": "Beérkezett:", "token": "Token:", "newMessages": "{n} új" },
     "deadline": { "confirmation": "Visszaigazolás:", "response": "Válasz:", "overdueN": "{n}n késedelmes", "daysLeft": "{n}n" },
     "detail": {
@@ -88,7 +88,7 @@
       "send": "Válasz küldése", "sending": "Küldés …", "errorSend": "Hiba küldéskor", "communication": "Kommunikáció", "messagesCount": "{n} üzenet"
     },
     "actions": { "heading": "Állapot és határidők", "current": "Jelenlegi:", "confirm": "Beérkezés visszaigazolása (HinSchG 7 napos határidő)", "confirmedOn": "Beérkezés visszaigazolva: {date}", "errorSave": "Hiba mentéskor" },
-    "statusLabels": { "neu": "Új", "in_bearbeitung": "Feldolgozás alatt", "abgeschlossen": "Lezárva" },
+    "statusLabels": { "neu": "Új", "bestaetigt": "Visszaigazolva", "in_bearbeitung": "Feldolgozás alatt", "abgeschlossen": "Lezárva" },
     "nav": { "logout": "Kijelentkezés" }
   }
 }

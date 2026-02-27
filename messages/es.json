@@ -73,6 +73,7 @@
     },
     "statusLabels": {
       "neu": "Recibida",
+      "bestaetigt": "Recepción confirmada",
       "in_bearbeitung": "En tramitación",
       "abgeschlossen": "Cerrada"
     }
@@ -80,7 +81,7 @@
   "dashboard": {
     "title": "Denuncias",
     "stats": { "total": "Total", "new": "Nueva", "inProgress": "En tramitación", "overdue": "Vencida" },
-    "filter": { "all": "Todas", "new": "Nueva", "inProgress": "En tramitación", "done": "Cerrada", "overdue": "Vencida" },
+    "filter": { "all": "Todas", "new": "Nueva", "confirmed": "Confirmado", "inProgress": "En tramitación", "done": "Cerrada", "overdue": "Vencida" },
     "list": { "empty": "No se encontraron denuncias.", "received": "Recibida:", "token": "Token:", "newMessages": "{n} nueva(s)" },
     "deadline": { "confirmation": "Confirmación:", "response": "Respuesta:", "overdueN": "{n}d de retraso", "daysLeft": "{n}d" },
     "detail": {
@@ -92,7 +93,7 @@
       "send": "Enviar respuesta", "sending": "Enviando …", "errorSend": "Error al enviar", "communication": "Comunicación", "messagesCount": "{n} mensajes"
     },
     "actions": { "heading": "Estado y plazos", "current": "Actual:", "confirm": "Confirmar recepción (plazo HinSchG 7 días)", "confirmedOn": "Recepción confirmada el {date}", "errorSave": "Error al guardar" },
-    "statusLabels": { "neu": "Nueva", "in_bearbeitung": "En tramitación", "abgeschlossen": "Cerrada" },
+    "statusLabels": { "neu": "Nueva", "bestaetigt": "Confirmado", "in_bearbeitung": "En tramitación", "abgeschlossen": "Cerrada" },
     "nav": { "logout": "Cerrar sesión" }
   }
 }

@@ -55,7 +55,7 @@ CREATE TABLE reports (
   title_encrypted         TEXT        NOT NULL,              -- AES-256-GCM JSON
   description_encrypted   TEXT        NOT NULL,              -- AES-256-GCM JSON
   status                  TEXT        NOT NULL DEFAULT 'neu'
-                            CHECK (status IN ('neu', 'in_bearbeitung', 'abgeschlossen')),
+                            CHECK (status IN ('neu', 'bestaetigt', 'in_bearbeitung', 'abgeschlossen')),
   -- Fristen gemäß HinSchG
   received_at             TIMESTAMPTZ NOT NULL DEFAULT NOW(),
   confirmation_deadline   TIMESTAMPTZ NOT NULL,              -- +7 Tage (via Trigger)

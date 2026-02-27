@@ -71,12 +71,12 @@
       "errorSend": "Fel vid sändning",
       "privacy": "Alla meddelanden är krypterade från ände till ände. Ingen spårning, inga cookies."
     },
-    "statusLabels": { "neu": "Mottagen", "in_bearbeitung": "Pågår", "abgeschlossen": "Stängd" }
+    "statusLabels": { "neu": "Mottagen", "bestaetigt": "Mottagning bekräftad", "in_bearbeitung": "Pågår", "abgeschlossen": "Stängd" }
   },
   "dashboard": {
     "title": "Rapporter",
     "stats": { "total": "Totalt", "new": "Ny", "inProgress": "Pågår", "overdue": "Försenad" },
-    "filter": { "all": "Alla", "new": "Ny", "inProgress": "Pågår", "done": "Stängd", "overdue": "Försenad" },
+    "filter": { "all": "Alla", "new": "Ny", "confirmed": "Bekräftad", "inProgress": "Pågår", "done": "Stängd", "overdue": "Försenad" },
     "list": { "empty": "Inga rapporter hittades.", "received": "Mottagen:", "token": "Token:", "newMessages": "{n} ny(a)" },
     "deadline": { "confirmation": "Bekräftelse:", "response": "Svar:", "overdueN": "{n}d försenad", "daysLeft": "{n}d" },
     "detail": {
@@ -88,7 +88,7 @@
       "send": "Skicka svar", "sending": "Skickar …", "errorSend": "Fel vid sändning", "communication": "Kommunikation", "messagesCount": "{n} meddelanden"
     },
     "actions": { "heading": "Status och frister", "current": "Aktuell:", "confirm": "Bekräfta mottagande (HinSchG 7-dagarsfrist)", "confirmedOn": "Mottagning bekräftad {date}", "errorSave": "Fel vid sparande" },
-    "statusLabels": { "neu": "Ny", "in_bearbeitung": "Pågår", "abgeschlossen": "Stängd" },
+    "statusLabels": { "neu": "Ny", "bestaetigt": "Bekräftad", "in_bearbeitung": "Pågår", "abgeschlossen": "Stängd" },
     "nav": { "logout": "Logga ut" }
   }
 }

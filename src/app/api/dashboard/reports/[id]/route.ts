@@ -12,7 +12,7 @@ import type {
   ReportStatus,
 } from '@/types'
 
-const VALID_STATUSES: ReportStatus[] = ['neu', 'in_bearbeitung', 'abgeschlossen']
+const VALID_STATUSES: ReportStatus[] = ['neu', 'bestaetigt', 'in_bearbeitung', 'abgeschlossen']
 
 export async function GET(_req: NextRequest, { params }: { params: { id: string } }) {
   try {

@@ -71,12 +71,12 @@
       "errorSend": "Napaka pri pošiljanju",
       "privacy": "Vsa sporočila so šifrirana od konca do konca. Brez sledenja, brez piškotkov."
     },
-    "statusLabels": { "neu": "Prejeto", "in_bearbeitung": "V obravnavi", "abgeschlossen": "Zaprto" }
+    "statusLabels": { "neu": "Prejeto", "bestaetigt": "Prejem potrjen", "in_bearbeitung": "V obravnavi", "abgeschlossen": "Zaprto" }
   },
   "dashboard": {
     "title": "Prijave",
     "stats": { "total": "Skupaj", "new": "Nova", "inProgress": "V obravnavi", "overdue": "Zamujeno" },
-    "filter": { "all": "Vse", "new": "Nova", "inProgress": "V obravnavi", "done": "Zaprto", "overdue": "Zamujeno" },
+    "filter": { "all": "Vse", "new": "Nova", "confirmed": "Potrjeno", "inProgress": "V obravnavi", "done": "Zaprto", "overdue": "Zamujeno" },
     "list": { "empty": "Ni najdenih prijav.", "received": "Prejeto:", "token": "Žeton:", "newMessages": "{n} novo" },
     "deadline": { "confirmation": "Potrditev:", "response": "Odgovor:", "overdueN": "{n}d zamuda", "daysLeft": "{n}d" },
     "detail": {
@@ -88,7 +88,7 @@
       "send": "Pošlji odgovor", "sending": "Pošiljanje …", "errorSend": "Napaka pri pošiljanju", "communication": "Komunikacija", "messagesCount": "{n} sporočil"
     },
     "actions": { "heading": "Status in roki", "current": "Trenutni:", "confirm": "Potrdi prejem (HinSchG 7-dnevni rok)", "confirmedOn": "Prejem potrjen {date}", "errorSave": "Napaka pri shranjevanju" },
-    "statusLabels": { "neu": "Nova", "in_bearbeitung": "V obravnavi", "abgeschlossen": "Zaprto" },
+    "statusLabels": { "neu": "Nova", "bestaetigt": "Potrjeno", "in_bearbeitung": "V obravnavi", "abgeschlossen": "Zaprto" },
     "nav": { "logout": "Odjava" }
   }
 }

@@ -73,6 +73,7 @@
     },
     "statusLabels": {
       "neu": "Recebida",
+      "bestaetigt": "Receção confirmada",
       "in_bearbeitung": "Em análise",
       "abgeschlossen": "Encerrada"
     }
@@ -80,7 +81,7 @@
   "dashboard": {
     "title": "Denúncias",
     "stats": { "total": "Total", "new": "Nova", "inProgress": "Em análise", "overdue": "Em atraso" },
-    "filter": { "all": "Todas", "new": "Nova", "inProgress": "Em análise", "done": "Encerrada", "overdue": "Em atraso" },
+    "filter": { "all": "Todas", "new": "Nova", "confirmed": "Confirmado", "inProgress": "Em análise", "done": "Encerrada", "overdue": "Em atraso" },
     "list": { "empty": "Não foram encontradas denúncias.", "received": "Recebida:", "token": "Token:", "newMessages": "{n} nova(s)" },
     "deadline": { "confirmation": "Confirmação:", "response": "Resposta:", "overdueN": "{n}d em atraso", "daysLeft": "{n}d" },
     "detail": {
@@ -92,7 +93,7 @@
       "send": "Enviar resposta", "sending": "A enviar …", "errorSend": "Erro ao enviar", "communication": "Comunicação", "messagesCount": "{n} mensagens"
     },
     "actions": { "heading": "Estado e prazos", "current": "Atual:", "confirm": "Confirmar receção (prazo HinSchG 7 dias)", "confirmedOn": "Receção confirmada em {date}", "errorSave": "Erro ao guardar" },
-    "statusLabels": { "neu": "Nova", "in_bearbeitung": "Em análise", "abgeschlossen": "Encerrada" },
+    "statusLabels": { "neu": "Nova", "bestaetigt": "Confirmado", "in_bearbeitung": "Em análise", "abgeschlossen": "Encerrada" },
     "nav": { "logout": "Terminar sessão" }
   }
 }

@@ -71,12 +71,12 @@
       "errorSend": "Chyba pri odosielaní",
       "privacy": "Všetky správy sú šifrované end-to-end. Žiadne sledovanie, žiadne súbory cookie."
     },
-    "statusLabels": { "neu": "Prijaté", "in_bearbeitung": "Spracováva sa", "abgeschlossen": "Uzavreté" }
+    "statusLabels": { "neu": "Prijaté", "bestaetigt": "Prijatie potvrdené", "in_bearbeitung": "Spracováva sa", "abgeschlossen": "Uzavreté" }
   },
   "dashboard": {
     "title": "Oznámenia",
     "stats": { "total": "Celkom", "new": "Nové", "inProgress": "Spracováva sa", "overdue": "Po termíne" },
-    "filter": { "all": "Všetky", "new": "Nové", "inProgress": "Spracováva sa", "done": "Uzavreté", "overdue": "Po termíne" },
+    "filter": { "all": "Všetky", "new": "Nové", "confirmed": "Potvrdené", "inProgress": "Spracováva sa", "done": "Uzavreté", "overdue": "Po termíne" },
     "list": { "empty": "Žiadne oznámenia nenájdené.", "received": "Prijaté:", "token": "Token:", "newMessages": "{n} nové" },
     "deadline": { "confirmation": "Potvrdenie:", "response": "Odpoveď:", "overdueN": "{n}d po termíne", "daysLeft": "{n}d" },
     "detail": {
@@ -88,7 +88,7 @@
       "send": "Odoslať odpoveď", "sending": "Odosielanie …", "errorSend": "Chyba pri odosielaní", "communication": "Komunikácia", "messagesCount": "{n} správ"
     },
     "actions": { "heading": "Stav a lehoty", "current": "Aktuálny:", "confirm": "Potvrdiť prijatie (zákonná lehota HinSchG 7 dní)", "confirmedOn": "Prijatie potvrdené dňa {date}", "errorSave": "Chyba pri ukladaní" },
-    "statusLabels": { "neu": "Nové", "in_bearbeitung": "Spracováva sa", "abgeschlossen": "Uzavreté" },
+    "statusLabels": { "neu": "Nové", "bestaetigt": "Potvrdené", "in_bearbeitung": "Spracováva sa", "abgeschlossen": "Uzavreté" },
     "nav": { "logout": "Odhlásiť" }
   }
 }

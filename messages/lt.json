@@ -71,7 +71,7 @@
       "errorSend": "Klaida siunčiant",
       "privacy": "Visos žinutės yra šifruotos nuo galo iki galo. Jokio stebėjimo, jokių slapukų."
     },
-    "statusLabels": { "neu": "Gauta", "in_bearbeitung": "Nagrinėjama", "abgeschlossen": "Uždaryta" }
+    "statusLabels": { "neu": "Gauta", "bestaetigt": "Gavimas patvirtintas", "in_bearbeitung": "Nagrinėjama", "abgeschlossen": "Uždaryta" }
   },
   "dashboard": {
     "title": "Pranešimai",

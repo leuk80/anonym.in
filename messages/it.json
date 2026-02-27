@@ -73,6 +73,7 @@
     },
     "statusLabels": {
       "neu": "Ricevuta",
+      "bestaetigt": "Ricezione confermata",
       "in_bearbeitung": "In lavorazione",
       "abgeschlossen": "Chiusa"
     }
@@ -80,7 +81,7 @@
   "dashboard": {
     "title": "Segnalazioni",
     "stats": { "total": "Totale", "new": "Nuova", "inProgress": "In lavorazione", "overdue": "Scaduta" },
-    "filter": { "all": "Tutte", "new": "Nuova", "inProgress": "In lavorazione", "done": "Chiusa", "overdue": "Scaduta" },
+    "filter": { "all": "Tutte", "new": "Nuova", "confirmed": "Confermato", "inProgress": "In lavorazione", "done": "Chiusa", "overdue": "Scaduta" },
     "list": { "empty": "Nessuna segnalazione trovata.", "received": "Ricevuta:", "token": "Token:", "newMessages": "{n} nuova/e" },
     "deadline": { "confirmation": "Conferma:", "response": "Risposta:", "overdueN": "{n}g scaduta", "daysLeft": "{n}g" },
     "detail": {
@@ -92,7 +93,7 @@
       "send": "Invia risposta", "sending": "Invio in corso …", "errorSend": "Errore durante l'invio", "communication": "Comunicazione", "messagesCount": "{n} messaggi"
     },
     "actions": { "heading": "Stato e termini", "current": "Attuale:", "confirm": "Conferma ricezione (termine HinSchG 7 giorni)", "confirmedOn": "Ricezione confermata il {date}", "errorSave": "Errore durante il salvataggio" },
-    "statusLabels": { "neu": "Nuova", "in_bearbeitung": "In lavorazione", "abgeschlossen": "Chiusa" },
+    "statusLabels": { "neu": "Nuova", "bestaetigt": "Confermato", "in_bearbeitung": "In lavorazione", "abgeschlossen": "Chiusa" },
     "nav": { "logout": "Disconnetti" }
   }
 }
