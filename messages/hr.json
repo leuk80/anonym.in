@@ -71,12 +71,12 @@
       "errorSend": "Greška pri slanju",
       "privacy": "Sve poruke su šifrirane s kraja na kraj. Bez praćenja, bez kolačića."
     },
-    "statusLabels": { "neu": "Primljeno", "in_bearbeitung": "U obradi", "abgeschlossen": "Zatvoreno" }
+    "statusLabels": { "neu": "Primljeno", "bestaetigt": "Primitak potvrđen", "in_bearbeitung": "U obradi", "abgeschlossen": "Zatvoreno" }
   },
   "dashboard": {
     "title": "Prijave",
     "stats": { "total": "Ukupno", "new": "Nova", "inProgress": "U obradi", "overdue": "Prekoračeno" },
-    "filter": { "all": "Sve", "new": "Nova", "inProgress": "U obradi", "done": "Zatvoreno", "overdue": "Prekoračeno" },
+    "filter": { "all": "Sve", "new": "Nova", "confirmed": "Potvrđeno", "inProgress": "U obradi", "done": "Zatvoreno", "overdue": "Prekoračeno" },
     "list": { "empty": "Nema pronađenih prijava.", "received": "Primljeno:", "token": "Token:", "newMessages": "{n} nova" },
     "deadline": { "confirmation": "Potvrda:", "response": "Odgovor:", "overdueN": "{n}d prekoračeno", "daysLeft": "{n}d" },
     "detail": {
@@ -88,7 +88,7 @@
       "send": "Pošalji odgovor", "sending": "Slanje …", "errorSend": "Greška pri slanju", "communication": "Komunikacija", "messagesCount": "{n} poruka"
     },
     "actions": { "heading": "Status i rokovi", "current": "Trenutni:", "confirm": "Potvrdite primitak (HinSchG rok od 7 dana)", "confirmedOn": "Primitak potvrđen {date}", "errorSave": "Greška pri spremanju" },
-    "statusLabels": { "neu": "Nova", "in_bearbeitung": "U obradi", "abgeschlossen": "Zatvoreno" },
+    "statusLabels": { "neu": "Nova", "bestaetigt": "Potvrđeno", "in_bearbeitung": "U obradi", "abgeschlossen": "Zatvoreno" },
     "nav": { "logout": "Odjava" }
   }
 }

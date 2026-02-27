@@ -73,6 +73,7 @@
     },
     "statusLabels": {
       "neu": "Eingegangen",
+      "bestaetigt": "Eingang bestätigt",
       "in_bearbeitung": "In Bearbeitung",
       "abgeschlossen": "Abgeschlossen"
     }
@@ -88,6 +89,7 @@
     "filter": {
       "all": "Alle",
       "new": "Neu",
+      "confirmed": "Bestätigt",
       "inProgress": "In Bearbeitung",
       "done": "Abgeschlossen",
       "overdue": "Überfällig"
@@ -134,6 +136,7 @@
     },
     "statusLabels": {
       "neu": "Neu",
+      "bestaetigt": "Bestätigt",
       "in_bearbeitung": "In Bearbeitung",
       "abgeschlossen": "Abgeschlossen"
     },

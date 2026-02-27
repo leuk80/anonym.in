@@ -71,12 +71,12 @@
       "errorSend": "Fejl ved afsendelse",
       "privacy": "Alle beskeder er end-to-end-krypterede. Ingen sporing, ingen cookies."
     },
-    "statusLabels": { "neu": "Modtaget", "in_bearbeitung": "Under behandling", "abgeschlossen": "Lukket" }
+    "statusLabels": { "neu": "Modtaget", "bestaetigt": "Modtagelse bekræftet", "in_bearbeitung": "Under behandling", "abgeschlossen": "Lukket" }
   },
   "dashboard": {
     "title": "Indberetninger",
     "stats": { "total": "I alt", "new": "Ny", "inProgress": "Under behandling", "overdue": "Overskredet" },
-    "filter": { "all": "Alle", "new": "Ny", "inProgress": "Under behandling", "done": "Lukket", "overdue": "Overskredet" },
+    "filter": { "all": "Alle", "new": "Ny", "confirmed": "Bekræftet", "inProgress": "Under behandling", "done": "Lukket", "overdue": "Overskredet" },
     "list": { "empty": "Ingen indberetninger fundet.", "received": "Modtaget:", "token": "Token:", "newMessages": "{n} ny(e)" },
     "deadline": { "confirmation": "Bekræftelse:", "response": "Svar:", "overdueN": "{n}d overskredet", "daysLeft": "{n}d" },
     "detail": {
@@ -88,7 +88,7 @@
       "send": "Send svar", "sending": "Sender …", "errorSend": "Fejl ved afsendelse", "communication": "Kommunikation", "messagesCount": "{n} beskeder"
     },
     "actions": { "heading": "Status og frister", "current": "Aktuel:", "confirm": "Bekræft modtagelse (HinSchG 7-dages frist)", "confirmedOn": "Modtagelse bekræftet den {date}", "errorSave": "Fejl ved lagring" },
-    "statusLabels": { "neu": "Ny", "in_bearbeitung": "Under behandling", "abgeschlossen": "Lukket" },
+    "statusLabels": { "neu": "Ny", "bestaetigt": "Bekræftet", "in_bearbeitung": "Under behandling", "abgeschlossen": "Lukket" },
     "nav": { "logout": "Log ud" }
   }
 }

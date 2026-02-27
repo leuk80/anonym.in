@@ -13,6 +13,7 @@ Font.register({
 
 const STATUS_LABELS: Record<ReportStatus, string> = {
   neu: 'Neu',
+  bestaetigt: 'Eingang bestätigt',
   in_bearbeitung: 'In Bearbeitung',
   abgeschlossen: 'Abgeschlossen',
 }

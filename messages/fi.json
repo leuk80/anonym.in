@@ -71,12 +71,12 @@
       "errorSend": "Virhe lähettämisessä",
       "privacy": "Kaikki viestit ovat päästä päähän salattuja. Ei seurantaa, ei evästeitä."
     },
-    "statusLabels": { "neu": "Vastaanotettu", "in_bearbeitung": "Käsittelyssä", "abgeschlossen": "Suljettu" }
+    "statusLabels": { "neu": "Vastaanotettu", "bestaetigt": "Vastaanotto vahvistettu", "in_bearbeitung": "Käsittelyssä", "abgeschlossen": "Suljettu" }
   },
   "dashboard": {
     "title": "Ilmoitukset",
     "stats": { "total": "Yhteensä", "new": "Uusi", "inProgress": "Käsittelyssä", "overdue": "Myöhässä" },
-    "filter": { "all": "Kaikki", "new": "Uusi", "inProgress": "Käsittelyssä", "done": "Suljettu", "overdue": "Myöhässä" },
+    "filter": { "all": "Kaikki", "new": "Uusi", "confirmed": "Vahvistettu", "inProgress": "Käsittelyssä", "done": "Suljettu", "overdue": "Myöhässä" },
     "list": { "empty": "Ilmoituksia ei löydy.", "received": "Vastaanotettu:", "token": "Tunnus:", "newMessages": "{n} uusi" },
     "deadline": { "confirmation": "Vahvistus:", "response": "Vastaus:", "overdueN": "{n}pv myöhässä", "daysLeft": "{n}pv" },
     "detail": {
@@ -88,7 +88,7 @@
       "send": "Lähetä vastaus", "sending": "Lähetetään …", "errorSend": "Virhe lähettämisessä", "communication": "Viestintä", "messagesCount": "{n} viestiä"
     },
     "actions": { "heading": "Tila ja määräajat", "current": "Nykyinen:", "confirm": "Vahvista vastaanotto (HinSchG 7 päivän määräaika)", "confirmedOn": "Vastaanotto vahvistettu {date}", "errorSave": "Virhe tallentamisessa" },
-    "statusLabels": { "neu": "Uusi", "in_bearbeitung": "Käsittelyssä", "abgeschlossen": "Suljettu" },
+    "statusLabels": { "neu": "Uusi", "bestaetigt": "Vahvistettu", "in_bearbeitung": "Käsittelyssä", "abgeschlossen": "Suljettu" },
     "nav": { "logout": "Kirjaudu ulos" }
   }
 }

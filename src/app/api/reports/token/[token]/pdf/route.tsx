@@ -6,6 +6,7 @@ import { renderToBuffer, Document, Page, Text, View, StyleSheet } from '@react-p
 
 const STATUS_LABELS: Record<ReportStatus, string> = {
   neu: 'Eingegangen',
+  bestaetigt: 'Eingang bestätigt',
   in_bearbeitung: 'In Bearbeitung',
   abgeschlossen: 'Abgeschlossen',
 }

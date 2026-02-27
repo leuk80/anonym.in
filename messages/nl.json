@@ -73,6 +73,7 @@
     },
     "statusLabels": {
       "neu": "Ontvangen",
+      "bestaetigt": "Ontvangst bevestigd",
       "in_bearbeitung": "In behandeling",
       "abgeschlossen": "Afgesloten"
     }
@@ -80,7 +81,7 @@
   "dashboard": {
     "title": "Meldingen",
     "stats": { "total": "Totaal", "new": "Nieuw", "inProgress": "In behandeling", "overdue": "Achterstallig" },
-    "filter": { "all": "Alle", "new": "Nieuw", "inProgress": "In behandeling", "done": "Afgesloten", "overdue": "Achterstallig" },
+    "filter": { "all": "Alle", "new": "Nieuw", "confirmed": "Bevestigd", "inProgress": "In behandeling", "done": "Afgesloten", "overdue": "Achterstallig" },
     "list": { "empty": "Geen meldingen gevonden.", "received": "Ontvangen:", "token": "Token:", "newMessages": "{n} nieuw" },
     "deadline": { "confirmation": "Bevestiging:", "response": "Reactie:", "overdueN": "{n}d achterstallig", "daysLeft": "{n}d" },
     "detail": {
@@ -92,7 +93,7 @@
       "send": "Antwoord versturen", "sending": "Wordt verzonden …", "errorSend": "Fout bij verzenden", "communication": "Communicatie", "messagesCount": "{n} berichten"
     },
     "actions": { "heading": "Status en termijnen", "current": "Huidig:", "confirm": "Ontvangst bevestigen (HinSchG 7-daagse termijn)", "confirmedOn": "Ontvangst bevestigd op {date}", "errorSave": "Fout bij opslaan" },
-    "statusLabels": { "neu": "Nieuw", "in_bearbeitung": "In behandeling", "abgeschlossen": "Afgesloten" },
+    "statusLabels": { "neu": "Nieuw", "bestaetigt": "Bevestigd", "in_bearbeitung": "In behandeling", "abgeschlossen": "Afgesloten" },
     "nav": { "logout": "Uitloggen" }
   }
 }

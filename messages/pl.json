@@ -73,6 +73,7 @@
     },
     "statusLabels": {
       "neu": "Otrzymano",
+      "bestaetigt": "Odbiór potwierdzony",
       "in_bearbeitung": "W trakcie",
       "abgeschlossen": "Zamknięte"
     }
@@ -80,7 +81,7 @@
   "dashboard": {
     "title": "Zgłoszenia",
     "stats": { "total": "Razem", "new": "Nowe", "inProgress": "W trakcie", "overdue": "Przeterminowane" },
-    "filter": { "all": "Wszystkie", "new": "Nowe", "inProgress": "W trakcie", "done": "Zamknięte", "overdue": "Przeterminowane" },
+    "filter": { "all": "Wszystkie", "new": "Nowe", "confirmed": "Potwierdzone", "inProgress": "W trakcie", "done": "Zamknięte", "overdue": "Przeterminowane" },
     "list": { "empty": "Nie znaleziono zgłoszeń.", "received": "Otrzymano:", "token": "Token:", "newMessages": "{n} nowe" },
     "deadline": { "confirmation": "Potwierdzenie:", "response": "Odpowiedź:", "overdueN": "{n}d po terminie", "daysLeft": "{n}d" },
     "detail": {
@@ -92,7 +93,7 @@
       "send": "Wyślij odpowiedź", "sending": "Wysyłanie …", "errorSend": "Błąd podczas wysyłania", "communication": "Komunikacja", "messagesCount": "{n} wiadomości"
     },
     "actions": { "heading": "Status i terminy", "current": "Aktualny:", "confirm": "Potwierdź odbiór (termin HinSchG 7 dni)", "confirmedOn": "Potwierdzono odbiór w dniu {date}", "errorSave": "Błąd podczas zapisywania" },
-    "statusLabels": { "neu": "Nowe", "in_bearbeitung": "W trakcie", "abgeschlossen": "Zamknięte" },
+    "statusLabels": { "neu": "Nowe", "bestaetigt": "Potwierdzone", "in_bearbeitung": "W trakcie", "abgeschlossen": "Zamknięte" },
     "nav": { "logout": "Wyloguj" }
   }
 }

@@ -71,12 +71,12 @@
       "errorSend": "Грешка при изпращане",
       "privacy": "Всички съобщения са криптирани от край до край. Без проследяване, без бисквитки."
     },
-    "statusLabels": { "neu": "Получен", "in_bearbeitung": "В процес", "abgeschlossen": "Затворен" }
+    "statusLabels": { "neu": "Получен", "bestaetigt": "Получаването е потвърдено", "in_bearbeitung": "В процес", "abgeschlossen": "Затворен" }
   },
   "dashboard": {
     "title": "Сигнали",
     "stats": { "total": "Общо", "new": "Нов", "inProgress": "В процес", "overdue": "Просрочен" },
-    "filter": { "all": "Всички", "new": "Нов", "inProgress": "В процес", "done": "Затворен", "overdue": "Просрочен" },
+    "filter": { "all": "Всички", "new": "Нов", "confirmed": "Потвърдено", "inProgress": "В процес", "done": "Затворен", "overdue": "Просрочен" },
     "list": { "empty": "Не са намерени сигнали.", "received": "Получен:", "token": "Токен:", "newMessages": "{n} ново" },
     "deadline": { "confirmation": "Потвърждение:", "response": "Отговор:", "overdueN": "{n}д просрочен", "daysLeft": "{n}д" },
     "detail": {
@@ -88,7 +88,7 @@
       "send": "Изпрати отговор", "sending": "Изпраща се …", "errorSend": "Грешка при изпращане", "communication": "Комуникация", "messagesCount": "{n} съобщения"
     },
     "actions": { "heading": "Статус и срокове", "current": "Текущ:", "confirm": "Потвърди получаването (HinSchG 7-дневен срок)", "confirmedOn": "Получаването е потвърдено на {date}", "errorSave": "Грешка при запазване" },
-    "statusLabels": { "neu": "Нов", "in_bearbeitung": "В процес", "abgeschlossen": "Затворен" },
+    "statusLabels": { "neu": "Нов", "bestaetigt": "Потвърдено", "in_bearbeitung": "В процес", "abgeschlossen": "Затворен" },
     "nav": { "logout": "Изход" }
   }
 }

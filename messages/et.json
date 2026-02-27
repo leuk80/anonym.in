@@ -71,12 +71,12 @@
       "errorSend": "Viga saatmisel",
       "privacy": "Kõik sõnumid on otsast lõpuni krüpteeritud. Jälgimist ega küpsiseid pole."
     },
-    "statusLabels": { "neu": "Saabunud", "in_bearbeitung": "Töös", "abgeschlossen": "Suletud" }
+    "statusLabels": { "neu": "Saabunud", "bestaetigt": "Kättesaamine kinnitatud", "in_bearbeitung": "Töös", "abgeschlossen": "Suletud" }
   },
   "dashboard": {
     "title": "Teavitused",
     "stats": { "total": "Kokku", "new": "Uus", "inProgress": "Töös", "overdue": "Tähtaeg ületatud" },
-    "filter": { "all": "Kõik", "new": "Uus", "inProgress": "Töös", "done": "Suletud", "overdue": "Tähtaeg ületatud" },
+    "filter": { "all": "Kõik", "new": "Uus", "confirmed": "Kinnitatud", "inProgress": "Töös", "done": "Suletud", "overdue": "Tähtaeg ületatud" },
     "list": { "empty": "Teavitusi ei leitud.", "received": "Saabunud:", "token": "Token:", "newMessages": "{n} uus" },
     "deadline": { "confirmation": "Kinnitus:", "response": "Vastus:", "overdueN": "{n}p hilinenud", "daysLeft": "{n}p" },
     "detail": {
@@ -88,7 +88,7 @@
       "send": "Saada vastus", "sending": "Saatmine …", "errorSend": "Viga saatmisel", "communication": "Suhtlus", "messagesCount": "{n} sõnumit"
     },
     "actions": { "heading": "Staatus ja tähtajad", "current": "Praegune:", "confirm": "Kinnita kättesaamine (HinSchG 7-päevane tähtaeg)", "confirmedOn": "Kättesaamine kinnitatud {date}", "errorSave": "Viga salvestamisel" },
-    "statusLabels": { "neu": "Uus", "in_bearbeitung": "Töös", "abgeschlossen": "Suletud" },
+    "statusLabels": { "neu": "Uus", "bestaetigt": "Kinnitatud", "in_bearbeitung": "Töös", "abgeschlossen": "Suletud" },
     "nav": { "logout": "Logi välja" }
   }
 }

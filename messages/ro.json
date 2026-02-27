@@ -71,12 +71,12 @@
       "errorSend": "Eroare la trimitere",
       "privacy": "Toate mesajele sunt criptate end-to-end. Fără urmărire, fără cookie-uri."
     },
-    "statusLabels": { "neu": "Primită", "in_bearbeitung": "În curs", "abgeschlossen": "Închisă" }
+    "statusLabels": { "neu": "Primită", "bestaetigt": "Primire confirmată", "in_bearbeitung": "În curs", "abgeschlossen": "Închisă" }
   },
   "dashboard": {
     "title": "Raportări",
     "stats": { "total": "Total", "new": "Nouă", "inProgress": "În curs", "overdue": "Depășit" },
-    "filter": { "all": "Toate", "new": "Nouă", "inProgress": "În curs", "done": "Închisă", "overdue": "Depășit" },
+    "filter": { "all": "Toate", "new": "Nouă", "confirmed": "Confirmat", "inProgress": "În curs", "done": "Închisă", "overdue": "Depășit" },
     "list": { "empty": "Nu s-au găsit raportări.", "received": "Primită:", "token": "Token:", "newMessages": "{n} nouă" },
     "deadline": { "confirmation": "Confirmare:", "response": "Răspuns:", "overdueN": "{n}z depășit", "daysLeft": "{n}z" },
     "detail": {
@@ -88,7 +88,7 @@
       "send": "Trimiteți răspunsul", "sending": "Se trimite …", "errorSend": "Eroare la trimitere", "communication": "Comunicare", "messagesCount": "{n} mesaje"
     },
     "actions": { "heading": "Status și termene", "current": "Curent:", "confirm": "Confirmați primirea (termenul HinSchG de 7 zile)", "confirmedOn": "Primire confirmată la {date}", "errorSave": "Eroare la salvare" },
-    "statusLabels": { "neu": "Nouă", "in_bearbeitung": "În curs", "abgeschlossen": "Închisă" },
+    "statusLabels": { "neu": "Nouă", "bestaetigt": "Confirmat", "in_bearbeitung": "În curs", "abgeschlossen": "Închisă" },
     "nav": { "logout": "Deconectare" }
   }
 }
